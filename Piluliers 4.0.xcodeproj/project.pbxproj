@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422AC6AF63948C7CF9418B04 /* libPods-Piluliers 4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */; };
+		BD1D6372524053B896173C45 /* libPods-Piluliers 4.0 WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8687B4E2155720F4DF9B6FE2 /* libPods-Piluliers 4.0 WatchKit Extension.a */; };
+		C0C73D44CE7477E88A7E25FF /* libPods-Piluliers 4.0 WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */; };
 		C72E60251EC1F3770087D2FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60241EC1F3770087D2FD /* main.m */; };
 		C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60271EC1F3770087D2FD /* AppDelegate.m */; };
 		C72E602B1EC1F3770087D2FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E602A1EC1F3770087D2FD /* ViewController.m */; };
@@ -67,6 +70,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05DF0918CC641785E1244598 /* Pods-Piluliers 4.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0.release.xcconfig"; sourceTree = "<group>"; };
+		0AD7B1CB3057483E18828E20 /* Pods-Piluliers 4.0 WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0 WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0 WatchKit App/Pods-Piluliers 4.0 WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		35EA955690DD6E672D8EEC8A /* Pods-Piluliers 4.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0.debug.xcconfig"; sourceTree = "<group>"; };
+		3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0 WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		784FCB19BC7AB00AB21B0590 /* Pods-Piluliers 4.0 WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0 WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0 WatchKit App/Pods-Piluliers 4.0 WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		8687B4E2155720F4DF9B6FE2 /* libPods-Piluliers 4.0 WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0 WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DE46F55F3FE4D7C22FD363 /* Pods-Piluliers 4.0 WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0 WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0 WatchKit Extension/Pods-Piluliers 4.0 WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		C00B1934E3D1F690090DB8B3 /* Pods-Piluliers 4.0 WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0 WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0 WatchKit Extension/Pods-Piluliers 4.0 WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		C72E60201EC1F3770087D2FD /* Piluliers 4.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piluliers 4.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72E60241EC1F3770087D2FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C72E60261EC1F3770087D2FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,10 +108,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7C473FBE0586E7F0C3771F19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0C73D44CE7477E88A7E25FF /* libPods-Piluliers 4.0 WatchKit App.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C72E601D1EC1F3770087D2FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				422AC6AF63948C7CF9418B04 /* libPods-Piluliers 4.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,12 +128,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1D6372524053B896173C45 /* libPods-Piluliers 4.0 WatchKit Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070857A10BB09DF237AE2143 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */,
+				44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */,
+				8687B4E2155720F4DF9B6FE2 /* libPods-Piluliers 4.0 WatchKit Extension.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C72E60171EC1F3770087D2FD = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +152,8 @@
 				C72E603B1EC1F3770087D2FD /* Piluliers 4.0 WatchKit App */,
 				C72E604A1EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension */,
 				C72E60211EC1F3770087D2FD /* Products */,
+				EDA70D607A53DDE2079370F6 /* Pods */,
+				070857A10BB09DF237AE2143 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +227,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EDA70D607A53DDE2079370F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35EA955690DD6E672D8EEC8A /* Pods-Piluliers 4.0.debug.xcconfig */,
+				05DF0918CC641785E1244598 /* Pods-Piluliers 4.0.release.xcconfig */,
+				784FCB19BC7AB00AB21B0590 /* Pods-Piluliers 4.0 WatchKit App.debug.xcconfig */,
+				0AD7B1CB3057483E18828E20 /* Pods-Piluliers 4.0 WatchKit App.release.xcconfig */,
+				A2DE46F55F3FE4D7C22FD363 /* Pods-Piluliers 4.0 WatchKit Extension.debug.xcconfig */,
+				C00B1934E3D1F690090DB8B3 /* Pods-Piluliers 4.0 WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,10 +247,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C72E60661EC1F3770087D2FD /* Build configuration list for PBXNativeTarget "Piluliers 4.0" */;
 			buildPhases = (
+				85720DEF5D9CF1F9ED86A245 /* [CP] Check Pods Manifest.lock */,
 				C72E601C1EC1F3770087D2FD /* Sources */,
 				C72E601D1EC1F3770087D2FD /* Frameworks */,
 				C72E601E1EC1F3770087D2FD /* Resources */,
 				C72E60651EC1F3770087D2FD /* Embed Watch Content */,
+				F7916696B608D2DF463A4AE7 /* [CP] Embed Pods Frameworks */,
+				35BD7B9BD5F5D1163F720472 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,8 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C72E60621EC1F3770087D2FD /* Build configuration list for PBXNativeTarget "Piluliers 4.0 WatchKit App" */;
 			buildPhases = (
+				A13222EAC06888FCB8ED12DD /* [CP] Check Pods Manifest.lock */,
 				C72E60351EC1F3770087D2FD /* Resources */,
 				C72E60611EC1F3770087D2FD /* Embed App Extensions */,
+				7C473FBE0586E7F0C3771F19 /* Frameworks */,
+				B0C45CF099D6AD131BD111B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C72E605E1EC1F3770087D2FD /* Build configuration list for PBXNativeTarget "Piluliers 4.0 WatchKit Extension" */;
 			buildPhases = (
+				6F166B82B08E5F501107D614 /* [CP] Check Pods Manifest.lock */,
 				C72E60421EC1F3770087D2FD /* Sources */,
 				C72E60431EC1F3770087D2FD /* Frameworks */,
 				C72E60441EC1F3770087D2FD /* Resources */,
+				C850880E2BBABC5EB143CED2 /* [CP] Embed Pods Frameworks */,
+				15BB07D9FC7ECEAB995456BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,6 +380,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15BB07D9FC7ECEAB995456BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Piluliers 4.0 WatchKit Extension/Pods-Piluliers 4.0 WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35BD7B9BD5F5D1163F720472 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F166B82B08E5F501107D614 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		85720DEF5D9CF1F9ED86A245 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A13222EAC06888FCB8ED12DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B0C45CF099D6AD131BD111B4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Piluliers 4.0 WatchKit App/Pods-Piluliers 4.0 WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C850880E2BBABC5EB143CED2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Piluliers 4.0 WatchKit Extension/Pods-Piluliers 4.0 WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7916696B608D2DF463A4AE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C72E601C1EC1F3770087D2FD /* Sources */ = {
@@ -482,6 +661,7 @@
 		};
 		C72E605F1EC1F3770087D2FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2DE46F55F3FE4D7C22FD363 /* Pods-Piluliers 4.0 WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				DEVELOPMENT_TEAM = BURQ256D9M;
@@ -498,6 +678,7 @@
 		};
 		C72E60601EC1F3770087D2FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C00B1934E3D1F690090DB8B3 /* Pods-Piluliers 4.0 WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				DEVELOPMENT_TEAM = BURQ256D9M;
@@ -514,6 +695,7 @@
 		};
 		C72E60631EC1F3770087D2FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 784FCB19BC7AB00AB21B0590 /* Pods-Piluliers 4.0 WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BURQ256D9M;
@@ -530,6 +712,7 @@
 		};
 		C72E60641EC1F3770087D2FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AD7B1CB3057483E18828E20 /* Pods-Piluliers 4.0 WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BURQ256D9M;
@@ -546,6 +729,7 @@
 		};
 		C72E60671EC1F3770087D2FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35EA955690DD6E672D8EEC8A /* Pods-Piluliers 4.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BURQ256D9M;
@@ -558,6 +742,7 @@
 		};
 		C72E60681EC1F3770087D2FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05DF0918CC641785E1244598 /* Pods-Piluliers 4.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BURQ256D9M;
