@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C72E60251EC1F3770087D2FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60241EC1F3770087D2FD /* main.m */; };
+		C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60271EC1F3770087D2FD /* AppDelegate.m */; };
+		C72E602B1EC1F3770087D2FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E602A1EC1F3770087D2FD /* ViewController.m */; };
+		C72E602E1EC1F3770087D2FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E602C1EC1F3770087D2FD /* Main.storyboard */; };
+		C72E60301EC1F3770087D2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72E602F1EC1F3770087D2FD /* Assets.xcassets */; };
+		C72E60331EC1F3770087D2FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E60311EC1F3770087D2FD /* LaunchScreen.storyboard */; };
+		C72E60381EC1F3770087D2FD /* Piluliers 4.0 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C72E60371EC1F3770087D2FD /* Piluliers 4.0 WatchKit App.app */; };
+		C72E603E1EC1F3770087D2FD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E603C1EC1F3770087D2FD /* Interface.storyboard */; };
+		C72E60401EC1F3770087D2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72E603F1EC1F3770087D2FD /* Assets.xcassets */; };
+		C72E60471EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C72E60461EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C72E604F1EC1F3770087D2FD /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E604E1EC1F3770087D2FD /* InterfaceController.m */; };
+		C72E60521EC1F3770087D2FD /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60511EC1F3770087D2FD /* ExtensionDelegate.m */; };
+		C72E60551EC1F3770087D2FD /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60541EC1F3770087D2FD /* NotificationController.m */; };
+		C72E60581EC1F3770087D2FD /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60571EC1F3770087D2FD /* ComplicationController.m */; };
+		C72E605A1EC1F3770087D2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72E60591EC1F3770087D2FD /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C72E60391EC1F3770087D2FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C72E60181EC1F3770087D2FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C72E60361EC1F3770087D2FD;
+			remoteInfo = "Piluliers 4.0 WatchKit App";
+		};
+		C72E60481EC1F3770087D2FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C72E60181EC1F3770087D2FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C72E60451EC1F3770087D2FD;
+			remoteInfo = "Piluliers 4.0 WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C72E60611EC1F3770087D2FD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C72E60471EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72E60651EC1F3770087D2FD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C72E60381EC1F3770087D2FD /* Piluliers 4.0 WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C72E60201EC1F3770087D2FD /* Piluliers 4.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piluliers 4.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C72E60241EC1F3770087D2FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C72E60261EC1F3770087D2FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C72E60271EC1F3770087D2FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C72E60291EC1F3770087D2FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C72E602A1EC1F3770087D2FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C72E602D1EC1F3770087D2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C72E602F1EC1F3770087D2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C72E60321EC1F3770087D2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C72E60341EC1F3770087D2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C72E60371EC1F3770087D2FD /* Piluliers 4.0 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Piluliers 4.0 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C72E603D1EC1F3770087D2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C72E603F1EC1F3770087D2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C72E60411EC1F3770087D2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C72E60461EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Piluliers 4.0 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C72E604C1EC1F3770087D2FD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C72E604D1EC1F3770087D2FD /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		C72E604E1EC1F3770087D2FD /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		C72E60501EC1F3770087D2FD /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		C72E60511EC1F3770087D2FD /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		C72E60531EC1F3770087D2FD /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		C72E60541EC1F3770087D2FD /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		C72E60561EC1F3770087D2FD /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
+		C72E60571EC1F3770087D2FD /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
+		C72E60591EC1F3770087D2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C72E605B1EC1F3770087D2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C72E601D1EC1F3770087D2FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72E60431EC1F3770087D2FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C72E60171EC1F3770087D2FD = {
+			isa = PBXGroup;
+			children = (
+				C72E60221EC1F3770087D2FD /* Piluliers 4.0 */,
+				C72E603B1EC1F3770087D2FD /* Piluliers 4.0 WatchKit App */,
+				C72E604A1EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension */,
+				C72E60211EC1F3770087D2FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C72E60211EC1F3770087D2FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C72E60201EC1F3770087D2FD /* Piluliers 4.0.app */,
+				C72E60371EC1F3770087D2FD /* Piluliers 4.0 WatchKit App.app */,
+				C72E60461EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C72E60221EC1F3770087D2FD /* Piluliers 4.0 */ = {
+			isa = PBXGroup;
+			children = (
+				C72E60261EC1F3770087D2FD /* AppDelegate.h */,
+				C72E60271EC1F3770087D2FD /* AppDelegate.m */,
+				C72E60291EC1F3770087D2FD /* ViewController.h */,
+				C72E602A1EC1F3770087D2FD /* ViewController.m */,
+				C72E602C1EC1F3770087D2FD /* Main.storyboard */,
+				C72E602F1EC1F3770087D2FD /* Assets.xcassets */,
+				C72E60311EC1F3770087D2FD /* LaunchScreen.storyboard */,
+				C72E60341EC1F3770087D2FD /* Info.plist */,
+				C72E60231EC1F3770087D2FD /* Supporting Files */,
+			);
+			path = "Piluliers 4.0";
+			sourceTree = "<group>";
+		};
+		C72E60231EC1F3770087D2FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C72E60241EC1F3770087D2FD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C72E603B1EC1F3770087D2FD /* Piluliers 4.0 WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C72E603C1EC1F3770087D2FD /* Interface.storyboard */,
+				C72E603F1EC1F3770087D2FD /* Assets.xcassets */,
+				C72E60411EC1F3770087D2FD /* Info.plist */,
+			);
+			path = "Piluliers 4.0 WatchKit App";
+			sourceTree = "<group>";
+		};
+		C72E604A1EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C72E604D1EC1F3770087D2FD /* InterfaceController.h */,
+				C72E604E1EC1F3770087D2FD /* InterfaceController.m */,
+				C72E60501EC1F3770087D2FD /* ExtensionDelegate.h */,
+				C72E60511EC1F3770087D2FD /* ExtensionDelegate.m */,
+				C72E60531EC1F3770087D2FD /* NotificationController.h */,
+				C72E60541EC1F3770087D2FD /* NotificationController.m */,
+				C72E60561EC1F3770087D2FD /* ComplicationController.h */,
+				C72E60571EC1F3770087D2FD /* ComplicationController.m */,
+				C72E60591EC1F3770087D2FD /* Assets.xcassets */,
+				C72E605B1EC1F3770087D2FD /* Info.plist */,
+				C72E604B1EC1F3770087D2FD /* Supporting Files */,
+			);
+			path = "Piluliers 4.0 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		C72E604B1EC1F3770087D2FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C72E604C1EC1F3770087D2FD /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C72E601F1EC1F3770087D2FD /* Piluliers 4.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C72E60661EC1F3770087D2FD /* Build configuration list for PBXNativeTarget "Piluliers 4.0" */;
+			buildPhases = (
+				C72E601C1EC1F3770087D2FD /* Sources */,
+				C72E601D1EC1F3770087D2FD /* Frameworks */,
+				C72E601E1EC1F3770087D2FD /* Resources */,
+				C72E60651EC1F3770087D2FD /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C72E603A1EC1F3770087D2FD /* PBXTargetDependency */,
+			);
+			name = "Piluliers 4.0";
+			productName = "Piluliers 4.0";
+			productReference = C72E60201EC1F3770087D2FD /* Piluliers 4.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C72E60361EC1F3770087D2FD /* Piluliers 4.0 WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C72E60621EC1F3770087D2FD /* Build configuration list for PBXNativeTarget "Piluliers 4.0 WatchKit App" */;
+			buildPhases = (
+				C72E60351EC1F3770087D2FD /* Resources */,
+				C72E60611EC1F3770087D2FD /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C72E60491EC1F3770087D2FD /* PBXTargetDependency */,
+			);
+			name = "Piluliers 4.0 WatchKit App";
+			productName = "Piluliers 4.0 WatchKit App";
+			productReference = C72E60371EC1F3770087D2FD /* Piluliers 4.0 WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C72E60451EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C72E605E1EC1F3770087D2FD /* Build configuration list for PBXNativeTarget "Piluliers 4.0 WatchKit Extension" */;
+			buildPhases = (
+				C72E60421EC1F3770087D2FD /* Sources */,
+				C72E60431EC1F3770087D2FD /* Frameworks */,
+				C72E60441EC1F3770087D2FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Piluliers 4.0 WatchKit Extension";
+			productName = "Piluliers 4.0 WatchKit Extension";
+			productReference = C72E60461EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C72E60181EC1F3770087D2FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Post CH AG";
+				TargetAttributes = {
+					C72E601F1EC1F3770087D2FD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = BURQ256D9M;
+						ProvisioningStyle = Automatic;
+					};
+					C72E60361EC1F3770087D2FD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = BURQ256D9M;
+						ProvisioningStyle = Automatic;
+					};
+					C72E60451EC1F3770087D2FD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = BURQ256D9M;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C72E601B1EC1F3770087D2FD /* Build configuration list for PBXProject "Piluliers 4.0" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C72E60171EC1F3770087D2FD;
+			productRefGroup = C72E60211EC1F3770087D2FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C72E601F1EC1F3770087D2FD /* Piluliers 4.0 */,
+				C72E60361EC1F3770087D2FD /* Piluliers 4.0 WatchKit App */,
+				C72E60451EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C72E601E1EC1F3770087D2FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72E60331EC1F3770087D2FD /* LaunchScreen.storyboard in Resources */,
+				C72E60301EC1F3770087D2FD /* Assets.xcassets in Resources */,
+				C72E602E1EC1F3770087D2FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72E60351EC1F3770087D2FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72E60401EC1F3770087D2FD /* Assets.xcassets in Resources */,
+				C72E603E1EC1F3770087D2FD /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72E60441EC1F3770087D2FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72E605A1EC1F3770087D2FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C72E601C1EC1F3770087D2FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72E602B1EC1F3770087D2FD /* ViewController.m in Sources */,
+				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
+				C72E60251EC1F3770087D2FD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72E60421EC1F3770087D2FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72E60521EC1F3770087D2FD /* ExtensionDelegate.m in Sources */,
+				C72E60581EC1F3770087D2FD /* ComplicationController.m in Sources */,
+				C72E604F1EC1F3770087D2FD /* InterfaceController.m in Sources */,
+				C72E60551EC1F3770087D2FD /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C72E603A1EC1F3770087D2FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C72E60361EC1F3770087D2FD /* Piluliers 4.0 WatchKit App */;
+			targetProxy = C72E60391EC1F3770087D2FD /* PBXContainerItemProxy */;
+		};
+		C72E60491EC1F3770087D2FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C72E60451EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension */;
+			targetProxy = C72E60481EC1F3770087D2FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C72E602C1EC1F3770087D2FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C72E602D1EC1F3770087D2FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C72E60311EC1F3770087D2FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C72E60321EC1F3770087D2FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C72E603C1EC1F3770087D2FD /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C72E603D1EC1F3770087D2FD /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C72E605C1EC1F3770087D2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C72E605D1EC1F3770087D2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C72E605F1EC1F3770087D2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = BURQ256D9M;
+				INFOPLIST_FILE = "Piluliers 4.0 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		C72E60601EC1F3770087D2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = BURQ256D9M;
+				INFOPLIST_FILE = "Piluliers 4.0 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		C72E60631EC1F3770087D2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BURQ256D9M;
+				IBSC_MODULE = Piluliers_4_0_WatchKit_Extension;
+				INFOPLIST_FILE = "Piluliers 4.0 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		C72E60641EC1F3770087D2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BURQ256D9M;
+				IBSC_MODULE = Piluliers_4_0_WatchKit_Extension;
+				INFOPLIST_FILE = "Piluliers 4.0 WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		C72E60671EC1F3770087D2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BURQ256D9M;
+				INFOPLIST_FILE = "Piluliers 4.0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C72E60681EC1F3770087D2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BURQ256D9M;
+				INFOPLIST_FILE = "Piluliers 4.0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C72E601B1EC1F3770087D2FD /* Build configuration list for PBXProject "Piluliers 4.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72E605C1EC1F3770087D2FD /* Debug */,
+				C72E605D1EC1F3770087D2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C72E605E1EC1F3770087D2FD /* Build configuration list for PBXNativeTarget "Piluliers 4.0 WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72E605F1EC1F3770087D2FD /* Debug */,
+				C72E60601EC1F3770087D2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C72E60621EC1F3770087D2FD /* Build configuration list for PBXNativeTarget "Piluliers 4.0 WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72E60631EC1F3770087D2FD /* Debug */,
+				C72E60641EC1F3770087D2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C72E60661EC1F3770087D2FD /* Build configuration list for PBXNativeTarget "Piluliers 4.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72E60671EC1F3770087D2FD /* Debug */,
+				C72E60681EC1F3770087D2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C72E60181EC1F3770087D2FD /* Project object */;
+}
