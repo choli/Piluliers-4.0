@@ -8,13 +8,15 @@
 
 #import "StartInterfaceController.h"
 #import "PillImageNameRow.h"
+#import <WatchConnectivity/WatchConnectivity.h>
 
 
-@interface StartInterfaceController ()
+@interface StartInterfaceController () <WCSessionDelegate>
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *nextReminderLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *timeLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *ampmLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *pillsTable;
+@property (nonatomic) WCSession *session;
 @end
 
 
@@ -25,6 +27,11 @@
 
     // Configure interface objects here.
     [self.nextReminderLabel setText:NSLocalizedString(@"label_next_reminder", nil)];
+    
+    self.session = [WCSession defaultSession];
+    self.session.delegate = self;
+    [self.session activateSession];
+    
     [self loadDataForTable];
     [self setupTable];
 }
@@ -52,8 +59,23 @@
     [self.ampmLabel setText:@""];
 }
 
+#pragma mark - WCSession delegate
+-(void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError *)error {
+    if (!error) {
+        [self loadDataForTable];
+    } else {
+        WKAlertAction *action = [WKAlertAction actionWithTitle:NSLocalizedString(@"alert_ok", nil) style:WKAlertActionStyleCancel handler:^(void){
+            //TODO: Error action
+            
+        }];
+        
+        [self presentAlertControllerWithTitle:NSLocalizedString(@"alert_title_error", nil) message:NSLocalizedString(@"alert_message_no_connection", nil) preferredStyle:WKAlertControllerStyleAlert actions:@[action]];
+    }
+}
+
+
 #pragma mark - setup table and load data for it
-- (NSDictionary *)loadDataForTable {
+- (NSDictionary *)loadDummyDataForTable {
     return @{@"time" : [NSDate dateWithTimeIntervalSince1970:1494591300],
              @"pills" : @[@{
                               @"name" : @"Mydocalm",
@@ -66,8 +88,17 @@
              };
 }
 
-- (void)setupTable {
-    NSDictionary *nextReminderData = [self loadDataForTable];
+- (NSDictionary *)loadDataForTable {
+    [self.session sendMessage:@{@"dummy":@"dummy"} replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
+    
+    } errorHandler:^(NSError * _Nonnull error) {
+        
+    }];
+    return @{@"dummy":@"dummy"};
+}
+
+- (void)setupTableWithDict:(NSDictionary *)nextReminderData {
+    //NSDictionary *nextReminderData = [self loadDummyDataForTable];
     [self setNextReminderTime:nextReminderData[@"time"]];
     
     NSArray *pillsToTake = nextReminderData[@"pills"];

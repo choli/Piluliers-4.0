@@ -33,7 +33,7 @@
                                 <tableRow identifier="PillImageNameRow" selectable="NO" id="8jm-TQ-JqE" customClass="PillImageNameRow">
                                     <group key="rootItem" width="1" alignment="left" id="9eh-rC-bzK">
                                         <items>
-                                            <imageView width="0.29999999999999999" alignment="left" verticalAlignment="center" contentMode="left" id="r0a-yp-KVd"/>
+                                            <imageView alignment="left" verticalAlignment="center" contentMode="left" id="r0a-yp-KVd"/>
                                             <label alignment="left" verticalAlignment="center" text="Label" id="SpH-KZ-HrS"/>
                                         </items>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
