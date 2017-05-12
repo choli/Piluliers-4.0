@@ -11,6 +11,11 @@
 @interface UIColor (CustomColors)
 
 + (UIColor*)colorPostYellow;
++ (UIColor*)hackathonTintColor;
++ (UIColor*)colorPostDarkBlue;
++ (UIColor*)cellSwipeTakeColor;
++ (UIColor*)cellSwipeSkipColor;
++ (UIColor*)cellSwipeIgnoreColor;
 
 + (UIColor*)colorWithHexString:(NSString*)hexString;
 - (NSString *)hexString;

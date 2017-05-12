@@ -18,6 +18,22 @@
     return [UIColor colorWithHexString:@"#607d8b"];
 }
 
++(UIColor*) colorPostDarkBlue {
+    return [UIColor colorWithHexString:@"#103A76"];
+}
+
++(UIColor*) cellSwipeTakeColor {
+    return [UIColor colorWithHexString:@"#8BC34A"];
+}
+
++(UIColor*) cellSwipeSkipColor {
+    return [UIColor colorWithHexString:@"#FFEB3B"];
+}
+
++(UIColor*) cellSwipeIgnoreColor {
+    return [UIColor colorWithHexString:@"#E74C3C"];
+}
+
 -(NSString *)hexString {
     CGFloat redFloatValue, greenFloatValue, blueFloatValue, alphaFloatValue;
     int redIntValue, greenIntValue, blueIntValue, alphaIntValue;

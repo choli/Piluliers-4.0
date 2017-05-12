@@ -41,8 +41,6 @@
     
     [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(150, 0, 0, 0)];
     [self.tableView setContentInset:UIEdgeInsetsMake(150, 0, 0, 0)];
-    
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +67,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80.0f;
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"12.05.2017";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

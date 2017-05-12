@@ -32,8 +32,12 @@
 - (void)addTableViewHeaderView {
     TimelineHeaderView *timelineHeaderView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([TimelineHeaderView class]) owner:self options:nil] firstObject];
     //@meumannu: add username and image
-    timelineHeaderView.usernameLabel.text = @"Sandro";
+    timelineHeaderView.usernameLabel.text = @"Hallo Sandro";
     timelineHeaderView.userImageView.image = [UIImage imageNamed:@"sandro"];
+    timelineHeaderView.backgroundColor = [UIColor colorPostDarkBlue];
+    timelineHeaderView.datePicker.backgroundColor = [UIColor whiteColor];
+    [timelineHeaderView.datePicker addTarget:self action:@selector(dateChanged:)
+     forControlEvents:UIControlEventValueChanged];
     self.tableView.tableHeaderView = timelineHeaderView;
 }
 
@@ -44,6 +48,10 @@
 
 - (void)addMedication:(UIBarButtonItem*)barButtonItem {
     //todo present detail view controller
+}
+
+- (void)dateChanged:(UIDatePicker*)datePicker {
+    // handle date changes
 }
 
 # pragma mark - Table View Data Source
@@ -94,6 +102,34 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //todo stoecklim: present detail view controller
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewRowAction *takeAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"take", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        //todo stoecklim: mark as taken
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    }];
+    
+    takeAction.backgroundColor = [UIColor cellSwipeTakeColor];
+
+    UITableViewRowAction *skipAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"skip", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        //todo stoecklim: mark as skipped
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    }];
+    
+    skipAction.backgroundColor = [UIColor cellSwipeSkipColor];
+
+    UITableViewRowAction *ignoreAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"ignore", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        //todo stoecklim: mark as ignored
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    }];
+    
+    ignoreAction.backgroundColor = [UIColor cellSwipeIgnoreColor];
+
+    return @[takeAction, skipAction, ignoreAction];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 @end

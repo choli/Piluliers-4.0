@@ -13,3 +13,6 @@
 "midday"="Midday";
 "evening"="Evening";
 "night"="Night";
+"take"="Take";
+"skip"="Skip";
+"ignore"="Ignore";
