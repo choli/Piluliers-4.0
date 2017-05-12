@@ -20,3 +20,8 @@
 
 //Controler title
 "controller_title_back"="Back";
+
+//Buttons
+"button_take_pill"="Take";
+"button_skip_pill"="Skip";
+"button_ignore_pill"="Ignore";

@@ -85,6 +85,7 @@
 		CFAEE8A21EC61AB500CC8974 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEE89B1EC61AB500CC8974 /* QRCodeReader.m */; };
 		CFAEE8A31EC61AB500CC8974 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEE89D1EC61AB500CC8974 /* QRCameraSwitchButton.m */; };
 		CFAEE8A41EC61AB500CC8974 /* QRToggleTorchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEE89F1EC61AB500CC8974 /* QRToggleTorchButton.m */; };
+		C78208A91EC65E7C00CD80AF /* TakePillInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78208A81EC65E7C00CD80AF /* TakePillInterfaceController.m */; };
 		F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */; };
 		F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01A825B1EC59C6F008CEC5A /* Localizable.strings */; };
 		F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */; };
@@ -305,6 +306,8 @@
 		CFAEE89D1EC61AB500CC8974 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
 		CFAEE89E1EC61AB500CC8974 /* QRToggleTorchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRToggleTorchButton.h; sourceTree = "<group>"; };
 		CFAEE89F1EC61AB500CC8974 /* QRToggleTorchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRToggleTorchButton.m; sourceTree = "<group>"; };
+		C78208A71EC65E7C00CD80AF /* TakePillInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TakePillInterfaceController.h; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/TakePillInterfaceController.h"; sourceTree = "<group>"; };
+		C78208A81EC65E7C00CD80AF /* TakePillInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TakePillInterfaceController.m; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/TakePillInterfaceController.m"; sourceTree = "<group>"; };
 		F01A82511EC596C4008CEC5A /* MainMenuTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTabBarController.h; sourceTree = "<group>"; };
 		F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTabBarController.m; sourceTree = "<group>"; };
 		F01A825A1EC59C6F008CEC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -599,6 +602,8 @@
 				C72E60771EC5ABE00087D2FD /* StartInterfaceController.m */,
 				C72E608E1EC5DCB60087D2FD /* DailyOverviewInterfaceController.h */,
 				C72E608F1EC5DCB60087D2FD /* DailyOverviewInterfaceController.m */,
+				C78208A71EC65E7C00CD80AF /* TakePillInterfaceController.h */,
+				C78208A81EC65E7C00CD80AF /* TakePillInterfaceController.m */,
 			);
 			name = InterfaceControllers;
 			path = ..;
@@ -674,11 +679,8 @@
 		F01A824F1EC595F1008CEC5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				CFAEE8911EC60BB200CC8974 /* BarCodeReader */,
-=======
 				F01A82A61EC66C0F008CEC5A /* Edit Drugs */,
->>>>>>> develop
 				F01A828A1EC5FDA4008CEC5A /* Settings */,
 				F01A82891EC5FD9B008CEC5A /* Drugs */,
 				F01A82881EC5FD94008CEC5A /* History */,
@@ -1183,6 +1185,7 @@
 				C72E60971EC5DCF90087D2FD /* ComplicationController.m in Sources */,
 				C72E60781EC5ABE00087D2FD /* StartInterfaceController.m in Sources */,
 				C72E60901EC5DCB60087D2FD /* DailyOverviewInterfaceController.m in Sources */,
+				C78208A91EC65E7C00CD80AF /* TakePillInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
