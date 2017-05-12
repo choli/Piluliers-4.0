@@ -137,9 +137,15 @@
                         </button>
                         <button width="1" alignment="center" title="Button" id="IYs-Qh-0xU">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="skipAction" destination="BIs-9w-9ET" id="YhJ-KR-jhu"/>
+                            </connections>
                         </button>
                         <button width="1" alignment="center" title="Button" id="bV5-y1-H6l">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="ignoreAction" destination="BIs-9w-9ET" id="D7t-7O-2nP"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>
