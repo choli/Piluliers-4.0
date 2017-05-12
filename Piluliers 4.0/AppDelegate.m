@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainMenuTabBarController.h"
 #import "AppDelegate+Appearance.h"
+#import "BarCodeViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +19,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    UIStoryboard * uiStroyboard = [UIStoryboard storyboardWithName:@"Qrcode" bundle:nil];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[MainMenuTabBarController alloc] initWithNibName:@"MainMenuTabBarController" bundle:nil];
+    self.window.rootViewController = [uiStroyboard instantiateViewControllerWithIdentifier:@"BarCodeViewController"];
     [self setupAppearance];
     [self.window makeKeyAndVisible];
     return YES;
