@@ -9,6 +9,7 @@
 #import "TimelineTableViewController.h"
 #import "TimelineTableViewCell.h"
 #import "UIColor+CustomColors.h"
+#import "TimelineHeaderView.h"
 
 @interface TimelineTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -23,6 +24,12 @@
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorPostYellow]];
     [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     self.title = NSLocalizedString(@"timeline", nil);
+    TimelineHeaderView *timelineHeaderView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([TimelineHeaderView class]) owner:self options:nil] firstObject];
+    timelineHeaderView.translatesAutoresizingMaskIntoConstraints = NO;
+    //@meumannu: add username and image
+    timelineHeaderView.usernameLabel.text = @"Sandro";
+    timelineHeaderView.userImageView.image = [UIImage imageNamed:@"sandro"];
+    self.tableView.tableHeaderView = timelineHeaderView;
     [self.tableView reloadData];
 }
 

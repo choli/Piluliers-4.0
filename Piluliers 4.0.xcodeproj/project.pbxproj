@@ -30,6 +30,8 @@
 		F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */; };
 		F01A82741EC5AAF2008CEC5A /* TimelineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */; };
 		F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A827A1EC5D39A008CEC5A /* UIColor+CustomColors.m */; };
+		F01A827F1EC5D65F008CEC5A /* TimelineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A827E1EC5D65F008CEC5A /* TimelineHeaderView.m */; };
+		F01A82811EC5D6FC008CEC5A /* TimelineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,9 @@
 		F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewCell.m; sourceTree = "<group>"; };
 		F01A82791EC5D39A008CEC5A /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		F01A827A1EC5D39A008CEC5A /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		F01A827D1EC5D65F008CEC5A /* TimelineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineHeaderView.h; sourceTree = "<group>"; };
+		F01A827E1EC5D65F008CEC5A /* TimelineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineHeaderView.m; sourceTree = "<group>"; };
+		F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +292,7 @@
 		F01A82611EC59DED008CEC5A /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
+				F01A827C1EC5D641008CEC5A /* TableViewHeaderView */,
 				F01A82701EC5AAD5008CEC5A /* TableViewCell */,
 				F01A82621EC59E2F008CEC5A /* TimelineTableViewController.h */,
 				F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */,
@@ -310,6 +316,16 @@
 				F01A827A1EC5D39A008CEC5A /* UIColor+CustomColors.m */,
 			);
 			name = Additions;
+			sourceTree = "<group>";
+		};
+		F01A827C1EC5D641008CEC5A /* TableViewHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				F01A827D1EC5D65F008CEC5A /* TimelineHeaderView.h */,
+				F01A827E1EC5D65F008CEC5A /* TimelineHeaderView.m */,
+				F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */,
+			);
+			name = TableViewHeaderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01A82811EC5D6FC008CEC5A /* TimelineHeaderView.xib in Resources */,
 				F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */,
 				C72E60331EC1F3770087D2FD /* LaunchScreen.storyboard in Resources */,
 				C72E60301EC1F3770087D2FD /* Assets.xcassets in Resources */,
@@ -586,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01A827F1EC5D65F008CEC5A /* TimelineHeaderView.m in Sources */,
 				F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */,
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
