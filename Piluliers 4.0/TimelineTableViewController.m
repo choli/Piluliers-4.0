@@ -19,8 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorPostYellow]];
     [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     self.title = NSLocalizedString(@"timeline", nil);
