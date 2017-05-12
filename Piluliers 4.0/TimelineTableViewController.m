@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"timeline", nil);
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"pill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
     [self.tableView reloadData];
 }
 
@@ -39,6 +40,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)addMedication:(UIBarButtonItem*)barButtonItem {
+    //todo present detail view controller
 }
 
 # pragma mark - Table View Data Source

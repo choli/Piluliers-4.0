@@ -19,11 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"drugs", nil);
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"pill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)addMedication:(UIBarButtonItem*)barButtonItem {
+    //todo present detail view controller
 }
 
 #pragma mark - Table view data source
