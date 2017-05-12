@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"timeline", nil);
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"pill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addpill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
     [self.tableView reloadData];
 }
 
@@ -34,7 +34,7 @@
     //@meumannu: add username and image
     timelineHeaderView.usernameLabel.text = @"Hallo Sandro";
     timelineHeaderView.userImageView.image = [UIImage imageNamed:@"sandro"];
-    timelineHeaderView.backgroundColor = [UIColor colorPostDarkBlue];
+    timelineHeaderView.backgroundColor = [UIColor hackathonAccentColor];
     timelineHeaderView.datePicker.backgroundColor = [UIColor whiteColor];
     [timelineHeaderView.datePicker addTarget:self action:@selector(dateChanged:)
      forControlEvents:UIControlEventValueChanged];
@@ -89,7 +89,8 @@
     TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
     //todo meumannu: set data from model
     cell.intakeTime.text = @"12:00";
-    cell.pillImage.image = [UIImage imageNamed:@"pill"];
+    cell.pillImage.image = [UIImage imageNamed:@"addpill"];
+    [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
     cell.medicamentName.text = @"Medikament X";
     cell.medicamentDescription.text = @"Dies ist eine Pille";
     cell.medicamentDosage.text = @"1 Kapsel";

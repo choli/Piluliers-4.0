@@ -9,6 +9,7 @@
 #import "HistoryTableViewController.h"
 #import "TimelineTableViewCell.h"
 #import "HistoryGraphView.h"
+#import "UIColor+CustomColors.h"
 
 @interface HistoryTableViewController ()
 
@@ -22,22 +23,15 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"history", nil);
     
-    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-    [self.navigationController.view addSubview:blurEffectView];
-    blurEffectView.translatesAutoresizingMaskIntoConstraints = NO;
-    [blurEffectView.heightAnchor constraintEqualToConstant:150].active = YES;
-    self.topDistanceConstraint = [blurEffectView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:[self getNavBarHeight]];
-    self.topDistanceConstraint.active = YES;
-    [blurEffectView.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor].active = YES;
-    [blurEffectView.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor].active = YES;
-    
     HistoryGraphView *historyGraphView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([HistoryGraphView class]) owner:self options:nil] firstObject];
-    [blurEffectView addSubview:historyGraphView];
-    historyGraphView.backgroundColor = [UIColor clearColor];
-    [historyGraphView.leftAnchor constraintEqualToAnchor:blurEffectView.leftAnchor].active = YES;
-    [historyGraphView.rightAnchor constraintEqualToAnchor:blurEffectView.rightAnchor].active = YES;    [historyGraphView.topAnchor constraintEqualToAnchor:blurEffectView.topAnchor].active = YES;
-    [historyGraphView.bottomAnchor constraintEqualToAnchor:blurEffectView.bottomAnchor].active = YES;
+    [historyGraphView setBackgroundColor:[UIColor hackathonAccentColor]];
+    [self.navigationController.view addSubview:historyGraphView];
+    historyGraphView.translatesAutoresizingMaskIntoConstraints = NO;
+    [historyGraphView.heightAnchor constraintEqualToConstant:150].active = YES;
+    self.topDistanceConstraint = [historyGraphView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:[self getNavBarHeight]];
+    self.topDistanceConstraint.active = YES;
+    [historyGraphView.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor].active = YES;
+    [historyGraphView.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor].active = YES;
     
     [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(150, 0, 0, 0)];
     [self.tableView setContentInset:UIEdgeInsetsMake(150, 0, 0, 0)];
@@ -78,6 +72,7 @@
     //todo meumannu: set data from model
     cell.intakeTime.text = @"12:00";
     cell.pillImage.image = [UIImage imageNamed:@"pill"];
+    [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
     cell.medicamentName.text = @"Medikament X";
     cell.medicamentDescription.text = @"Dies ist eine Pille";
     cell.medicamentDosage.text = @"1 Kapsel";

@@ -10,13 +10,14 @@
 
 @interface UIColor (CustomColors)
 
-+ (UIColor*)colorPostYellow;
 + (UIColor*)hackathonTintColor;
++ (UIColor*)hackathonAccentColor;
 + (UIColor*)colorPostDarkBlue;
 + (UIColor*)cellSwipeTakeColor;
 + (UIColor*)cellSwipeSkipColor;
 + (UIColor*)cellSwipeIgnoreColor;
 
++ (void)colorIconImageView:(UIImageView*)imageView color:(UIColor*)color;
 + (UIColor*)colorWithHexString:(NSString*)hexString;
 - (NSString *)hexString;
 
