@@ -7,6 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2316DF3C1EC5F6DE006284D6 /* Content+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEE51EC5F6DE006284D6 /* Content+CoreDataClass.m */; };
+		2316DF3D1EC5F6DE006284D6 /* Content+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEE71EC5F6DE006284D6 /* Content+CoreDataProperties.m */; };
+		2316DF3E1EC5F6DE006284D6 /* DispenseRequest+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEE91EC5F6DE006284D6 /* DispenseRequest+CoreDataClass.m */; };
+		2316DF3F1EC5F6DF006284D6 /* DispenseRequest+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEEB1EC5F6DE006284D6 /* DispenseRequest+CoreDataProperties.m */; };
+		2316DF401EC5F6DF006284D6 /* Note+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEED1EC5F6DE006284D6 /* Note+CoreDataClass.m */; };
+		2316DF411EC5F6DF006284D6 /* Note+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEEF1EC5F6DE006284D6 /* Note+CoreDataProperties.m */; };
+		2316DF421EC5F6DF006284D6 /* Period+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEF11EC5F6DE006284D6 /* Period+CoreDataClass.m */; };
+		2316DF431EC5F6DF006284D6 /* Period+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEF31EC5F6DE006284D6 /* Period+CoreDataProperties.m */; };
+		2316DF441EC5F6DF006284D6 /* Ratio+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEF51EC5F6DE006284D6 /* Ratio+CoreDataClass.m */; };
+		2316DF451EC5F6DF006284D6 /* Ratio+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEF71EC5F6DE006284D6 /* Ratio+CoreDataProperties.m */; };
+		2316DF461EC5F6DF006284D6 /* Batch+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEF91EC5F6DE006284D6 /* Batch+CoreDataClass.m */; };
+		2316DF471EC5F6DF006284D6 /* Batch+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEFB1EC5F6DE006284D6 /* Batch+CoreDataProperties.m */; };
+		2316DF481EC5F6DF006284D6 /* Dosage+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEFD1EC5F6DE006284D6 /* Dosage+CoreDataClass.m */; };
+		2316DF491EC5F6DF006284D6 /* Dosage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DEFF1EC5F6DE006284D6 /* Dosage+CoreDataProperties.m */; };
+		2316DF4A1EC5F6DF006284D6 /* EventTiming+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF011EC5F6DE006284D6 /* EventTiming+CoreDataClass.m */; };
+		2316DF4B1EC5F6DF006284D6 /* EventTiming+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF031EC5F6DE006284D6 /* EventTiming+CoreDataProperties.m */; };
+		2316DF4C1EC5F6DF006284D6 /* Ingredient+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF051EC5F6DE006284D6 /* Ingredient+CoreDataClass.m */; };
+		2316DF4D1EC5F6DF006284D6 /* Ingredient+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF071EC5F6DE006284D6 /* Ingredient+CoreDataProperties.m */; };
+		2316DF4E1EC5F6DF006284D6 /* MedicationPlan+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF091EC5F6DE006284D6 /* MedicationPlan+CoreDataClass.m */; };
+		2316DF4F1EC5F6DF006284D6 /* MedicationPlan+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF0B1EC5F6DE006284D6 /* MedicationPlan+CoreDataProperties.m */; };
+		2316DF501EC5F6DF006284D6 /* Repeat+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF0D1EC5F6DE006284D6 /* Repeat+CoreDataClass.m */; };
+		2316DF511EC5F6DF006284D6 /* Repeat+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF0F1EC5F6DE006284D6 /* Repeat+CoreDataProperties.m */; };
+		2316DF521EC5F6DF006284D6 /* BoundsRange+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF111EC5F6DE006284D6 /* BoundsRange+CoreDataClass.m */; };
+		2316DF531EC5F6DF006284D6 /* BoundsRange+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF131EC5F6DE006284D6 /* BoundsRange+CoreDataProperties.m */; };
+		2316DF541EC5F6DF006284D6 /* Attachment+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF151EC5F6DE006284D6 /* Attachment+CoreDataClass.m */; };
+		2316DF551EC5F6DF006284D6 /* Attachment+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF171EC5F6DE006284D6 /* Attachment+CoreDataProperties.m */; };
+		2316DF561EC5F6DF006284D6 /* Range+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF191EC5F6DE006284D6 /* Range+CoreDataClass.m */; };
+		2316DF571EC5F6DF006284D6 /* Range+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF1B1EC5F6DE006284D6 /* Range+CoreDataProperties.m */; };
+		2316DF581EC5F6DF006284D6 /* Timing+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF1D1EC5F6DE006284D6 /* Timing+CoreDataClass.m */; };
+		2316DF591EC5F6DF006284D6 /* Timing+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF1F1EC5F6DE006284D6 /* Timing+CoreDataProperties.m */; };
+		2316DF5A1EC5F6DF006284D6 /* CodeableConcept+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF211EC5F6DE006284D6 /* CodeableConcept+CoreDataClass.m */; };
+		2316DF5B1EC5F6DF006284D6 /* CodeableConcept+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF231EC5F6DE006284D6 /* CodeableConcept+CoreDataProperties.m */; };
+		2316DF5C1EC5F6DF006284D6 /* Quantity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF251EC5F6DE006284D6 /* Quantity+CoreDataClass.m */; };
+		2316DF5D1EC5F6DF006284D6 /* Quantity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF271EC5F6DE006284D6 /* Quantity+CoreDataProperties.m */; };
+		2316DF5E1EC5F6DF006284D6 /* MedicationRequest+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF291EC5F6DE006284D6 /* MedicationRequest+CoreDataClass.m */; };
+		2316DF5F1EC5F6DF006284D6 /* MedicationRequest+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF2B1EC5F6DE006284D6 /* MedicationRequest+CoreDataProperties.m */; };
+		2316DF601EC5F6DF006284D6 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF2D1EC5F6DE006284D6 /* User+CoreDataClass.m */; };
+		2316DF611EC5F6DF006284D6 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF2F1EC5F6DE006284D6 /* User+CoreDataProperties.m */; };
+		2316DF621EC5F6DF006284D6 /* Package+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF311EC5F6DE006284D6 /* Package+CoreDataClass.m */; };
+		2316DF631EC5F6DF006284D6 /* Package+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF331EC5F6DE006284D6 /* Package+CoreDataProperties.m */; };
+		2316DF641EC5F6DF006284D6 /* Medication+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF351EC5F6DE006284D6 /* Medication+CoreDataClass.m */; };
+		2316DF651EC5F6DF006284D6 /* Medication+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF371EC5F6DE006284D6 /* Medication+CoreDataProperties.m */; };
+		2316DF661EC5F6DF006284D6 /* Coding+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF391EC5F6DE006284D6 /* Coding+CoreDataClass.m */; };
+		2316DF671EC5F6DF006284D6 /* Coding+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF3B1EC5F6DE006284D6 /* Coding+CoreDataProperties.m */; };
 		2372DDFA1EC5B76900E18A0F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2372DDF61EC5B76900E18A0F /* CFNetwork.framework */; };
 		2372DDFB1EC5B76900E18A0F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2372DDF71EC5B76900E18A0F /* CoreData.framework */; };
 		2372DDFC1EC5B76900E18A0F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2372DDF81EC5B76900E18A0F /* MobileCoreServices.framework */; };
@@ -81,6 +125,94 @@
 /* Begin PBXFileReference section */
 		05DF0918CC641785E1244598 /* Pods-Piluliers 4.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0.release.xcconfig"; sourceTree = "<group>"; };
 		0AD7B1CB3057483E18828E20 /* Pods-Piluliers 4.0 WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0 WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0 WatchKit App/Pods-Piluliers 4.0 WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		2316DEE41EC5F6DE006284D6 /* Content+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Content+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DEE51EC5F6DE006284D6 /* Content+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Content+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DEE61EC5F6DE006284D6 /* Content+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Content+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DEE71EC5F6DE006284D6 /* Content+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Content+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DEE81EC5F6DE006284D6 /* DispenseRequest+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DispenseRequest+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DEE91EC5F6DE006284D6 /* DispenseRequest+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DispenseRequest+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DEEA1EC5F6DE006284D6 /* DispenseRequest+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DispenseRequest+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DEEB1EC5F6DE006284D6 /* DispenseRequest+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DispenseRequest+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DEEC1EC5F6DE006284D6 /* Note+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Note+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DEED1EC5F6DE006284D6 /* Note+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Note+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DEEE1EC5F6DE006284D6 /* Note+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Note+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DEEF1EC5F6DE006284D6 /* Note+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Note+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DEF01EC5F6DE006284D6 /* Period+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Period+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DEF11EC5F6DE006284D6 /* Period+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Period+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DEF21EC5F6DE006284D6 /* Period+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Period+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DEF31EC5F6DE006284D6 /* Period+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Period+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DEF41EC5F6DE006284D6 /* Ratio+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ratio+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DEF51EC5F6DE006284D6 /* Ratio+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Ratio+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DEF61EC5F6DE006284D6 /* Ratio+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ratio+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DEF71EC5F6DE006284D6 /* Ratio+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Ratio+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DEF81EC5F6DE006284D6 /* Batch+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Batch+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DEF91EC5F6DE006284D6 /* Batch+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Batch+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DEFA1EC5F6DE006284D6 /* Batch+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Batch+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DEFB1EC5F6DE006284D6 /* Batch+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Batch+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DEFC1EC5F6DE006284D6 /* Dosage+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dosage+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DEFD1EC5F6DE006284D6 /* Dosage+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Dosage+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DEFE1EC5F6DE006284D6 /* Dosage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dosage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DEFF1EC5F6DE006284D6 /* Dosage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Dosage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF001EC5F6DE006284D6 /* EventTiming+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventTiming+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF011EC5F6DE006284D6 /* EventTiming+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventTiming+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF021EC5F6DE006284D6 /* EventTiming+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventTiming+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF031EC5F6DE006284D6 /* EventTiming+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventTiming+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF041EC5F6DE006284D6 /* Ingredient+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ingredient+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF051EC5F6DE006284D6 /* Ingredient+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Ingredient+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF061EC5F6DE006284D6 /* Ingredient+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ingredient+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF071EC5F6DE006284D6 /* Ingredient+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Ingredient+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF081EC5F6DE006284D6 /* MedicationPlan+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MedicationPlan+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF091EC5F6DE006284D6 /* MedicationPlan+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MedicationPlan+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF0A1EC5F6DE006284D6 /* MedicationPlan+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MedicationPlan+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF0B1EC5F6DE006284D6 /* MedicationPlan+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MedicationPlan+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF0C1EC5F6DE006284D6 /* Repeat+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Repeat+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF0D1EC5F6DE006284D6 /* Repeat+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Repeat+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF0E1EC5F6DE006284D6 /* Repeat+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Repeat+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF0F1EC5F6DE006284D6 /* Repeat+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Repeat+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF101EC5F6DE006284D6 /* BoundsRange+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BoundsRange+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF111EC5F6DE006284D6 /* BoundsRange+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BoundsRange+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF121EC5F6DE006284D6 /* BoundsRange+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BoundsRange+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF131EC5F6DE006284D6 /* BoundsRange+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BoundsRange+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF141EC5F6DE006284D6 /* Attachment+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Attachment+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF151EC5F6DE006284D6 /* Attachment+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Attachment+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF161EC5F6DE006284D6 /* Attachment+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Attachment+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF171EC5F6DE006284D6 /* Attachment+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Attachment+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF181EC5F6DE006284D6 /* Range+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Range+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF191EC5F6DE006284D6 /* Range+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Range+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF1A1EC5F6DE006284D6 /* Range+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Range+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF1B1EC5F6DE006284D6 /* Range+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Range+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF1C1EC5F6DE006284D6 /* Timing+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Timing+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF1D1EC5F6DE006284D6 /* Timing+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Timing+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF1E1EC5F6DE006284D6 /* Timing+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Timing+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF1F1EC5F6DE006284D6 /* Timing+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Timing+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF201EC5F6DE006284D6 /* CodeableConcept+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CodeableConcept+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF211EC5F6DE006284D6 /* CodeableConcept+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CodeableConcept+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF221EC5F6DE006284D6 /* CodeableConcept+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CodeableConcept+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF231EC5F6DE006284D6 /* CodeableConcept+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CodeableConcept+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF241EC5F6DE006284D6 /* Quantity+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Quantity+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF251EC5F6DE006284D6 /* Quantity+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Quantity+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF261EC5F6DE006284D6 /* Quantity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Quantity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF271EC5F6DE006284D6 /* Quantity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Quantity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF281EC5F6DE006284D6 /* MedicationRequest+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MedicationRequest+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF291EC5F6DE006284D6 /* MedicationRequest+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MedicationRequest+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF2A1EC5F6DE006284D6 /* MedicationRequest+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MedicationRequest+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF2B1EC5F6DE006284D6 /* MedicationRequest+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MedicationRequest+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF2C1EC5F6DE006284D6 /* User+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF2D1EC5F6DE006284D6 /* User+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF2E1EC5F6DE006284D6 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF2F1EC5F6DE006284D6 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF301EC5F6DE006284D6 /* Package+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Package+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF311EC5F6DE006284D6 /* Package+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Package+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF321EC5F6DE006284D6 /* Package+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Package+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF331EC5F6DE006284D6 /* Package+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Package+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF341EC5F6DE006284D6 /* Medication+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Medication+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF351EC5F6DE006284D6 /* Medication+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Medication+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF361EC5F6DE006284D6 /* Medication+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Medication+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF371EC5F6DE006284D6 /* Medication+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Medication+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2316DF381EC5F6DE006284D6 /* Coding+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Coding+CoreDataClass.h"; sourceTree = "<group>"; };
+		2316DF391EC5F6DE006284D6 /* Coding+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Coding+CoreDataClass.m"; sourceTree = "<group>"; };
+		2316DF3A1EC5F6DE006284D6 /* Coding+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Coding+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2316DF3B1EC5F6DE006284D6 /* Coding+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Coding+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2372DDF61EC5B76900E18A0F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2372DDF71EC5B76900E18A0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2372DDF81EC5B76900E18A0F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -284,6 +416,94 @@
 		CF3A7D4C1EC5A431001DDB66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2316DEE41EC5F6DE006284D6 /* Content+CoreDataClass.h */,
+				2316DEE51EC5F6DE006284D6 /* Content+CoreDataClass.m */,
+				2316DEE61EC5F6DE006284D6 /* Content+CoreDataProperties.h */,
+				2316DEE71EC5F6DE006284D6 /* Content+CoreDataProperties.m */,
+				2316DEE81EC5F6DE006284D6 /* DispenseRequest+CoreDataClass.h */,
+				2316DEE91EC5F6DE006284D6 /* DispenseRequest+CoreDataClass.m */,
+				2316DEEA1EC5F6DE006284D6 /* DispenseRequest+CoreDataProperties.h */,
+				2316DEEB1EC5F6DE006284D6 /* DispenseRequest+CoreDataProperties.m */,
+				2316DEEC1EC5F6DE006284D6 /* Note+CoreDataClass.h */,
+				2316DEED1EC5F6DE006284D6 /* Note+CoreDataClass.m */,
+				2316DEEE1EC5F6DE006284D6 /* Note+CoreDataProperties.h */,
+				2316DEEF1EC5F6DE006284D6 /* Note+CoreDataProperties.m */,
+				2316DEF01EC5F6DE006284D6 /* Period+CoreDataClass.h */,
+				2316DEF11EC5F6DE006284D6 /* Period+CoreDataClass.m */,
+				2316DEF21EC5F6DE006284D6 /* Period+CoreDataProperties.h */,
+				2316DEF31EC5F6DE006284D6 /* Period+CoreDataProperties.m */,
+				2316DEF41EC5F6DE006284D6 /* Ratio+CoreDataClass.h */,
+				2316DEF51EC5F6DE006284D6 /* Ratio+CoreDataClass.m */,
+				2316DEF61EC5F6DE006284D6 /* Ratio+CoreDataProperties.h */,
+				2316DEF71EC5F6DE006284D6 /* Ratio+CoreDataProperties.m */,
+				2316DEF81EC5F6DE006284D6 /* Batch+CoreDataClass.h */,
+				2316DEF91EC5F6DE006284D6 /* Batch+CoreDataClass.m */,
+				2316DEFA1EC5F6DE006284D6 /* Batch+CoreDataProperties.h */,
+				2316DEFB1EC5F6DE006284D6 /* Batch+CoreDataProperties.m */,
+				2316DEFC1EC5F6DE006284D6 /* Dosage+CoreDataClass.h */,
+				2316DEFD1EC5F6DE006284D6 /* Dosage+CoreDataClass.m */,
+				2316DEFE1EC5F6DE006284D6 /* Dosage+CoreDataProperties.h */,
+				2316DEFF1EC5F6DE006284D6 /* Dosage+CoreDataProperties.m */,
+				2316DF001EC5F6DE006284D6 /* EventTiming+CoreDataClass.h */,
+				2316DF011EC5F6DE006284D6 /* EventTiming+CoreDataClass.m */,
+				2316DF021EC5F6DE006284D6 /* EventTiming+CoreDataProperties.h */,
+				2316DF031EC5F6DE006284D6 /* EventTiming+CoreDataProperties.m */,
+				2316DF041EC5F6DE006284D6 /* Ingredient+CoreDataClass.h */,
+				2316DF051EC5F6DE006284D6 /* Ingredient+CoreDataClass.m */,
+				2316DF061EC5F6DE006284D6 /* Ingredient+CoreDataProperties.h */,
+				2316DF071EC5F6DE006284D6 /* Ingredient+CoreDataProperties.m */,
+				2316DF081EC5F6DE006284D6 /* MedicationPlan+CoreDataClass.h */,
+				2316DF091EC5F6DE006284D6 /* MedicationPlan+CoreDataClass.m */,
+				2316DF0A1EC5F6DE006284D6 /* MedicationPlan+CoreDataProperties.h */,
+				2316DF0B1EC5F6DE006284D6 /* MedicationPlan+CoreDataProperties.m */,
+				2316DF0C1EC5F6DE006284D6 /* Repeat+CoreDataClass.h */,
+				2316DF0D1EC5F6DE006284D6 /* Repeat+CoreDataClass.m */,
+				2316DF0E1EC5F6DE006284D6 /* Repeat+CoreDataProperties.h */,
+				2316DF0F1EC5F6DE006284D6 /* Repeat+CoreDataProperties.m */,
+				2316DF101EC5F6DE006284D6 /* BoundsRange+CoreDataClass.h */,
+				2316DF111EC5F6DE006284D6 /* BoundsRange+CoreDataClass.m */,
+				2316DF121EC5F6DE006284D6 /* BoundsRange+CoreDataProperties.h */,
+				2316DF131EC5F6DE006284D6 /* BoundsRange+CoreDataProperties.m */,
+				2316DF141EC5F6DE006284D6 /* Attachment+CoreDataClass.h */,
+				2316DF151EC5F6DE006284D6 /* Attachment+CoreDataClass.m */,
+				2316DF161EC5F6DE006284D6 /* Attachment+CoreDataProperties.h */,
+				2316DF171EC5F6DE006284D6 /* Attachment+CoreDataProperties.m */,
+				2316DF181EC5F6DE006284D6 /* Range+CoreDataClass.h */,
+				2316DF191EC5F6DE006284D6 /* Range+CoreDataClass.m */,
+				2316DF1A1EC5F6DE006284D6 /* Range+CoreDataProperties.h */,
+				2316DF1B1EC5F6DE006284D6 /* Range+CoreDataProperties.m */,
+				2316DF1C1EC5F6DE006284D6 /* Timing+CoreDataClass.h */,
+				2316DF1D1EC5F6DE006284D6 /* Timing+CoreDataClass.m */,
+				2316DF1E1EC5F6DE006284D6 /* Timing+CoreDataProperties.h */,
+				2316DF1F1EC5F6DE006284D6 /* Timing+CoreDataProperties.m */,
+				2316DF201EC5F6DE006284D6 /* CodeableConcept+CoreDataClass.h */,
+				2316DF211EC5F6DE006284D6 /* CodeableConcept+CoreDataClass.m */,
+				2316DF221EC5F6DE006284D6 /* CodeableConcept+CoreDataProperties.h */,
+				2316DF231EC5F6DE006284D6 /* CodeableConcept+CoreDataProperties.m */,
+				2316DF241EC5F6DE006284D6 /* Quantity+CoreDataClass.h */,
+				2316DF251EC5F6DE006284D6 /* Quantity+CoreDataClass.m */,
+				2316DF261EC5F6DE006284D6 /* Quantity+CoreDataProperties.h */,
+				2316DF271EC5F6DE006284D6 /* Quantity+CoreDataProperties.m */,
+				2316DF281EC5F6DE006284D6 /* MedicationRequest+CoreDataClass.h */,
+				2316DF291EC5F6DE006284D6 /* MedicationRequest+CoreDataClass.m */,
+				2316DF2A1EC5F6DE006284D6 /* MedicationRequest+CoreDataProperties.h */,
+				2316DF2B1EC5F6DE006284D6 /* MedicationRequest+CoreDataProperties.m */,
+				2316DF2C1EC5F6DE006284D6 /* User+CoreDataClass.h */,
+				2316DF2D1EC5F6DE006284D6 /* User+CoreDataClass.m */,
+				2316DF2E1EC5F6DE006284D6 /* User+CoreDataProperties.h */,
+				2316DF2F1EC5F6DE006284D6 /* User+CoreDataProperties.m */,
+				2316DF301EC5F6DE006284D6 /* Package+CoreDataClass.h */,
+				2316DF311EC5F6DE006284D6 /* Package+CoreDataClass.m */,
+				2316DF321EC5F6DE006284D6 /* Package+CoreDataProperties.h */,
+				2316DF331EC5F6DE006284D6 /* Package+CoreDataProperties.m */,
+				2316DF341EC5F6DE006284D6 /* Medication+CoreDataClass.h */,
+				2316DF351EC5F6DE006284D6 /* Medication+CoreDataClass.m */,
+				2316DF361EC5F6DE006284D6 /* Medication+CoreDataProperties.h */,
+				2316DF371EC5F6DE006284D6 /* Medication+CoreDataProperties.m */,
+				2316DF381EC5F6DE006284D6 /* Coding+CoreDataClass.h */,
+				2316DF391EC5F6DE006284D6 /* Coding+CoreDataClass.m */,
+				2316DF3A1EC5F6DE006284D6 /* Coding+CoreDataProperties.h */,
+				2316DF3B1EC5F6DE006284D6 /* Coding+CoreDataProperties.m */,
 				CF3A7D521EC5B38F001DDB66 /* DataModel.xcdatamodeld */,
 			);
 			name = Models;
@@ -528,7 +748,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		85720DEF5D9CF1F9ED86A245 /* [CP] Check Pods Manifest.lock */ = {
@@ -543,7 +763,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A13222EAC06888FCB8ED12DD /* [CP] Check Pods Manifest.lock */ = {
@@ -558,7 +778,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B0C45CF099D6AD131BD111B4 /* [CP] Copy Pods Resources */ = {
@@ -613,12 +833,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2316DF3E1EC5F6DE006284D6 /* DispenseRequest+CoreDataClass.m in Sources */,
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
+				2316DF4A1EC5F6DF006284D6 /* EventTiming+CoreDataClass.m in Sources */,
+				2316DF4F1EC5F6DF006284D6 /* MedicationPlan+CoreDataProperties.m in Sources */,
+				2316DF431EC5F6DF006284D6 /* Period+CoreDataProperties.m in Sources */,
 				CF3A7D541EC5B38F001DDB66 /* DataModel.xcdatamodeld in Sources */,
 				2372DE001EC5B83000E18A0F /* RestManager.m in Sources */,
+				2316DF571EC5F6DF006284D6 /* Range+CoreDataProperties.m in Sources */,
+				2316DF5A1EC5F6DF006284D6 /* CodeableConcept+CoreDataClass.m in Sources */,
+				2316DF541EC5F6DF006284D6 /* Attachment+CoreDataClass.m in Sources */,
+				2316DF611EC5F6DF006284D6 /* User+CoreDataProperties.m in Sources */,
+				2316DF621EC5F6DF006284D6 /* Package+CoreDataClass.m in Sources */,
+				2316DF4D1EC5F6DF006284D6 /* Ingredient+CoreDataProperties.m in Sources */,
+				2316DF4B1EC5F6DF006284D6 /* EventTiming+CoreDataProperties.m in Sources */,
+				2316DF661EC5F6DF006284D6 /* Coding+CoreDataClass.m in Sources */,
+				2316DF481EC5F6DF006284D6 /* Dosage+CoreDataClass.m in Sources */,
+				2316DF581EC5F6DF006284D6 /* Timing+CoreDataClass.m in Sources */,
+				2316DF631EC5F6DF006284D6 /* Package+CoreDataProperties.m in Sources */,
+				2316DF521EC5F6DF006284D6 /* BoundsRange+CoreDataClass.m in Sources */,
+				2316DF651EC5F6DF006284D6 /* Medication+CoreDataProperties.m in Sources */,
+				2316DF4C1EC5F6DF006284D6 /* Ingredient+CoreDataClass.m in Sources */,
 				2372DE041EC5CFBF00E18A0F /* MedicationManager.m in Sources */,
+				2316DF471EC5F6DF006284D6 /* Batch+CoreDataProperties.m in Sources */,
+				2316DF411EC5F6DF006284D6 /* Note+CoreDataProperties.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
+				2316DF401EC5F6DF006284D6 /* Note+CoreDataClass.m in Sources */,
+				2316DF461EC5F6DF006284D6 /* Batch+CoreDataClass.m in Sources */,
+				2316DF671EC5F6DF006284D6 /* Coding+CoreDataProperties.m in Sources */,
+				2316DF531EC5F6DF006284D6 /* BoundsRange+CoreDataProperties.m in Sources */,
+				2316DF561EC5F6DF006284D6 /* Range+CoreDataClass.m in Sources */,
+				2316DF3D1EC5F6DE006284D6 /* Content+CoreDataProperties.m in Sources */,
+				2316DF5C1EC5F6DF006284D6 /* Quantity+CoreDataClass.m in Sources */,
+				2316DF5D1EC5F6DF006284D6 /* Quantity+CoreDataProperties.m in Sources */,
+				2316DF5B1EC5F6DF006284D6 /* CodeableConcept+CoreDataProperties.m in Sources */,
+				2316DF511EC5F6DF006284D6 /* Repeat+CoreDataProperties.m in Sources */,
+				2316DF591EC5F6DF006284D6 /* Timing+CoreDataProperties.m in Sources */,
+				2316DF5F1EC5F6DF006284D6 /* MedicationRequest+CoreDataProperties.m in Sources */,
+				2316DF3C1EC5F6DE006284D6 /* Content+CoreDataClass.m in Sources */,
+				2316DF601EC5F6DF006284D6 /* User+CoreDataClass.m in Sources */,
+				2316DF641EC5F6DF006284D6 /* Medication+CoreDataClass.m in Sources */,
+				2316DF421EC5F6DF006284D6 /* Period+CoreDataClass.m in Sources */,
+				2316DF3F1EC5F6DF006284D6 /* DispenseRequest+CoreDataProperties.m in Sources */,
+				2316DF491EC5F6DF006284D6 /* Dosage+CoreDataProperties.m in Sources */,
+				2316DF501EC5F6DF006284D6 /* Repeat+CoreDataClass.m in Sources */,
+				2316DF4E1EC5F6DF006284D6 /* MedicationPlan+CoreDataClass.m in Sources */,
+				2316DF441EC5F6DF006284D6 /* Ratio+CoreDataClass.m in Sources */,
+				2316DF5E1EC5F6DF006284D6 /* MedicationRequest+CoreDataClass.m in Sources */,
 				F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */,
+				2316DF551EC5F6DF006284D6 /* Attachment+CoreDataProperties.m in Sources */,
+				2316DF451EC5F6DF006284D6 /* Ratio+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
