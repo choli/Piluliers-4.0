@@ -13,5 +13,6 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage *pillImage;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *pillNameLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceGroup *rowGroup;
+@property (nonatomic) NSDictionary *infoDict;
 
 @end

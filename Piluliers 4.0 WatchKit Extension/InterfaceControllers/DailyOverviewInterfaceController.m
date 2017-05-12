@@ -65,8 +65,17 @@
             PillImageNameRow *row = (PillImageNameRow *)[self.dayTable rowControllerAtIndex:index];
             [row.pillImage setImage:nil];
             [row.pillNameLabel setText:pill[@"name"]];
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:dateString forKey:@"time"];
+            [dict addEntriesFromDictionary:pill];
+            row.infoDict = dict;
+            
         }
     }
+}
+
+-(void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex {
+    PillImageNameRow *row = (PillImageNameRow *)[self.dayTable rowControllerAtIndex:rowIndex];
+    [self presentControllerWithName:@"TakePillInterfaceController" context:row.infoDict];
 }
 @end
 

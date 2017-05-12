@@ -77,6 +77,7 @@
 		C72E60991EC5DCF90087D2FD /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60961EC5DCF90087D2FD /* NotificationController.m */; };
 		C72E60A31EC5F3A80087D2FD /* ConnectivityHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */; };
 		C72E60A61EC644DC0087D2FD /* TimeTitleRow.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60A51EC644DC0087D2FD /* TimeTitleRow.m */; };
+		C78208A91EC65E7C00CD80AF /* TakePillInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78208A81EC65E7C00CD80AF /* TakePillInterfaceController.m */; };
 		F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */; };
 		F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01A825B1EC59C6F008CEC5A /* Localizable.strings */; };
 		F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */; };
@@ -279,6 +280,8 @@
 		C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectivityHandler.m; path = WatchHelper/ConnectivityHandler.m; sourceTree = "<group>"; };
 		C72E60A41EC644DC0087D2FD /* TimeTitleRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeTitleRow.h; path = Cells/TimeTitleRow.h; sourceTree = "<group>"; };
 		C72E60A51EC644DC0087D2FD /* TimeTitleRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTitleRow.m; path = Cells/TimeTitleRow.m; sourceTree = "<group>"; };
+		C78208A71EC65E7C00CD80AF /* TakePillInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TakePillInterfaceController.h; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/TakePillInterfaceController.h"; sourceTree = "<group>"; };
+		C78208A81EC65E7C00CD80AF /* TakePillInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TakePillInterfaceController.m; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/TakePillInterfaceController.m"; sourceTree = "<group>"; };
 		F01A82511EC596C4008CEC5A /* MainMenuTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTabBarController.h; sourceTree = "<group>"; };
 		F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTabBarController.m; sourceTree = "<group>"; };
 		F01A825A1EC59C6F008CEC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -566,6 +569,8 @@
 				C72E60771EC5ABE00087D2FD /* StartInterfaceController.m */,
 				C72E608E1EC5DCB60087D2FD /* DailyOverviewInterfaceController.h */,
 				C72E608F1EC5DCB60087D2FD /* DailyOverviewInterfaceController.m */,
+				C78208A71EC65E7C00CD80AF /* TakePillInterfaceController.h */,
+				C78208A81EC65E7C00CD80AF /* TakePillInterfaceController.m */,
 			);
 			name = InterfaceControllers;
 			path = ..;
@@ -1104,6 +1109,7 @@
 				C72E60971EC5DCF90087D2FD /* ComplicationController.m in Sources */,
 				C72E60781EC5ABE00087D2FD /* StartInterfaceController.m in Sources */,
 				C72E60901EC5DCB60087D2FD /* DailyOverviewInterfaceController.m in Sources */,
+				C78208A91EC65E7C00CD80AF /* TakePillInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

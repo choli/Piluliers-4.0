@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
-        <!--Interface Controller-->
+        <!--TakePillInterfaceController-->
         <scene sceneID="IL6-nJ-Hif">
             <objects>
-                <controller id="BIs-9w-9ET">
+                <controller identifier="TakePillInterfaceController" id="BIs-9w-9ET" customClass="TakePillInterfaceController">
                     <items>
                         <label alignment="center" text="Label" id="dhz-59-uTl">
                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -133,6 +133,15 @@
                         <button width="1" alignment="center" title="Button" id="IYs-Qh-0xU"/>
                         <button width="1" alignment="center" title="Button" id="bV5-y1-H6l"/>
                     </items>
+                    <connections>
+                        <outlet property="ignoreButton" destination="bV5-y1-H6l" id="yWH-RZ-Xon"/>
+                        <outlet property="infoLabel" destination="ahL-fX-afk" id="Pfb-X5-dnc"/>
+                        <outlet property="nameLabel" destination="dhz-59-uTl" id="tI7-W0-tNw"/>
+                        <outlet property="pillImage" destination="PPr-G2-dAj" id="1pg-S9-1Gz"/>
+                        <outlet property="quantityTimeLabel" destination="Ykm-qT-NXm" id="1Ed-ij-kFK"/>
+                        <outlet property="skipButton" destination="IYs-Qh-0xU" id="W5y-Ey-T04"/>
+                        <outlet property="takeButton" destination="8lF-eD-zaY" id="RZe-lx-PAL"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="742" y="345"/>
