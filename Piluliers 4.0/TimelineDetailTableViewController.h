@@ -10,4 +10,6 @@
 
 @interface TimelineDetailTableViewController : UITableViewController
 
+@property (nonatomic, weak) NSString *titleString; //todo: replace by data object!!!!!!!
+
 @end
