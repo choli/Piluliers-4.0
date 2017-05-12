@@ -1,16 +1,72 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--startIC-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider=""/>
+                <controller identifier="startIC" id="AgC-eL-Hgc" customClass="StartInterfaceController">
+                    <items>
+                        <label alignment="left" text="next reminder" id="Omh-Wm-gyX"/>
+                        <group width="1" alignment="left" id="naZ-d5-MkB">
+                            <items>
+                                <label alignment="left" verticalAlignment="bottom" text="TI:ME" id="hXj-dv-XXR">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="35"/>
+                                </label>
+                                <label height="35" alignment="left" verticalAlignment="bottom" text="AM" id="HAQ-1u-Bdx">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="wOm-IM-8Jw"/>
+                        <table alignment="left" id="3t2-hC-Dc5">
+                            <items>
+                                <tableRow identifier="PillImageNameRow" selectable="NO" id="8jm-TQ-JqE" customClass="PillImageNameRow">
+                                    <group key="rootItem" width="1" alignment="left" id="9eh-rC-bzK">
+                                        <items>
+                                            <imageView width="0.29999999999999999" alignment="left" verticalAlignment="center" contentMode="left" id="r0a-yp-KVd"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="SpH-KZ-HrS"/>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="pillImage" destination="r0a-yp-KVd" id="Zd1-pu-zvY"/>
+                                        <outlet property="pillNameLabel" destination="SpH-KZ-HrS" id="25a-HY-cJS"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="krr-tf-tDe">
+                        <items>
+                            <menuItem title="Today" icon="info" id="Fmb-08-Mpg"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="ampmLabel" destination="HAQ-1u-Bdx" id="24b-Rd-6Bg"/>
+                        <outlet property="nextReminderLabel" destination="Omh-Wm-gyX" id="cUd-Iq-C2E"/>
+                        <outlet property="pillsTable" destination="3t2-hC-Dc5" id="3AH-wk-2AL"/>
+                        <outlet property="timeLabel" destination="hXj-dv-XXR" id="Gqc-GC-T5F"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--DailyOverviewInterfaceController-->
+        <scene sceneID="R0o-Gj-5Cb">
+            <objects>
+                <controller identifier="DailyOverviewInterfaceController" id="lof-mT-Peq" customClass="DailyOverviewInterfaceController"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -31,7 +87,7 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider=""/>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>

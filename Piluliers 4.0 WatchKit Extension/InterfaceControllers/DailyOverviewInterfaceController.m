@@ -1,24 +1,22 @@
 //
-//  InterfaceController.m
-//  Piluliers 4.0 WatchKit Extension
+//  DailyOverviewInterfaceController.m
+//  Piluliers 4.0
 //
-//  Created by Kolly Sandro, IT133 on 09.05.17.
+//  Created by Kolly Sandro, IT133 on 12.05.17.
 //  Copyright © 2017 Post CH AG. All rights reserved.
 //
 
-#import "InterfaceController.h"
+#import "DailyOverviewInterfaceController.h"
 
-
-@interface InterfaceController ()
+@interface DailyOverviewInterfaceController ()
 
 @end
 
-
-@implementation InterfaceController
+@implementation DailyOverviewInterfaceController
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-
+    
     // Configure interface objects here.
 }
 

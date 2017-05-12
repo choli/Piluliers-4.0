@@ -211,8 +211,11 @@
 		C72E60221EC1F3770087D2FD /* Piluliers 4.0 */ = {
 			isa = PBXGroup;
 			children = (
-				C72E609D1EC5E3DC0087D2FD /* Piluliers 4.0.entitlements */,
+<<<<<<< HEAD
 				F01A82781EC5D33E008CEC5A /* Additions */,
+=======
+				C72E609D1EC5E3DC0087D2FD /* Piluliers 4.0.entitlements */,
+>>>>>>> develop
 				F01A824F1EC595F1008CEC5A /* Presentation */,
 				C72E60261EC1F3770087D2FD /* AppDelegate.h */,
 				C72E60271EC1F3770087D2FD /* AppDelegate.m */,
@@ -923,14 +926,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0 WatchKit Extension/Piluliers 4.0 WatchKit Extension.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "71ae234e-9aac-41a8-bbc6-742ebb8b9277";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitExtension_Development_20170512;
+				PROVISIONING_PROFILE = "d9111646-bdf4-49f2-ac6e-e29269fecf12";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitExtension_Distribution_20170512;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -965,14 +968,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0 WatchKit App/Piluliers 4.0 WatchKit App.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				IBSC_MODULE = Piluliers_4_0_WatchKit_Extension;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7a0fd540-819f-405a-ae5f-e05e6d4680e8";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitApp_Development_20170512;
+				PROVISIONING_PROFILE = "f6c8dc61-80e7-4514-b679-4882c4e46def";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitApp_Distribution_20170512;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1002,14 +1005,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0/Piluliers 4.0.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "68409b84-289b-4e57-ba24-e4f106f23bb2";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Development_20170512;
+				PROVISIONING_PROFILE = "ad8082b3-c4a3-412a-99fb-8feb5c7df495";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Distribution_20170512;
 			};
 			name = Release;
 		};
