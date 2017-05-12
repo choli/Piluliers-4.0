@@ -92,6 +92,7 @@
 		F01A829E1EC635E9008CEC5A /* HistoryGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A829D1EC635E9008CEC5A /* HistoryGraphView.xib */; };
 		F01A82A11EC6383E008CEC5A /* HistoryGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82A01EC6383E008CEC5A /* HistoryGraphView.m */; };
 		F01A82A51EC66A76008CEC5A /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82A41EC66A76008CEC5A /* SettingsTableViewController.m */; };
+		F01A82A91EC66C33008CEC5A /* EditDrugsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82A81EC66C33008CEC5A /* EditDrugsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -310,6 +311,8 @@
 		F01A82A01EC6383E008CEC5A /* HistoryGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryGraphView.m; path = Source/HistoryGraphView.m; sourceTree = "<group>"; };
 		F01A82A31EC66A76008CEC5A /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		F01A82A41EC66A76008CEC5A /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		F01A82A71EC66C33008CEC5A /* EditDrugsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditDrugsTableViewController.h; path = Source/EditDrugsTableViewController.h; sourceTree = "<group>"; };
+		F01A82A81EC66C33008CEC5A /* EditDrugsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditDrugsTableViewController.m; path = Source/EditDrugsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -624,6 +627,7 @@
 		F01A824F1EC595F1008CEC5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F01A82A61EC66C0F008CEC5A /* Edit Drugs */,
 				F01A828A1EC5FDA4008CEC5A /* Settings */,
 				F01A82891EC5FD9B008CEC5A /* Drugs */,
 				F01A82881EC5FD94008CEC5A /* History */,
@@ -737,6 +741,15 @@
 				F01A82A01EC6383E008CEC5A /* HistoryGraphView.m */,
 			);
 			name = HistoryGraphView;
+			sourceTree = "<group>";
+		};
+		F01A82A61EC66C0F008CEC5A /* Edit Drugs */ = {
+			isa = PBXGroup;
+			children = (
+				F01A82A71EC66C33008CEC5A /* EditDrugsTableViewController.h */,
+				F01A82A81EC66C33008CEC5A /* EditDrugsTableViewController.m */,
+			);
+			name = "Edit Drugs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1076,6 +1089,7 @@
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
 				F01A828D1EC5FDB9008CEC5A /* DrugsTableViewController.m in Sources */,
 				F01A82A11EC6383E008CEC5A /* HistoryGraphView.m in Sources */,
+				F01A82A91EC66C33008CEC5A /* EditDrugsTableViewController.m in Sources */,
 				F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */,
 				2316E0001EC61DEA006284D6 /* Medication+CoreDataClass.m in Sources */,
 				F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */,
