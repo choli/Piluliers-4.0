@@ -32,21 +32,29 @@
         response = @{@"todaysPills" : @[@{@"time" : [NSDate dateWithTimeIntervalSince1970:1494616500],
                                           @"pills" : @[@{
                                                            @"name" : @"Mydocalm",
-                                                           @"pictureName": @"pill.png"
+                                                           @"pictureName": @"pill.png",
+                                                           @"info" : @"5mg",
+                                                           @"amount": @"1 pill"
                                                            },
                                                        @{
                                                            @"name" : @"Aricept",
-                                                           @"pictureName": @"capsule.png"
+                                                           @"pictureName": @"capsule.png",
+                                                           @"info" : @"5mg",
+                                                           @"amount": @"1 pill"
                                                            }]
                                           },
                                         @{@"time" : [NSDate dateWithTimeIntervalSince1970:1494620100],
                                           @"pills" : @[@{
                                                            @"name" : @"Mydocalm",
-                                                           @"pictureName": @"pill.png"
+                                                           @"pictureName": @"pill.png",
+                                                           @"info" : @"5mg",
+                                                           @"amount": @"1 pill"
                                                            },
                                                        @{
                                                            @"name" : @"Aricept",
-                                                           @"pictureName": @"capsule.png"
+                                                           @"pictureName": @"capsule.png",
+                                                           @"info" : @"5mg",
+                                                           @"amount": @"1 pill"
                                                            }]
                                           }]};
     }

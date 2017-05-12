@@ -116,6 +116,27 @@
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
+        <!--Interface Controller-->
+        <scene sceneID="IL6-nJ-Hif">
+            <objects>
+                <controller id="BIs-9w-9ET">
+                    <items>
+                        <label alignment="center" text="Label" id="dhz-59-uTl">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="center" text="Label" id="ahL-fX-afk">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <imageView alignment="center" id="PPr-G2-dAj"/>
+                        <label alignment="center" text="Label" id="Ykm-qT-NXm"/>
+                        <button width="1" alignment="center" title="Button" id="8lF-eD-zaY"/>
+                        <button width="1" alignment="center" title="Button" id="IYs-Qh-0xU"/>
+                        <button width="1" alignment="center" title="Button" id="bV5-y1-H6l"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="742" y="345"/>
+        </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
