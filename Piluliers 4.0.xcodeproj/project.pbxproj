@@ -32,7 +32,6 @@
 		C72E60991EC5DCF90087D2FD /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60961EC5DCF90087D2FD /* NotificationController.m */; };
 		C72E60A31EC5F3A80087D2FD /* ConnectivityHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */; };
 		F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */; };
-		F01A82551EC596C4008CEC5A /* MainMenuTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */; };
 		F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01A825B1EC59C6F008CEC5A /* Localizable.strings */; };
 		F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */; };
 		F01A82741EC5AAF2008CEC5A /* TimelineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */; };
@@ -42,6 +41,8 @@
 		F01A82871EC5EA1E008CEC5A /* TimelineDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82861EC5EA1E008CEC5A /* TimelineDetailTableViewController.m */; };
 		F01A828D1EC5FDB9008CEC5A /* DrugsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */; };
 		F01A82901EC60640008CEC5A /* AppDelegate+Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A828F1EC60640008CEC5A /* AppDelegate+Appearance.m */; };
+		F01A82941EC60D99008CEC5A /* DrugsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82931EC60D99008CEC5A /* DrugsTableViewCell.m */; };
+		F01A82971EC612AD008CEC5A /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82961EC612AD008CEC5A /* HistoryTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,7 +141,6 @@
 		C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectivityHandler.m; path = WatchHelper/ConnectivityHandler.m; sourceTree = "<group>"; };
 		F01A82511EC596C4008CEC5A /* MainMenuTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTabBarController.h; sourceTree = "<group>"; };
 		F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTabBarController.m; sourceTree = "<group>"; };
-		F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuTabBarController.xib; sourceTree = "<group>"; };
 		F01A825A1EC59C6F008CEC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F01A825C1EC59C94008CEC5A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F01A825D1EC59CA2008CEC5A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -160,6 +160,10 @@
 		F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsTableViewController.m; sourceTree = "<group>"; };
 		F01A828E1EC60640008CEC5A /* AppDelegate+Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+Appearance.h"; path = "Source/AppDelegate+Appearance.h"; sourceTree = "<group>"; };
 		F01A828F1EC60640008CEC5A /* AppDelegate+Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+Appearance.m"; path = "Source/AppDelegate+Appearance.m"; sourceTree = "<group>"; };
+		F01A82921EC60D99008CEC5A /* DrugsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrugsTableViewCell.h; path = Source/DrugsTableViewCell.h; sourceTree = "<group>"; };
+		F01A82931EC60D99008CEC5A /* DrugsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrugsTableViewCell.m; path = Source/DrugsTableViewCell.m; sourceTree = "<group>"; };
+		F01A82951EC612AD008CEC5A /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		F01A82961EC612AD008CEC5A /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,7 +392,6 @@
 			children = (
 				F01A82511EC596C4008CEC5A /* MainMenuTabBarController.h */,
 				F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */,
-				F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */,
 			);
 			name = MainMenu;
 			sourceTree = "<group>";
@@ -404,8 +407,8 @@
 		F01A82611EC59DED008CEC5A /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
-				F01A827C1EC5D641008CEC5A /* TableViewHeaderView */,
-				F01A82701EC5AAD5008CEC5A /* TableViewCell */,
+				F01A827C1EC5D641008CEC5A /* TimelineTableViewHeaderView */,
+				F01A82701EC5AAD5008CEC5A /* TimelineTableViewCell */,
 				F01A82621EC59E2F008CEC5A /* TimelineTableViewController.h */,
 				F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */,
 				F01A82851EC5EA1E008CEC5A /* TimelineDetailTableViewController.h */,
@@ -414,13 +417,13 @@
 			name = Timeline;
 			sourceTree = "<group>";
 		};
-		F01A82701EC5AAD5008CEC5A /* TableViewCell */ = {
+		F01A82701EC5AAD5008CEC5A /* TimelineTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				F01A82711EC5AAF2008CEC5A /* TimelineTableViewCell.h */,
 				F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */,
 			);
-			name = TableViewCell;
+			name = TimelineTableViewCell;
 			sourceTree = "<group>";
 		};
 		F01A82781EC5D33E008CEC5A /* Additions */ = {
@@ -432,19 +435,21 @@
 			name = Additions;
 			sourceTree = "<group>";
 		};
-		F01A827C1EC5D641008CEC5A /* TableViewHeaderView */ = {
+		F01A827C1EC5D641008CEC5A /* TimelineTableViewHeaderView */ = {
 			isa = PBXGroup;
 			children = (
 				F01A827D1EC5D65F008CEC5A /* TimelineHeaderView.h */,
 				F01A827E1EC5D65F008CEC5A /* TimelineHeaderView.m */,
 				F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */,
 			);
-			name = TableViewHeaderView;
+			name = TimelineTableViewHeaderView;
 			sourceTree = "<group>";
 		};
 		F01A82881EC5FD94008CEC5A /* History */ = {
 			isa = PBXGroup;
 			children = (
+				F01A82951EC612AD008CEC5A /* HistoryTableViewController.h */,
+				F01A82961EC612AD008CEC5A /* HistoryTableViewController.m */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -452,6 +457,7 @@
 		F01A82891EC5FD9B008CEC5A /* Drugs */ = {
 			isa = PBXGroup;
 			children = (
+				F01A82911EC60D2D008CEC5A /* DrugsTableViewCell */,
 				F01A828B1EC5FDB9008CEC5A /* DrugsTableViewController.h */,
 				F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */,
 			);
@@ -463,6 +469,15 @@
 			children = (
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		F01A82911EC60D2D008CEC5A /* DrugsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F01A82921EC60D99008CEC5A /* DrugsTableViewCell.h */,
+				F01A82931EC60D99008CEC5A /* DrugsTableViewCell.m */,
+			);
+			name = DrugsTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,7 +622,6 @@
 				C72E60331EC1F3770087D2FD /* LaunchScreen.storyboard in Resources */,
 				C72E60301EC1F3770087D2FD /* Assets.xcassets in Resources */,
 				C72E602E1EC1F3770087D2FD /* Main.storyboard in Resources */,
-				F01A82551EC596C4008CEC5A /* MainMenuTabBarController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,7 +773,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01A82971EC612AD008CEC5A /* HistoryTableViewController.m in Sources */,
 				F01A827F1EC5D65F008CEC5A /* TimelineHeaderView.m in Sources */,
+				F01A82941EC60D99008CEC5A /* DrugsTableViewCell.m in Sources */,
 				2316DF761EC602BA006284D6 /* DataModel.xcdatamodeld in Sources */,
 				2316DF7B1EC602C7006284D6 /* MedicationManager.m in Sources */,
 				F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */,
