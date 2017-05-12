@@ -1,5 +1,5 @@
 //
-//  MedicationManager.h
+//  ConfigurationManager.h
 //  Piluliers 4.0
 //
 //  Created by Meumann Ulrich, IT133 on 12.05.17.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MedicationManager : NSObject
-- (void)fetchMedicationRequestFromContext;
+@interface ConfigurationManager : NSObject
++ (NSString *)baseUrl;
 @end

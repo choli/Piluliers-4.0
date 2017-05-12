@@ -10,6 +10,9 @@
 #import <RestKit/CoreData.h>
 #import <RestKit/RestKit.h>
 #import "Mappings.h"
+#import "MedicationManager.h"
+#import "ConfigurationManager.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface RestManager ()
 @property (nonatomic, nullable) RKManagedObjectStore *managedObjectStore;
@@ -31,9 +34,13 @@
     }
 
 - (void)initializeCoreData {
+    // https://hackathon.test.docdesk.ch:4443/medication-web-module/hackathon/fhir
     
-    NSURL *baseURL = [NSURL URLWithString:@"http://hl7.org/fhir"];
+    [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"application/fhir+json"];
+
+    NSURL *baseURL = [NSURL URLWithString:[ConfigurationManager baseUrl]];
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
+    objectManager.HTTPClient.allowsInvalidSSLCertificate = YES;
     [RKObjectManager setSharedManager:objectManager];
     
     // Initialize managed object model from bundle
@@ -86,12 +93,53 @@
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:[self createMedicationRequestMapping] method:RKRequestMethodGET pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     
     [[RKObjectManager sharedManager] addResponseDescriptor:responseDescriptor];
-    
-    [[RKObjectManager sharedManager] getObjectsAtPath:@"medicationrequest0312.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+    // @"medicationrequest0312.json"
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"Medication?patient_id=.PAT_10&_format=json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSLog(@"Success");
+        MedicationManager *medicationManager = [[MedicationManager alloc] init];
+        [medicationManager fetchMedicationRequestFromContext];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Failure");
     }];
 }
 
+- (void)fetchMedicationsForPatient:(NSString *)patientId {
+    
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/Medication?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId]];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    [manager.securityPolicy setValidatesDomainName:NO];
+    manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"application/fhir+json"];
+
+    [manager GET:[NSString stringWithFormat:@"%@/Medication?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
+
+- (void)fetchPatientDataForPatient:(NSString *)patientId {
+    
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/Patient?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId]];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    [manager.securityPolicy setValidatesDomainName:NO];
+    manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"application/fhir+json"];
+    
+    [manager GET:[NSString stringWithFormat:@"%@/Patient?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
 @end

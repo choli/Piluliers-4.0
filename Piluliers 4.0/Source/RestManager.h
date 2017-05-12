@@ -12,4 +12,6 @@
 + (RestManager *)sharedInstance;
 - (void)initializeCoreData;
 - (void)fetchMedicationRequest;
+- (void)fetchMedicationsForPatient:(NSString *)patientId;
+- (void)fetchPatientDataForPatient:(NSString *)patientId;
 @end
