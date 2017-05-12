@@ -9,6 +9,7 @@
 #import "DrugsTableViewController.h"
 #import "TimelineTableViewCell.h"
 #import "DrugsTableViewCell.h"
+#import "TimelineDetailTableViewController.h"
 
 @interface DrugsTableViewController ()
 
@@ -59,8 +60,10 @@
 # pragma mark - Table View Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //todo stoecklim: present detail view controller
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TimelineDetailTableViewController *timelineTableDetailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TimelineDetailTableViewController"];
+    timelineTableDetailViewController.titleString = @"Medikament X";
+    [self.navigationController pushViewController:timelineTableDetailViewController animated:YES];
 }
 
 @end

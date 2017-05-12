@@ -1,30 +1,28 @@
 //
-//  TimelineDetailTableViewController.m
+//  SettingsTableViewController.m
 //  Piluliers 4.0
 //
-//  Created by Stoeckli Michael, IT133 on 12.05.17.
+//  Created by Stoeckli Michael, IT133 on 13.05.17.
 //  Copyright © 2017 Post CH AG. All rights reserved.
 //
 
-#import "TimelineDetailTableViewController.h"
+#import "SettingsTableViewController.h"
 
-@interface TimelineDetailTableViewController ()
+@interface SettingsTableViewController ()
 
 @end
 
-@implementation TimelineDetailTableViewController
+@implementation SettingsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.titleString;
+    self.title = NSLocalizedString(@"settings", nil);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-# pragma mark - Table View Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
