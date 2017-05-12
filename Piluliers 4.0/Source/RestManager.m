@@ -11,15 +11,32 @@
 #import <RestKit/RestKit.h>
 
 @interface RestManager ()
-    @property (nonatomic, nullable) RKManagedObjectStore *managedObjectStore;
+@property (nonatomic, nullable) RKManagedObjectStore *managedObjectStore;
+
 @end
 
 @implementation RestManager
     
++ (RestManager *)sharedInstance
+    {
+        static RestManager *_shared = nil;
+        static dispatch_once_t onceToken;
+        
+        dispatch_once(&onceToken, ^{
+            _shared = [[self alloc] init];
+            if (_shared != nil) {
+                [_shared initializeCoreData];
+            }
+        });
+        
+        return _shared;
+    }
+
 - (void)initializeCoreData {
     
     NSURL *baseURL = [NSURL URLWithString:@"http://api.feedzilla.com"];
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
+    [RKObjectManager setSharedManager:objectManager];
     
     // Initialize managed object model from bundle
     NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
@@ -41,9 +58,29 @@
     self.managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:self.managedObjectStore.persistentStoreManagedObjectContext];
 }
     
-- (RKEntityMapping *)createMedicationMapping {
+- (RKObjectMapping *)createMedicationMapping {
     RKEntityMapping *medicationMapping = [RKEntityMapping mappingForEntityForName:@"Article" inManagedObjectStore:self.managedObjectStore];
     
     return medicationMapping;
 }
+    
+- (RKObjectMapping *)createMedicationRequestMapping {
+    RKEntityMapping *medicationRequestMapping = [RKEntityMapping mappingForEntityForName:@"Article" inManagedObjectStore:self.managedObjectStore];
+    
+    return medicationRequestMapping;
+}
+
+- (void)fetchMedication {
+    
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:[self createMedicationMapping] method:RKRequestMethodGET pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    
+    [[RKObjectManager sharedManager] addResponseDescriptor:responseDescriptor];
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        
+    }];
+}
+
 @end

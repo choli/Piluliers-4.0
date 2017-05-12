@@ -1,5 +1,5 @@
 //
-//  RestManager.h
+//  MedicationManager.h
 //  Piluliers 4.0
 //
 //  Created by Meumann Ulrich, IT133 on 12.05.17.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RestManager : NSObject
-+ (RestManager *)sharedInstance;
+@interface MedicationManager : NSObject
+
 @end

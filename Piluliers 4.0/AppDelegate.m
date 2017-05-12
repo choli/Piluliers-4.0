@@ -17,6 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[MainMenuTabBarController alloc] initWithNibName:@"MainMenuTabBarController" bundle:nil];
     self.window.backgroundColor = [UIColor redColor];
