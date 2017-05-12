@@ -11,6 +11,7 @@
 #import "TimelineTableViewCell.h"
 #import "UIColor+CustomColors.h"
 #import "TimelineHeaderView.h"
+#import "EditDrugsTableViewController.h"
 
 @interface TimelineTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -48,7 +49,10 @@
 }
 
 - (void)addMedication:(UIBarButtonItem*)barButtonItem {
-    //todo present detail view controller
+    EditDrugsTableViewController *editDrugsTableViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"EditDrugsTableViewController"];
+    UINavigationController *editDrugsNavigationController = [[UINavigationController alloc] initWithRootViewController:editDrugsTableViewController];
+    editDrugsTableViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    [self.tabBarController presentViewController:editDrugsNavigationController animated:YES completion:nil];
 }
 
 - (void)dateChanged:(UIDatePicker*)datePicker {
