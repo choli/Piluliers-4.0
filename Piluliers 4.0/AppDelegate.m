@@ -22,11 +22,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    RestManager *restManager = [RestManager sharedInstance];
-    [restManager initializeCoreData];
-    //[restManager fetchMedicationRequest];
-    [restManager fetchPatientDataForPatient:@".PAT_10"];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[MainMenuTabBarController alloc] initWithNibName:@"MainMenuTabBarController" bundle:nil];
     [self setupAppearance];

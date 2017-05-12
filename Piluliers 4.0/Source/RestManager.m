@@ -103,7 +103,7 @@
     }];
 }
 
-- (void)fetchMedicationsForPatient:(NSString *)patientId {
+- (void)fetchMedicationsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock {
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/Medication?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId]];
     
@@ -118,12 +118,21 @@
     [manager GET:[NSString stringWithFormat:@"%@/Medication?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
+        [userDefaults setObject:responseObject forKey:@"medications"];
+        [userDefaults synchronize];
+
+        if (completionBlock != nil) {
+            completionBlock(nil);
+        }
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+        if (completionBlock != nil) {
+            completionBlock(error);
+        }
     }];
 }
 
-- (void)fetchPatientDataForPatient:(NSString *)patientId {
+- (void)fetchPatientDataForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock {
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/Patient?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId]];
     
@@ -138,8 +147,29 @@
     [manager GET:[NSString stringWithFormat:@"%@/Patient?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
+        [userDefaults setObject:responseObject forKey:@"patient"];
+        [userDefaults synchronize];
+        if (completionBlock != nil) {
+            completionBlock(nil);
+        }
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+        if (completionBlock != nil) {
+            completionBlock(error);
+        }
     }];
 }
+
+/*
+RestManager *restManager = [RestManager sharedInstance];
+
+[restManager fetchPatientDataForPatient:@".PAT_10" withCompletionBlock:^(NSError *error) {
+    NSLog(@"fetchPatientDataForPatient Error: %@", error);
+    if (error == nil) {
+        NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
+        NSDictionary *json = [userDefaults objectForKey:@"patient"];
+        NSLog(@"PatientData: %@", json);
+    }
+}];
+*/
 @end
