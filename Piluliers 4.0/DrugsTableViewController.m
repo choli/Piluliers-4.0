@@ -10,6 +10,7 @@
 #import "TimelineTableViewCell.h"
 #import "DrugsTableViewCell.h"
 #import "TimelineDetailTableViewController.h"
+#import "EditDrugsTableViewController.h"
 
 @interface DrugsTableViewController ()
 
@@ -30,7 +31,10 @@
 }
 
 - (void)addMedication:(UIBarButtonItem*)barButtonItem {
-    //todo present detail view controller
+    EditDrugsTableViewController *editDrugsTableViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"EditDrugsTableViewController"];
+    UINavigationController *editDrugsNavigationController = [[UINavigationController alloc] initWithRootViewController:editDrugsTableViewController];
+    editDrugsTableViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    [self.tabBarController presentViewController:editDrugsNavigationController animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source

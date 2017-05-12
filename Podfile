@@ -4,7 +4,7 @@
 target 'Piluliers 4.0' do
     # Pods for Piluliers 4.0
     pod 'AFNetworking', '~> 3.0'
-    pod 'RestKit'
+    pod 'RestKit', :git => 'https://github.com/RestKit/RestKit.git', :commit => '13d98d5a6a5e06656ad040013dcae149b7cf8b99'
 end
 
 target 'Piluliers 4.0 WatchKit App' do

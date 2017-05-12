@@ -38,5 +38,6 @@
     
     NSError *error = nil;
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    NSLog(@"FetchedObjects: %@", fetchedObjects);
 }
 @end
