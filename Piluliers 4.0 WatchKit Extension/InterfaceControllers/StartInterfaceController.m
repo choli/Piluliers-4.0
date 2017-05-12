@@ -31,9 +31,8 @@
     self.session = [WCSession defaultSession];
     self.session.delegate = self;
     [self.session activateSession];
-    
-    [self loadDataForTable];
-    [self setupTable];
+    [self.timeLabel setText:@""];
+    [self.ampmLabel setText:@""];
 }
 
 - (void)willActivate {
@@ -62,7 +61,11 @@
 #pragma mark - WCSession delegate
 -(void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError *)error {
     if (!error) {
-        [self loadDataForTable];
+        if (activationState == WCSessionActivationStateActivated) {
+            [self loadDataForTable];
+        } else {
+            NSLog(@"some other status than connected!");
+        }
     } else {
         WKAlertAction *action = [WKAlertAction actionWithTitle:NSLocalizedString(@"alert_ok", nil) style:WKAlertActionStyleCancel handler:^(void){
             //TODO: Error action
@@ -88,17 +91,16 @@
              };
 }
 
-- (NSDictionary *)loadDataForTable {
-    [self.session sendMessage:@{@"dummy":@"dummy"} replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
-    
-    } errorHandler:^(NSError * _Nonnull error) {
-        
-    }];
-    return @{@"dummy":@"dummy"};
+- (void)loadDataForTable {
+    [self.session sendMessage:@{@"request":@"dummy"}
+                 replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
+                     [self setupTableWithDict:replyMessage];
+                 } errorHandler:^(NSError * _Nonnull error) {
+                     NSLog(@"Error: %@", error.localizedDescription);
+                 }];
 }
 
 - (void)setupTableWithDict:(NSDictionary *)nextReminderData {
-    //NSDictionary *nextReminderData = [self loadDummyDataForTable];
     [self setNextReminderTime:nextReminderData[@"time"]];
     
     NSArray *pillsToTake = nextReminderData[@"pills"];
