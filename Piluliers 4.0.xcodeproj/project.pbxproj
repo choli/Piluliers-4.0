@@ -118,6 +118,9 @@
 		C72E60941EC5DCF90087D2FD /* ExtensionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExtensionDelegate.m; path = "Piluliers 4.0 WatchKit Extension/Extensions/ExtensionDelegate.m"; sourceTree = "<group>"; };
 		C72E60951EC5DCF90087D2FD /* NotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationController.h; path = "Piluliers 4.0 WatchKit Extension/Extensions/NotificationController.h"; sourceTree = "<group>"; };
 		C72E60961EC5DCF90087D2FD /* NotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationController.m; path = "Piluliers 4.0 WatchKit Extension/Extensions/NotificationController.m"; sourceTree = "<group>"; };
+		C72E609D1EC5E3DC0087D2FD /* Piluliers 4.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Piluliers 4.0.entitlements"; sourceTree = "<group>"; };
+		C72E609E1EC5E5CC0087D2FD /* Piluliers 4.0 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Piluliers 4.0 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		C72E609F1EC5E5D60087D2FD /* Piluliers 4.0 WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Piluliers 4.0 WatchKit App.entitlements"; sourceTree = "<group>"; };
 		F01A82511EC596C4008CEC5A /* MainMenuTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTabBarController.h; sourceTree = "<group>"; };
 		F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTabBarController.m; sourceTree = "<group>"; };
 		F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuTabBarController.xib; sourceTree = "<group>"; };
@@ -194,6 +197,7 @@
 		C72E60221EC1F3770087D2FD /* Piluliers 4.0 */ = {
 			isa = PBXGroup;
 			children = (
+				C72E609D1EC5E3DC0087D2FD /* Piluliers 4.0.entitlements */,
 				F01A824F1EC595F1008CEC5A /* Presentation */,
 				C72E60261EC1F3770087D2FD /* AppDelegate.h */,
 				C72E60271EC1F3770087D2FD /* AppDelegate.m */,
@@ -218,6 +222,7 @@
 		C72E603B1EC1F3770087D2FD /* Piluliers 4.0 WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				C72E609F1EC5E5D60087D2FD /* Piluliers 4.0 WatchKit App.entitlements */,
 				C72E603C1EC1F3770087D2FD /* Interface.storyboard */,
 				C72E603F1EC1F3770087D2FD /* Assets.xcassets */,
 				C72E60411EC1F3770087D2FD /* Info.plist */,
@@ -228,6 +233,7 @@
 		C72E604A1EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C72E609E1EC5E5CC0087D2FD /* Piluliers 4.0 WatchKit Extension.entitlements */,
 				C72E60721EC5AB460087D2FD /* InterfaceControllers */,
 				C72E60871EC5BC770087D2FD /* Cells */,
 				C72E60821EC5B6F70087D2FD /* Extensions */,
@@ -427,16 +433,34 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = BURQ256D9M;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					C72E60361EC1F3770087D2FD = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = BURQ256D9M;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C72E60451EC1F3770087D2FD = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = BURQ256D9M;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -809,13 +833,15 @@
 			baseConfigurationReference = A2DE46F55F3FE4D7C22FD363 /* Pods-Piluliers 4.0 WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0 WatchKit Extension/Piluliers 4.0 WatchKit Extension.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "71ae234e-9aac-41a8-bbc6-742ebb8b9277";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitExtension_Development_20170512;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -828,13 +854,15 @@
 			baseConfigurationReference = C00B1934E3D1F690090DB8B3 /* Pods-Piluliers 4.0 WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0 WatchKit Extension/Piluliers 4.0 WatchKit Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d9111646-bdf4-49f2-ac6e-e29269fecf12";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitExtension_Distribution_20170512;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -847,13 +875,15 @@
 			baseConfigurationReference = 784FCB19BC7AB00AB21B0590 /* Pods-Piluliers 4.0 WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0 WatchKit App/Piluliers 4.0 WatchKit App.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				IBSC_MODULE = Piluliers_4_0_WatchKit_Extension;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "7a0fd540-819f-405a-ae5f-e05e6d4680e8";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitApp_Development_20170512;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -866,13 +896,15 @@
 			baseConfigurationReference = 0AD7B1CB3057483E18828E20 /* Pods-Piluliers 4.0 WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0 WatchKit App/Piluliers 4.0 WatchKit App.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				IBSC_MODULE = Piluliers_4_0_WatchKit_Extension;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "f6c8dc61-80e7-4514-b679-4882c4e46def";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitApp_Distribution_20170512;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -885,13 +917,14 @@
 			baseConfigurationReference = 35EA955690DD6E672D8EEC8A /* Pods-Piluliers 4.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0/Piluliers 4.0.entitlements";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "65ecb868-e091-4cb1-81e6-66470282cac6";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Development_20170510;
+				PROVISIONING_PROFILE = "68409b84-289b-4e57-ba24-e4f106f23bb2";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Development_20170512;
 			};
 			name = Debug;
 		};
@@ -900,14 +933,15 @@
 			baseConfigurationReference = 05DF0918CC641785E1244598 /* Pods-Piluliers 4.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0/Piluliers 4.0.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dbb0cfd7-d8ef-4b57-96f3-9c1689f4e9b0";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Distribution_20170510;
+				PROVISIONING_PROFILE = "ad8082b3-c4a3-412a-99fb-8feb5c7df495";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Distribution_20170512;
 			};
 			name = Release;
 		};
