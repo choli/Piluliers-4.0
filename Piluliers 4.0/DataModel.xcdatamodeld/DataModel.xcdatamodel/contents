@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="Attachment" representedClassName="Attachment" syncable="YES" codeGenerationType="class">
+    <entity name="Attachment" representedClassName="Attachment" syncable="YES">
         <attribute name="contentType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creation" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,33 +8,33 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Batch" representedClassName="Batch" syncable="YES" codeGenerationType="class">
+    <entity name="Batch" representedClassName="Batch" syncable="YES">
         <attribute name="expirationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="lotNumber" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="BoundsRange" representedClassName="BoundsRange" syncable="YES" codeGenerationType="class">
+    <entity name="BoundsRange" representedClassName="BoundsRange" syncable="YES">
         <attribute name="high" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="low" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
-    <entity name="CodeableConcept" representedClassName="CodeableConcept" syncable="YES" codeGenerationType="class">
+    <entity name="CodeableConcept" representedClassName="CodeableConcept" syncable="YES">
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="coding" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Coding" syncable="YES"/>
     </entity>
-    <entity name="Coding" representedClassName="Coding" syncable="YES" codeGenerationType="class">
+    <entity name="Coding" representedClassName="Coding" syncable="YES">
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="display" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="system" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Content" representedClassName="Content" syncable="YES" codeGenerationType="class">
+    <entity name="Content" representedClassName="Content" syncable="YES">
         <relationship name="amount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quantity" syncable="YES"/>
         <relationship name="itemCodeableConcept" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
     </entity>
-    <entity name="DispenseRequest" representedClassName="DispenseRequest" syncable="YES" codeGenerationType="class">
+    <entity name="DispenseRequest" representedClassName="DispenseRequest" syncable="YES">
         <attribute name="numberOfRepeatsAllowed" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="quantity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quantity" syncable="YES"/>
         <relationship name="validityPeriod" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Period" syncable="YES"/>
     </entity>
-    <entity name="Dosage" representedClassName="Dosage" syncable="YES" codeGenerationType="class">
+    <entity name="Dosage" representedClassName="Dosage" syncable="YES">
         <attribute name="sequence" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="doseQuantity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quantity" syncable="YES"/>
@@ -49,7 +49,7 @@
         <relationship name="route" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
         <relationship name="timing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Repeat" syncable="YES"/>
     </entity>
-    <entity name="EventTiming" representedClassName="EventTiming" syncable="YES" codeGenerationType="class">
+    <entity name="EventTiming" representedClassName="EventTiming" syncable="YES">
         <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" syncable="YES"/>
         <relationship name="relationship1" optional="YES" maxCount="1" deletionRule="Nullify" syncable="YES"/>
@@ -67,12 +67,12 @@
         <relationship name="relationship13" optional="YES" maxCount="1" deletionRule="Nullify" syncable="YES"/>
         <relationship name="relationship14" optional="YES" maxCount="1" deletionRule="Nullify" syncable="YES"/>
     </entity>
-    <entity name="Ingredient" representedClassName="Ingredient" syncable="YES" codeGenerationType="class">
+    <entity name="Ingredient" representedClassName="Ingredient" syncable="YES">
         <attribute name="isActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="amount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ratio" syncable="YES"/>
         <relationship name="itemCodeableConcept" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
     </entity>
-    <entity name="Medication" representedClassName="Medication" syncable="YES" codeGenerationType="class">
+    <entity name="Medication" representedClassName="Medication" syncable="YES">
         <attribute name="isBrand" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isOverTheCounter" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
@@ -82,11 +82,11 @@
         <relationship name="ingredient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" syncable="YES"/>
         <relationship name="package" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Package" syncable="YES"/>
     </entity>
-    <entity name="MedicationPlan" representedClassName="MedicationPlan" syncable="YES" codeGenerationType="class">
+    <entity name="MedicationPlan" representedClassName="MedicationPlan" syncable="YES">
         <relationship name="medications" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MedicationRequest" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
     </entity>
-    <entity name="MedicationRequest" representedClassName="MedicationRequest" syncable="YES" codeGenerationType="class">
+    <entity name="MedicationRequest" representedClassName="MedicationRequest" syncable="YES">
         <attribute name="authoredOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="dispenseRequest" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DispenseRequest" syncable="YES"/>
@@ -95,35 +95,35 @@
         <relationship name="note" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" syncable="YES"/>
         <relationship name="reasonCode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
     </entity>
-    <entity name="Note" representedClassName="Note" syncable="YES" codeGenerationType="class">
+    <entity name="Note" representedClassName="Note" syncable="YES">
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
-    <entity name="Package" representedClassName="Package" syncable="YES" codeGenerationType="class">
+    <entity name="Package" representedClassName="Package" syncable="YES">
         <relationship name="batch" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Batch" syncable="YES"/>
         <relationship name="container" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
         <relationship name="content" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Content" syncable="YES"/>
     </entity>
-    <entity name="Period" representedClassName="Period" syncable="YES" codeGenerationType="class">
+    <entity name="Period" representedClassName="Period" syncable="YES">
         <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
-    <entity name="Quantity" representedClassName="Quantity" syncable="YES" codeGenerationType="class">
+    <entity name="Quantity" representedClassName="Quantity" syncable="YES">
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="comparator" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="system" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="Range" representedClassName="Range" syncable="YES" codeGenerationType="class">
+    <entity name="Range" representedClassName="Range" syncable="YES">
         <relationship name="high" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quantity" syncable="YES"/>
         <relationship name="low" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quantity" syncable="YES"/>
     </entity>
-    <entity name="Ratio" representedClassName="Ratio" syncable="YES" codeGenerationType="class">
+    <entity name="Ratio" representedClassName="Ratio" syncable="YES">
         <relationship name="denumerator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quantity" syncable="YES"/>
         <relationship name="numerator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quantity" syncable="YES"/>
     </entity>
-    <entity name="Repeat" representedClassName="Repeat" syncable="YES" codeGenerationType="class">
+    <entity name="Repeat" representedClassName="Repeat" syncable="YES">
         <attribute name="frequency" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="period" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="periodMax" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -131,37 +131,37 @@
         <relationship name="boundsPeriod" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Period" syncable="YES"/>
         <relationship name="when" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EventTiming" syncable="YES"/>
     </entity>
-    <entity name="Timing" representedClassName="Timing" syncable="YES" codeGenerationType="class">
+    <entity name="Timing" representedClassName="Timing" syncable="YES">
         <relationship name="code" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
         <relationship name="repeat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
     </entity>
-    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+    <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="birthDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Attachment" positionX="-18" positionY="-36" width="128" height="135"/>
+        <element name="Batch" positionX="9" positionY="-9" width="128" height="75"/>
         <element name="BoundsRange" positionX="0" positionY="81" width="128" height="75"/>
-        <element name="CodeableConcept" positionX="-9" positionY="72" width="128" height="30"/>
-        <element name="Coding" positionX="-18" positionY="63" width="128" height="88"/>
+        <element name="CodeableConcept" positionX="-9" positionY="72" width="128" height="75"/>
+        <element name="Coding" positionX="-18" positionY="63" width="128" height="90"/>
+        <element name="Content" positionX="-36" positionY="-54" width="128" height="75"/>
         <element name="DispenseRequest" positionX="27" positionY="99" width="128" height="90"/>
-        <element name="Dosage" positionX="-18" positionY="135" width="128" height="30"/>
-        <element name="MedicationPlan" positionX="-27" positionY="-54" width="128" height="30"/>
-        <element name="EventTiming" positionX="72" positionY="210" width="128" height="30"/>
-        <element name="MedicationRequest" positionX="-243" positionY="-171" width="128" height="30"/>
+        <element name="Dosage" positionX="-18" positionY="135" width="128" height="240"/>
+        <element name="EventTiming" positionX="72" positionY="210" width="128" height="285"/>
+        <element name="Ingredient" positionX="0" positionY="-18" width="128" height="90"/>
+        <element name="Medication" positionX="-27" positionY="-45" width="128" height="165"/>
+        <element name="MedicationPlan" positionX="-27" positionY="-54" width="128" height="75"/>
+        <element name="MedicationRequest" positionX="-243" positionY="-171" width="128" height="150"/>
         <element name="Note" positionX="-47" positionY="279" width="128" height="75"/>
+        <element name="Package" positionX="18" positionY="0" width="128" height="90"/>
         <element name="Period" positionX="187" positionY="-0" width="128" height="75"/>
-        <element name="Quantity" positionX="-108" positionY="-216" width="128" height="118"/>
+        <element name="Quantity" positionX="-108" positionY="-216" width="128" height="120"/>
         <element name="Range" positionX="43" positionY="-174" width="128" height="75"/>
-        <element name="Repeat" positionX="-173" positionY="144" width="128" height="133"/>
-        <element name="Timing" positionX="-243" positionY="-18" width="128" height="73"/>
+        <element name="Ratio" positionX="-9" positionY="-27" width="128" height="75"/>
+        <element name="Repeat" positionX="-173" positionY="144" width="128" height="135"/>
+        <element name="Timing" positionX="-243" positionY="-18" width="128" height="75"/>
         <element name="User" positionX="-36" positionY="-63" width="128" height="90"/>
-        <element name="Medication" positionX="-27" positionY="-45" width="128" height="30"/>
-        <element name="Attachment" positionX="-18" positionY="-36" width="128" height="30"/>
-        <element name="Ratio" positionX="-9" positionY="-27" width="128" height="30"/>
-        <element name="Ingredient" positionX="0" positionY="-18" width="128" height="30"/>
-        <element name="Batch" positionX="9" positionY="-9" width="128" height="30"/>
-        <element name="Package" positionX="18" positionY="0" width="128" height="30"/>
-        <element name="Content" positionX="-36" positionY="-54" width="128" height="30"/>
     </elements>
 </model>
