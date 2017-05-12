@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2316DF761EC602BA006284D6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF741EC602BA006284D6 /* DataModel.xcdatamodeld */; };
-		2316DF7B1EC602C7006284D6 /* MedicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF781EC602C7006284D6 /* MedicationManager.m */; };
-		2316DF7C1EC602C7006284D6 /* RestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DF7A1EC602C7006284D6 /* RestManager.m */; };
 		422AC6AF63948C7CF9418B04 /* libPods-Piluliers 4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */; };
 		BD1D6372524053B896173C45 /* libPods-Piluliers 4.0 WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8687B4E2155720F4DF9B6FE2 /* libPods-Piluliers 4.0 WatchKit Extension.a */; };
 		C0C73D44CE7477E88A7E25FF /* libPods-Piluliers 4.0 WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */; };
@@ -22,26 +19,16 @@
 		C72E603E1EC1F3770087D2FD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E603C1EC1F3770087D2FD /* Interface.storyboard */; };
 		C72E60401EC1F3770087D2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72E603F1EC1F3770087D2FD /* Assets.xcassets */; };
 		C72E60471EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C72E60461EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C72E604F1EC1F3770087D2FD /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E604E1EC1F3770087D2FD /* InterfaceController.m */; };
+		C72E60521EC1F3770087D2FD /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60511EC1F3770087D2FD /* ExtensionDelegate.m */; };
+		C72E60551EC1F3770087D2FD /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60541EC1F3770087D2FD /* NotificationController.m */; };
+		C72E60581EC1F3770087D2FD /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60571EC1F3770087D2FD /* ComplicationController.m */; };
 		C72E605A1EC1F3770087D2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72E60591EC1F3770087D2FD /* Assets.xcassets */; };
-		C72E606C1EC59F460087D2FD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C72E606E1EC59F460087D2FD /* Localizable.strings */; };
-		C72E60781EC5ABE00087D2FD /* StartInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60771EC5ABE00087D2FD /* StartInterfaceController.m */; };
-		C72E608D1EC5BD8A0087D2FD /* PillImageNameRow.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E608C1EC5BD8A0087D2FD /* PillImageNameRow.m */; };
-		C72E60901EC5DCB60087D2FD /* DailyOverviewInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E608F1EC5DCB60087D2FD /* DailyOverviewInterfaceController.m */; };
-		C72E60971EC5DCF90087D2FD /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60921EC5DCF90087D2FD /* ComplicationController.m */; };
-		C72E60981EC5DCF90087D2FD /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60941EC5DCF90087D2FD /* ExtensionDelegate.m */; };
-		C72E60991EC5DCF90087D2FD /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60961EC5DCF90087D2FD /* NotificationController.m */; };
-		C72E60A31EC5F3A80087D2FD /* ConnectivityHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */; };
 		F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */; };
 		F01A82551EC596C4008CEC5A /* MainMenuTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */; };
 		F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01A825B1EC59C6F008CEC5A /* Localizable.strings */; };
 		F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */; };
 		F01A82741EC5AAF2008CEC5A /* TimelineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */; };
-		F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A827A1EC5D39A008CEC5A /* UIColor+CustomColors.m */; };
-		F01A827F1EC5D65F008CEC5A /* TimelineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A827E1EC5D65F008CEC5A /* TimelineHeaderView.m */; };
-		F01A82811EC5D6FC008CEC5A /* TimelineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */; };
-		F01A82871EC5EA1E008CEC5A /* TimelineDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82861EC5EA1E008CEC5A /* TimelineDetailTableViewController.m */; };
-		F01A828D1EC5FDB9008CEC5A /* DrugsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */; };
-		F01A82901EC60640008CEC5A /* AppDelegate+Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A828F1EC60640008CEC5A /* AppDelegate+Appearance.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,11 +76,6 @@
 /* Begin PBXFileReference section */
 		05DF0918CC641785E1244598 /* Pods-Piluliers 4.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0.release.xcconfig"; sourceTree = "<group>"; };
 		0AD7B1CB3057483E18828E20 /* Pods-Piluliers 4.0 WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0 WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0 WatchKit App/Pods-Piluliers 4.0 WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
-		2316DF751EC602BA006284D6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		2316DF771EC602C7006284D6 /* MedicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MedicationManager.h; path = Source/MedicationManager.h; sourceTree = "<group>"; };
-		2316DF781EC602C7006284D6 /* MedicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MedicationManager.m; path = Source/MedicationManager.m; sourceTree = "<group>"; };
-		2316DF791EC602C7006284D6 /* RestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestManager.h; path = Source/RestManager.h; sourceTree = "<group>"; };
-		2316DF7A1EC602C7006284D6 /* RestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestManager.m; path = Source/RestManager.m; sourceTree = "<group>"; };
 		35EA955690DD6E672D8EEC8A /* Pods-Piluliers 4.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0.debug.xcconfig"; sourceTree = "<group>"; };
 		3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0 WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,29 +97,16 @@
 		C72E60411EC1F3770087D2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72E60461EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Piluliers 4.0 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72E604C1EC1F3770087D2FD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C72E604D1EC1F3770087D2FD /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		C72E604E1EC1F3770087D2FD /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		C72E60501EC1F3770087D2FD /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		C72E60511EC1F3770087D2FD /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		C72E60531EC1F3770087D2FD /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		C72E60541EC1F3770087D2FD /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		C72E60561EC1F3770087D2FD /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
+		C72E60571EC1F3770087D2FD /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
 		C72E60591EC1F3770087D2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C72E605B1EC1F3770087D2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C72E606D1EC59F460087D2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C72E606F1EC59F500087D2FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C72E60701EC59F510087D2FD /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C72E60711EC59F520087D2FD /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C72E60761EC5ABE00087D2FD /* StartInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartInterfaceController.h; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/StartInterfaceController.h"; sourceTree = "<group>"; };
-		C72E60771EC5ABE00087D2FD /* StartInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StartInterfaceController.m; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/StartInterfaceController.m"; sourceTree = "<group>"; };
-		C72E608B1EC5BD8A0087D2FD /* PillImageNameRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PillImageNameRow.h; path = Cells/PillImageNameRow.h; sourceTree = "<group>"; };
-		C72E608C1EC5BD8A0087D2FD /* PillImageNameRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PillImageNameRow.m; path = Cells/PillImageNameRow.m; sourceTree = "<group>"; };
-		C72E608E1EC5DCB60087D2FD /* DailyOverviewInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DailyOverviewInterfaceController.h; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/DailyOverviewInterfaceController.h"; sourceTree = "<group>"; };
-		C72E608F1EC5DCB60087D2FD /* DailyOverviewInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DailyOverviewInterfaceController.m; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/DailyOverviewInterfaceController.m"; sourceTree = "<group>"; };
-		C72E60911EC5DCF90087D2FD /* ComplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComplicationController.h; path = "Piluliers 4.0 WatchKit Extension/Extensions/ComplicationController.h"; sourceTree = "<group>"; };
-		C72E60921EC5DCF90087D2FD /* ComplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComplicationController.m; path = "Piluliers 4.0 WatchKit Extension/Extensions/ComplicationController.m"; sourceTree = "<group>"; };
-		C72E60931EC5DCF90087D2FD /* ExtensionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtensionDelegate.h; path = "Piluliers 4.0 WatchKit Extension/Extensions/ExtensionDelegate.h"; sourceTree = "<group>"; };
-		C72E60941EC5DCF90087D2FD /* ExtensionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExtensionDelegate.m; path = "Piluliers 4.0 WatchKit Extension/Extensions/ExtensionDelegate.m"; sourceTree = "<group>"; };
-		C72E60951EC5DCF90087D2FD /* NotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationController.h; path = "Piluliers 4.0 WatchKit Extension/Extensions/NotificationController.h"; sourceTree = "<group>"; };
-		C72E60961EC5DCF90087D2FD /* NotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationController.m; path = "Piluliers 4.0 WatchKit Extension/Extensions/NotificationController.m"; sourceTree = "<group>"; };
-		C72E609D1EC5E3DC0087D2FD /* Piluliers 4.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Piluliers 4.0.entitlements"; sourceTree = "<group>"; };
-		C72E609E1EC5E5CC0087D2FD /* Piluliers 4.0 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Piluliers 4.0 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		C72E609F1EC5E5D60087D2FD /* Piluliers 4.0 WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Piluliers 4.0 WatchKit App.entitlements"; sourceTree = "<group>"; };
-		C72E60A11EC5F3A80087D2FD /* ConnectivityHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectivityHandler.h; path = WatchHelper/ConnectivityHandler.h; sourceTree = "<group>"; };
-		C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectivityHandler.m; path = WatchHelper/ConnectivityHandler.m; sourceTree = "<group>"; };
 		F01A82511EC596C4008CEC5A /* MainMenuTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTabBarController.h; sourceTree = "<group>"; };
 		F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTabBarController.m; sourceTree = "<group>"; };
 		F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuTabBarController.xib; sourceTree = "<group>"; };
@@ -149,17 +118,6 @@
 		F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewController.m; sourceTree = "<group>"; };
 		F01A82711EC5AAF2008CEC5A /* TimelineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewCell.h; sourceTree = "<group>"; };
 		F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewCell.m; sourceTree = "<group>"; };
-		F01A82791EC5D39A008CEC5A /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
-		F01A827A1EC5D39A008CEC5A /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
-		F01A827D1EC5D65F008CEC5A /* TimelineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineHeaderView.h; sourceTree = "<group>"; };
-		F01A827E1EC5D65F008CEC5A /* TimelineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineHeaderView.m; sourceTree = "<group>"; };
-		F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineHeaderView.xib; sourceTree = "<group>"; };
-		F01A82851EC5EA1E008CEC5A /* TimelineDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineDetailTableViewController.h; sourceTree = "<group>"; };
-		F01A82861EC5EA1E008CEC5A /* TimelineDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineDetailTableViewController.m; sourceTree = "<group>"; };
-		F01A828B1EC5FDB9008CEC5A /* DrugsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugsTableViewController.h; sourceTree = "<group>"; };
-		F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsTableViewController.m; sourceTree = "<group>"; };
-		F01A828E1EC60640008CEC5A /* AppDelegate+Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+Appearance.h"; path = "Source/AppDelegate+Appearance.h"; sourceTree = "<group>"; };
-		F01A828F1EC60640008CEC5A /* AppDelegate+Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+Appearance.m"; path = "Source/AppDelegate+Appearance.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,26 +158,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2316DF721EC60298006284D6 /* BusinessLogic */ = {
-			isa = PBXGroup;
-			children = (
-				2316DF771EC602C7006284D6 /* MedicationManager.h */,
-				2316DF781EC602C7006284D6 /* MedicationManager.m */,
-				2316DF791EC602C7006284D6 /* RestManager.h */,
-				2316DF7A1EC602C7006284D6 /* RestManager.m */,
-				2316DF731EC602AE006284D6 /* Model */,
-			);
-			name = BusinessLogic;
-			sourceTree = "<group>";
-		};
-		2316DF731EC602AE006284D6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2316DF741EC602BA006284D6 /* DataModel.xcdatamodeld */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		C72E60171EC1F3770087D2FD = {
 			isa = PBXGroup;
 			children = (
@@ -245,11 +183,7 @@
 		C72E60221EC1F3770087D2FD /* Piluliers 4.0 */ = {
 			isa = PBXGroup;
 			children = (
-				2316DF721EC60298006284D6 /* BusinessLogic */,
-				C72E609D1EC5E3DC0087D2FD /* Piluliers 4.0.entitlements */,
-				F01A82781EC5D33E008CEC5A /* Additions */,
 				F01A824F1EC595F1008CEC5A /* Presentation */,
-				C72E60A01EC5F3530087D2FD /* WatchHelper */,
 				C72E60261EC1F3770087D2FD /* AppDelegate.h */,
 				C72E60271EC1F3770087D2FD /* AppDelegate.m */,
 				C72E602C1EC1F3770087D2FD /* Main.storyboard */,
@@ -258,8 +192,6 @@
 				C72E60341EC1F3770087D2FD /* Info.plist */,
 				F01A82561EC59C12008CEC5A /* Resources */,
 				C72E60231EC1F3770087D2FD /* Supporting Files */,
-				F01A828E1EC60640008CEC5A /* AppDelegate+Appearance.h */,
-				F01A828F1EC60640008CEC5A /* AppDelegate+Appearance.m */,
 			);
 			path = "Piluliers 4.0";
 			sourceTree = "<group>";
@@ -275,7 +207,6 @@
 		C72E603B1EC1F3770087D2FD /* Piluliers 4.0 WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				C72E609F1EC5E5D60087D2FD /* Piluliers 4.0 WatchKit App.entitlements */,
 				C72E603C1EC1F3770087D2FD /* Interface.storyboard */,
 				C72E603F1EC1F3770087D2FD /* Assets.xcassets */,
 				C72E60411EC1F3770087D2FD /* Info.plist */,
@@ -286,13 +217,16 @@
 		C72E604A1EC1F3770087D2FD /* Piluliers 4.0 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				C72E609E1EC5E5CC0087D2FD /* Piluliers 4.0 WatchKit Extension.entitlements */,
-				C72E60721EC5AB460087D2FD /* InterfaceControllers */,
-				C72E60871EC5BC770087D2FD /* Cells */,
-				C72E60821EC5B6F70087D2FD /* Extensions */,
+				C72E604D1EC1F3770087D2FD /* InterfaceController.h */,
+				C72E604E1EC1F3770087D2FD /* InterfaceController.m */,
+				C72E60501EC1F3770087D2FD /* ExtensionDelegate.h */,
+				C72E60511EC1F3770087D2FD /* ExtensionDelegate.m */,
+				C72E60531EC1F3770087D2FD /* NotificationController.h */,
+				C72E60541EC1F3770087D2FD /* NotificationController.m */,
+				C72E60561EC1F3770087D2FD /* ComplicationController.h */,
+				C72E60571EC1F3770087D2FD /* ComplicationController.m */,
 				C72E60591EC1F3770087D2FD /* Assets.xcassets */,
 				C72E605B1EC1F3770087D2FD /* Info.plist */,
-				C72E60691EC59B560087D2FD /* Resources */,
 				C72E604B1EC1F3770087D2FD /* Supporting Files */,
 			);
 			path = "Piluliers 4.0 WatchKit Extension";
@@ -304,58 +238,6 @@
 				C72E604C1EC1F3770087D2FD /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C72E60691EC59B560087D2FD /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C72E606E1EC59F460087D2FD /* Localizable.strings */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		C72E60721EC5AB460087D2FD /* InterfaceControllers */ = {
-			isa = PBXGroup;
-			children = (
-				C72E60761EC5ABE00087D2FD /* StartInterfaceController.h */,
-				C72E60771EC5ABE00087D2FD /* StartInterfaceController.m */,
-				C72E608E1EC5DCB60087D2FD /* DailyOverviewInterfaceController.h */,
-				C72E608F1EC5DCB60087D2FD /* DailyOverviewInterfaceController.m */,
-			);
-			name = InterfaceControllers;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		C72E60821EC5B6F70087D2FD /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C72E60911EC5DCF90087D2FD /* ComplicationController.h */,
-				C72E60921EC5DCF90087D2FD /* ComplicationController.m */,
-				C72E60931EC5DCF90087D2FD /* ExtensionDelegate.h */,
-				C72E60941EC5DCF90087D2FD /* ExtensionDelegate.m */,
-				C72E60951EC5DCF90087D2FD /* NotificationController.h */,
-				C72E60961EC5DCF90087D2FD /* NotificationController.m */,
-			);
-			name = Extensions;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		C72E60871EC5BC770087D2FD /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				C72E608B1EC5BD8A0087D2FD /* PillImageNameRow.h */,
-				C72E608C1EC5BD8A0087D2FD /* PillImageNameRow.m */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		C72E60A01EC5F3530087D2FD /* WatchHelper */ = {
-			isa = PBXGroup;
-			children = (
-				C72E60A11EC5F3A80087D2FD /* ConnectivityHandler.h */,
-				C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */,
-			);
-			name = WatchHelper;
 			sourceTree = "<group>";
 		};
 		EDA70D607A53DDE2079370F6 /* Pods */ = {
@@ -374,9 +256,6 @@
 		F01A824F1EC595F1008CEC5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				F01A828A1EC5FDA4008CEC5A /* Settings */,
-				F01A82891EC5FD9B008CEC5A /* Drugs */,
-				F01A82881EC5FD94008CEC5A /* History */,
 				F01A82611EC59DED008CEC5A /* Timeline */,
 				F01A82501EC59606008CEC5A /* MainMenu */,
 			);
@@ -404,12 +283,9 @@
 		F01A82611EC59DED008CEC5A /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
-				F01A827C1EC5D641008CEC5A /* TableViewHeaderView */,
 				F01A82701EC5AAD5008CEC5A /* TableViewCell */,
 				F01A82621EC59E2F008CEC5A /* TimelineTableViewController.h */,
 				F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */,
-				F01A82851EC5EA1E008CEC5A /* TimelineDetailTableViewController.h */,
-				F01A82861EC5EA1E008CEC5A /* TimelineDetailTableViewController.m */,
 			);
 			name = Timeline;
 			sourceTree = "<group>";
@@ -421,48 +297,6 @@
 				F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */,
 			);
 			name = TableViewCell;
-			sourceTree = "<group>";
-		};
-		F01A82781EC5D33E008CEC5A /* Additions */ = {
-			isa = PBXGroup;
-			children = (
-				F01A82791EC5D39A008CEC5A /* UIColor+CustomColors.h */,
-				F01A827A1EC5D39A008CEC5A /* UIColor+CustomColors.m */,
-			);
-			name = Additions;
-			sourceTree = "<group>";
-		};
-		F01A827C1EC5D641008CEC5A /* TableViewHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				F01A827D1EC5D65F008CEC5A /* TimelineHeaderView.h */,
-				F01A827E1EC5D65F008CEC5A /* TimelineHeaderView.m */,
-				F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */,
-			);
-			name = TableViewHeaderView;
-			sourceTree = "<group>";
-		};
-		F01A82881EC5FD94008CEC5A /* History */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = History;
-			sourceTree = "<group>";
-		};
-		F01A82891EC5FD9B008CEC5A /* Drugs */ = {
-			isa = PBXGroup;
-			children = (
-				F01A828B1EC5FDB9008CEC5A /* DrugsTableViewController.h */,
-				F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */,
-			);
-			name = Drugs;
-			sourceTree = "<group>";
-		};
-		F01A828A1EC5FDA4008CEC5A /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -543,34 +377,16 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = BURQ256D9M;
 						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
 					};
 					C72E60361EC1F3770087D2FD = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = BURQ256D9M;
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
+						ProvisioningStyle = Automatic;
 					};
 					C72E60451EC1F3770087D2FD = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = BURQ256D9M;
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -602,7 +418,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F01A82811EC5D6FC008CEC5A /* TimelineHeaderView.xib in Resources */,
 				F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */,
 				C72E60331EC1F3770087D2FD /* LaunchScreen.storyboard in Resources */,
 				C72E60301EC1F3770087D2FD /* Assets.xcassets in Resources */,
@@ -625,7 +440,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C72E605A1EC1F3770087D2FD /* Assets.xcassets in Resources */,
-				C72E606C1EC59F460087D2FD /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,20 +573,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F01A827F1EC5D65F008CEC5A /* TimelineHeaderView.m in Sources */,
-				2316DF761EC602BA006284D6 /* DataModel.xcdatamodeld in Sources */,
-				2316DF7B1EC602C7006284D6 /* MedicationManager.m in Sources */,
-				F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */,
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
-				C72E60A31EC5F3A80087D2FD /* ConnectivityHandler.m in Sources */,
-				F01A82901EC60640008CEC5A /* AppDelegate+Appearance.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
-				F01A828D1EC5FDB9008CEC5A /* DrugsTableViewController.m in Sources */,
 				F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */,
 				F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */,
-				2316DF7C1EC602C7006284D6 /* RestManager.m in Sources */,
 				F01A82741EC5AAF2008CEC5A /* TimelineTableViewCell.m in Sources */,
-				F01A82871EC5EA1E008CEC5A /* TimelineDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,12 +585,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C72E608D1EC5BD8A0087D2FD /* PillImageNameRow.m in Sources */,
-				C72E60981EC5DCF90087D2FD /* ExtensionDelegate.m in Sources */,
-				C72E60991EC5DCF90087D2FD /* NotificationController.m in Sources */,
-				C72E60971EC5DCF90087D2FD /* ComplicationController.m in Sources */,
-				C72E60781EC5ABE00087D2FD /* StartInterfaceController.m in Sources */,
-				C72E60901EC5DCB60087D2FD /* DailyOverviewInterfaceController.m in Sources */,
+				C72E60521EC1F3770087D2FD /* ExtensionDelegate.m in Sources */,
+				C72E60581EC1F3770087D2FD /* ComplicationController.m in Sources */,
+				C72E604F1EC1F3770087D2FD /* InterfaceController.m in Sources */,
+				C72E60551EC1F3770087D2FD /* NotificationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,18 +630,6 @@
 				C72E603D1EC1F3770087D2FD /* Base */,
 			);
 			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-		C72E606E1EC59F460087D2FD /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C72E606D1EC59F460087D2FD /* Base */,
-				C72E606F1EC59F500087D2FD /* de */,
-				C72E60701EC59F510087D2FD /* fr */,
-				C72E60711EC59F520087D2FD /* it */,
-			);
-			name = Localizable.strings;
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		F01A825B1EC59C6F008CEC5A /* Localizable.strings */ = {
@@ -953,15 +744,13 @@
 			baseConfigurationReference = A2DE46F55F3FE4D7C22FD363 /* Pods-Piluliers 4.0 WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0 WatchKit Extension/Piluliers 4.0 WatchKit Extension.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "0aa8f1fc-9d74-4e8a-a3e7-7dc306e0d8ff";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitExtension_Development_20170512;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -974,15 +763,13 @@
 			baseConfigurationReference = C00B1934E3D1F690090DB8B3 /* Pods-Piluliers 4.0 WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0 WatchKit Extension/Piluliers 4.0 WatchKit Extension.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "71ae234e-9aac-41a8-bbc6-742ebb8b9277";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitExtension_Development_20170512;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -995,15 +782,13 @@
 			baseConfigurationReference = 784FCB19BC7AB00AB21B0590 /* Pods-Piluliers 4.0 WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0 WatchKit App/Piluliers 4.0 WatchKit App.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				IBSC_MODULE = Piluliers_4_0_WatchKit_Extension;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7a0fd540-819f-405a-ae5f-e05e6d4680e8";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitApp_Development_20170512;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1016,15 +801,13 @@
 			baseConfigurationReference = 0AD7B1CB3057483E18828E20 /* Pods-Piluliers 4.0 WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0 WatchKit App/Piluliers 4.0 WatchKit App.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				IBSC_MODULE = Piluliers_4_0_WatchKit_Extension;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7a0fd540-819f-405a-ae5f-e05e6d4680e8";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitApp_Development_20170512;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1037,14 +820,13 @@
 			baseConfigurationReference = 35EA955690DD6E672D8EEC8A /* Pods-Piluliers 4.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0/Piluliers 4.0.entitlements";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a66ae419-b337-499e-8e3c-91ed3cf4f5bc";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Development_20170512;
+				PROVISIONING_PROFILE = "65ecb868-e091-4cb1-81e6-66470282cac6";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Development_20170510;
 			};
 			name = Debug;
 		};
@@ -1053,15 +835,14 @@
 			baseConfigurationReference = 05DF0918CC641785E1244598 /* Pods-Piluliers 4.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Piluliers 4.0/Piluliers 4.0.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "68409b84-289b-4e57-ba24-e4f106f23bb2";
-				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Development_20170512;
+				PROVISIONING_PROFILE = "dbb0cfd7-d8ef-4b57-96f3-9c1689f4e9b0";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Distribution_20170510;
 			};
 			name = Release;
 		};
@@ -1105,19 +886,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2316DF741EC602BA006284D6 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2316DF751EC602BA006284D6 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 2316DF751EC602BA006284D6 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C72E60181EC1F3770087D2FD /* Project object */;
 }

@@ -8,6 +8,8 @@
 
 #import "TimelineTableViewController.h"
 #import "TimelineTableViewCell.h"
+#import "UIColor+CustomColors.h"
+#import "TimelineHeaderView.h"
 
 @interface TimelineTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -17,12 +19,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    [self.navigationController.navigationBar setBarTintColor:[UIColor greenColor]];
-    [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     self.title = NSLocalizedString(@"timeline", nil);
     [self.tableView reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self addTableViewHeaderView];
+}
+
+- (void)addTableViewHeaderView {
+    TimelineHeaderView *timelineHeaderView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([TimelineHeaderView class]) owner:self options:nil] firstObject];
+    timelineHeaderView.translatesAutoresizingMaskIntoConstraints = NO;
+    //@meumannu: add username and image
+    timelineHeaderView.usernameLabel.text = @"Sandro";
+    timelineHeaderView.userImageView.image = [UIImage imageNamed:@"sandro"];
+    self.tableView.tableHeaderView = timelineHeaderView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,14 +69,26 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80.0f;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
+    //todo meumannu: set data from model
+    cell.intakeTime.text = @"12:00";
+    cell.pillImage.image = [UIImage imageNamed:@"pill"];
+    cell.medicamentName.text = @"Medikament X";
+    cell.medicamentDescription.text = @"Dies ist eine Pille";
+    cell.medicamentDosage.text = @"1 Kapsel";
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 # pragma mark - Table View Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //todo stoecklim: present detail view controller
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

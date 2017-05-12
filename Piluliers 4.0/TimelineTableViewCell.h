@@ -10,4 +10,10 @@
 
 @interface TimelineTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *intakeTime;
+@property (weak, nonatomic) IBOutlet UIImageView *pillImage;
+@property (weak, nonatomic) IBOutlet UILabel *medicamentName;
+@property (weak, nonatomic) IBOutlet UILabel *medicamentDescription;
+@property (weak, nonatomic) IBOutlet UILabel *medicamentDosage;
+
 @end

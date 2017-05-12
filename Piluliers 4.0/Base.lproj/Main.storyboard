@@ -6,9 +6,28 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="gor-KS-e1u">
+            <objects>
+                <viewController id="1YP-1W-Hne" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Byg-lU-KfS"/>
+                        <viewControllerLayoutGuide type="bottom" id="oWs-2M-XGX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Deg-VT-z69">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pI-Pq-b54" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-689" y="116"/>
+        </scene>
         <!--Timeline Table View Controller-->
         <scene sceneID="Oq6-05-5yZ">
             <objects>
@@ -18,22 +37,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineTableViewCell" textLabel="JWi-j3-EHb" style="IBUITableViewCellStyleDefault" id="fmg-0X-b9c" customClass="TimelineTableViewCell">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineTableViewCell" rowHeight="80" id="fmg-0X-b9c" customClass="TimelineTableViewCell">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fmg-0X-b9c" id="khN-bR-Wdi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JWi-j3-EHb">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="99:99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="How-HS-IDB">
+                                            <rect key="frame" x="8" y="8" width="55" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicament 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEt-4W-zbs">
+                                            <rect key="frame" x="118" y="8" width="249" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflux" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx6-CJ-rZh">
+                                            <rect key="frame" x="118" y="33" width="249" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 gélule" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sz-pn-haW">
+                                            <rect key="frame" x="118" y="53" width="249" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pill" translatesAutoresizingMaskIntoConstraints="NO" id="i82-Kp-sKT">
+                                            <rect key="frame" x="76" y="7" width="26" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="26" id="ipL-qh-QbM"/>
+                                                <constraint firstAttribute="height" constant="26" id="y3a-V1-mSx"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2Sz-pn-haW" firstAttribute="leading" secondItem="tx6-CJ-rZh" secondAttribute="leading" id="9Bq-7O-mHR"/>
+                                        <constraint firstItem="i82-Kp-sKT" firstAttribute="leading" secondItem="How-HS-IDB" secondAttribute="trailing" constant="13" id="BjI-4v-3sI"/>
+                                        <constraint firstItem="2Sz-pn-haW" firstAttribute="top" secondItem="tx6-CJ-rZh" secondAttribute="bottom" constant="3" id="CkN-5S-G2c"/>
+                                        <constraint firstItem="2Sz-pn-haW" firstAttribute="width" secondItem="tx6-CJ-rZh" secondAttribute="width" id="CmF-dm-VsX"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NEt-4W-zbs" secondAttribute="trailing" id="Dn6-1L-M3u"/>
+                                        <constraint firstAttribute="topMargin" secondItem="How-HS-IDB" secondAttribute="top" id="IfA-Fl-JSd"/>
+                                        <constraint firstItem="NEt-4W-zbs" firstAttribute="centerY" secondItem="i82-Kp-sKT" secondAttribute="centerY" id="OJX-Fi-oFa"/>
+                                        <constraint firstItem="tx6-CJ-rZh" firstAttribute="leading" secondItem="NEt-4W-zbs" secondAttribute="leading" id="WC4-mZ-6R9"/>
+                                        <constraint firstItem="i82-Kp-sKT" firstAttribute="centerY" secondItem="How-HS-IDB" secondAttribute="centerY" id="c6v-a7-Znq"/>
+                                        <constraint firstItem="tx6-CJ-rZh" firstAttribute="top" secondItem="NEt-4W-zbs" secondAttribute="bottom" constant="1" id="c9a-01-5LJ"/>
+                                        <constraint firstItem="tx6-CJ-rZh" firstAttribute="width" secondItem="NEt-4W-zbs" secondAttribute="width" id="e6w-Ek-xRA"/>
+                                        <constraint firstItem="NEt-4W-zbs" firstAttribute="leading" secondItem="i82-Kp-sKT" secondAttribute="trailing" constant="16" id="gHl-pc-9bG"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="How-HS-IDB" secondAttribute="leading" id="mZS-pu-7FV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="intakeTime" destination="How-HS-IDB" id="28i-HA-XTN"/>
+                                    <outlet property="medicamentDescription" destination="tx6-CJ-rZh" id="Z0v-fC-uFH"/>
+                                    <outlet property="medicamentDosage" destination="2Sz-pn-haW" id="aO1-Ck-dB0"/>
+                                    <outlet property="medicamentName" destination="NEt-4W-zbs" id="F5f-AA-aBA"/>
+                                    <outlet property="pillImage" destination="i82-Kp-sKT" id="DTq-hR-3wj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -41,7 +106,90 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDT-Tf-gFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="136"/>
+            <point key="canvasLocation" x="104.8" y="135.38230884557723"/>
+        </scene>
+        <!--Drugs Table View Controller-->
+        <scene sceneID="otS-Xk-We2">
+            <objects>
+                <tableViewController storyboardIdentifier="DrugsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3kp-nv-tCM" customClass="DrugsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="TH8-Uy-Ury">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineTableViewCell" rowHeight="80" id="bnU-Ee-kAv" customClass="TimelineTableViewCell">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnU-Ee-kAv" id="FDR-67-woI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="99:99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-33-e4b">
+                                            <rect key="frame" x="8" y="8" width="55" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicament 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1e-wX-SQn">
+                                            <rect key="frame" x="118" y="8" width="249" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflux" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7N-7y-8TK">
+                                            <rect key="frame" x="118" y="33" width="249" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 gélule" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZ7-X8-4Pg">
+                                            <rect key="frame" x="118" y="53" width="249" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pill" translatesAutoresizingMaskIntoConstraints="NO" id="leo-Zx-rxq">
+                                            <rect key="frame" x="76" y="7" width="26" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="hRG-MK-In7"/>
+                                                <constraint firstAttribute="width" constant="26" id="stE-0n-PBa"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="T7N-7y-8TK" firstAttribute="leading" secondItem="K1e-wX-SQn" secondAttribute="leading" id="1Hb-RY-kkc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="K1e-wX-SQn" secondAttribute="trailing" id="1Pb-cS-NzH"/>
+                                        <constraint firstItem="K1e-wX-SQn" firstAttribute="centerY" secondItem="leo-Zx-rxq" secondAttribute="centerY" id="AR8-l4-lDd"/>
+                                        <constraint firstItem="K1e-wX-SQn" firstAttribute="leading" secondItem="leo-Zx-rxq" secondAttribute="trailing" constant="16" id="Id5-wV-PNN"/>
+                                        <constraint firstItem="T7N-7y-8TK" firstAttribute="top" secondItem="K1e-wX-SQn" secondAttribute="bottom" constant="1" id="Jat-ex-lOg"/>
+                                        <constraint firstItem="leo-Zx-rxq" firstAttribute="leading" secondItem="o8X-33-e4b" secondAttribute="trailing" constant="13" id="KS8-xz-is5"/>
+                                        <constraint firstItem="leo-Zx-rxq" firstAttribute="centerY" secondItem="o8X-33-e4b" secondAttribute="centerY" id="Uo8-6M-B86"/>
+                                        <constraint firstAttribute="topMargin" secondItem="o8X-33-e4b" secondAttribute="top" id="Wje-gM-ZRF"/>
+                                        <constraint firstItem="qZ7-X8-4Pg" firstAttribute="leading" secondItem="T7N-7y-8TK" secondAttribute="leading" id="Wra-Ng-bm7"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="o8X-33-e4b" secondAttribute="leading" id="h60-Qc-xuB"/>
+                                        <constraint firstItem="qZ7-X8-4Pg" firstAttribute="top" secondItem="T7N-7y-8TK" secondAttribute="bottom" constant="3" id="idQ-84-sNQ"/>
+                                        <constraint firstItem="qZ7-X8-4Pg" firstAttribute="width" secondItem="T7N-7y-8TK" secondAttribute="width" id="rh8-Xx-Pmz"/>
+                                        <constraint firstItem="T7N-7y-8TK" firstAttribute="width" secondItem="K1e-wX-SQn" secondAttribute="width" id="xSm-tQ-bF8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="intakeTime" destination="o8X-33-e4b" id="PAY-Iv-Wme"/>
+                                    <outlet property="medicamentDescription" destination="T7N-7y-8TK" id="JDz-Oo-dT1"/>
+                                    <outlet property="medicamentDosage" destination="qZ7-X8-4Pg" id="0Oq-n4-dXi"/>
+                                    <outlet property="medicamentName" destination="K1e-wX-SQn" id="uf5-4j-k91"/>
+                                    <outlet property="pillImage" destination="leo-Zx-rxq" id="5q0-jR-W4G"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUu-HD-2Yt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="135.38230884557723"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pill" width="64" height="64"/>
+    </resources>
 </document>

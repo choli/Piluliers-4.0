@@ -10,6 +10,7 @@
 #import "MainMenuTabBarController.h"
 #import "ConnectivityHandler.h"
 #import <WatchConnectivity/WatchConnectivity.h>
+#import "AppDelegate+Appearance.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) ConnectivityHandler *connectivityHandler;
@@ -21,6 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[MainMenuTabBarController alloc] initWithNibName:@"MainMenuTabBarController" bundle:nil];
+    [self setupAppearance];
     [self.window makeKeyAndVisible];
     
     if ([WCSession isSupported]) {
