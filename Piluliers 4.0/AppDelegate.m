@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MainMenuTabBarController.h"
+#import "ConnectivityHandler.h"
+#import <WatchConnectivity/WatchConnectivity.h>
+#import "AppDelegate+Appearance.h"
 #import "RestManager.h"
 
 @interface AppDelegate ()
