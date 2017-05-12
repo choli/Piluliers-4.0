@@ -8,6 +8,7 @@
 
 #import "TimelineTableViewController.h"
 #import "TimelineTableViewCell.h"
+#import "UIColor+CustomColors.h"
 
 @interface TimelineTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -19,7 +20,7 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    [self.navigationController.navigationBar setBarTintColor:[UIColor greenColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorPostYellow]];
     [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     self.title = NSLocalizedString(@"timeline", nil);
     [self.tableView reloadData];

@@ -29,6 +29,7 @@
 		F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01A825B1EC59C6F008CEC5A /* Localizable.strings */; };
 		F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */; };
 		F01A82741EC5AAF2008CEC5A /* TimelineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */; };
+		F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A827A1EC5D39A008CEC5A /* UIColor+CustomColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,8 @@
 		F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewController.m; sourceTree = "<group>"; };
 		F01A82711EC5AAF2008CEC5A /* TimelineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewCell.h; sourceTree = "<group>"; };
 		F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewCell.m; sourceTree = "<group>"; };
+		F01A82791EC5D39A008CEC5A /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		F01A827A1EC5D39A008CEC5A /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,7 @@
 		C72E60221EC1F3770087D2FD /* Piluliers 4.0 */ = {
 			isa = PBXGroup;
 			children = (
+				F01A82781EC5D33E008CEC5A /* Additions */,
 				F01A824F1EC595F1008CEC5A /* Presentation */,
 				C72E60261EC1F3770087D2FD /* AppDelegate.h */,
 				C72E60271EC1F3770087D2FD /* AppDelegate.m */,
@@ -297,6 +301,15 @@
 				F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */,
 			);
 			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		F01A82781EC5D33E008CEC5A /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				F01A82791EC5D39A008CEC5A /* UIColor+CustomColors.h */,
+				F01A827A1EC5D39A008CEC5A /* UIColor+CustomColors.m */,
+			);
+			name = Additions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,6 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */,
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
 				F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */,
