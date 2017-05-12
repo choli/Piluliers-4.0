@@ -10,4 +10,5 @@
 
 @interface RestManager : NSObject
 + (RestManager *)sharedInstance;
+- (void)initializeCoreData;
 @end

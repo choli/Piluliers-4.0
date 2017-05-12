@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface MedicationManager : NSObject
-
+- (NSArray *)fetchMedicationsFromContext;
+- (NSArray *)fetchMedicationRequestsFromContext;
 @end

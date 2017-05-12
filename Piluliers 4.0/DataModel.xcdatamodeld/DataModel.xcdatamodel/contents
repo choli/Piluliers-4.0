@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="BoundsRange" representedClassName="BoundsRange" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="BoundsRange" representedClassName="BoundsRange" syncable="YES" codeGenerationType="category">
         <attribute name="high" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="low" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
@@ -70,18 +70,18 @@
         <relationship name="repeat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BoundsRange" positionX="0" positionY="81" width="128" height="75"/>
-        <element name="CodeableConcept" positionX="-9" positionY="72" width="128" height="75"/>
-        <element name="Coding" positionX="-18" positionY="63" width="128" height="88"/>
-        <element name="DispenseRequest" positionX="27" positionY="99" width="128" height="90"/>
-        <element name="Dosage" positionX="-18" positionY="135" width="128" height="133"/>
-        <element name="EventTiming" positionX="72" positionY="210" width="128" height="58"/>
-        <element name="Medication" positionX="-243" positionY="-171" width="128" height="148"/>
-        <element name="Note" positionX="-47" positionY="279" width="128" height="75"/>
+        <element name="BoundsRange" positionX="142" positionY="105" width="128" height="73"/>
+        <element name="CodeableConcept" positionX="-9" positionY="78" width="128" height="75"/>
+        <element name="Coding" positionX="304" positionY="90" width="128" height="88"/>
+        <element name="DispenseRequest" positionX="27" positionY="-72" width="128" height="90"/>
+        <element name="Dosage" positionX="-200" positionY="81" width="128" height="133"/>
+        <element name="EventTiming" positionX="115" positionY="266" width="128" height="58"/>
+        <element name="Medication" positionX="-333" positionY="-198" width="128" height="148"/>
+        <element name="Note" positionX="-162" positionY="321" width="128" height="75"/>
         <element name="Period" positionX="187" positionY="-0" width="128" height="75"/>
         <element name="Quantity" positionX="-108" positionY="-216" width="128" height="118"/>
         <element name="Range" positionX="43" positionY="-174" width="128" height="75"/>
-        <element name="Repeat" positionX="-173" positionY="144" width="128" height="133"/>
+        <element name="Repeat" positionX="-360" positionY="144" width="128" height="133"/>
         <element name="Timing" positionX="-243" positionY="-18" width="128" height="73"/>
     </elements>
 </model>

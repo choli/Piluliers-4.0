@@ -24,9 +24,7 @@
         
         dispatch_once(&onceToken, ^{
             _shared = [[self alloc] init];
-            if (_shared != nil) {
-                [_shared initializeCoreData];
-            }
+            
         });
         
         return _shared;
