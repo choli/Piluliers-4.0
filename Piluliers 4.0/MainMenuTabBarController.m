@@ -7,6 +7,7 @@
 //
 
 #import "MainMenuTabBarController.h"
+#import "TimelineTableViewController.h"
 
 @interface MainMenuTabBarController ()
 
@@ -24,15 +25,22 @@
 }
 
 - (void)setupTabBarTabs {
-    UIViewController *timelineViewController = [UIViewController new];
-    timelineViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"timeline", nil) image:[UIImage imageNamed:@"stoecklim"] tag:1];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    TimelineTableViewController *timelineTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimelineTableViewController"];
+    UINavigationController *timelineNavigationController = [[UINavigationController alloc] initWithRootViewController:timelineTableViewController];
+    timelineNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"timeline", nil) image:[UIImage imageNamed:@"stoecklim"] tag:1];
+
     UIViewController *historyViewController = [UIViewController new];
     historyViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"history", nil) image:[UIImage imageNamed:@"stoecklim"] tag:2];
+    
     UIViewController *drugsViewController = [UIViewController new];
     drugsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"drugs", nil) image:[UIImage imageNamed:@"stoecklim"] tag:3];
+    
     UIViewController *settingsViewController = [UIViewController new];
     settingsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"settings", nil) image:[UIImage imageNamed:@"stoecklim"] tag:4];
-    [self setViewControllers:@[timelineViewController, historyViewController, drugsViewController, settingsViewController]];
+    
+    [self setViewControllers:@[timelineNavigationController, historyViewController, drugsViewController, settingsViewController]];
 }
 
 @end
