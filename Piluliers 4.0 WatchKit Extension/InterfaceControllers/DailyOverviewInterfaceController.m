@@ -7,8 +7,13 @@
 //
 
 #import "DailyOverviewInterfaceController.h"
+#import "PillImageNameRow.h"
+#import "TimeTitleRow.h"
 
 @interface DailyOverviewInterfaceController ()
+
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *dayTable;
+@property (nonatomic) NSDictionary *allPills;
 
 @end
 
@@ -18,6 +23,11 @@
     [super awakeWithContext:context];
     
     // Configure interface objects here.
+    [self setTitle:NSLocalizedString(@"controller_title_back", nil)];
+    self.allPills = (NSDictionary *)context;
+    if (self.allPills) {
+        [self setupTableWithData:self.allPills[@"todaysPills"]];
+    }
 }
 
 - (void)willActivate {
@@ -30,6 +40,34 @@
     [super didDeactivate];
 }
 
+#pragma mark - populate table
+
+- (void) setupTableWithData:(NSArray *)allTimesArray {
+    for (NSDictionary *timeSlotDict in allTimesArray) {
+    
+        //TODO get last index
+        NSInteger index = self.dayTable.numberOfRows;
+        [self.dayTable insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withRowType:@"TimeTitleRow"];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+        [dateFormatter setDateStyle:NSDateFormatterNoStyle];
+        [dateFormatter setDoesRelativeDateFormatting:YES];
+        dateFormatter.locale = [NSLocale currentLocale];
+        NSString *dateString = [dateFormatter stringFromDate:timeSlotDict[@"time"]];
+        TimeTitleRow *row = (TimeTitleRow *)[self.dayTable rowControllerAtIndex:index];
+        [row.timeLabel setText:dateString];
+        
+        NSArray *pillsToTake = timeSlotDict[@"pills"];
+        
+        for (NSDictionary *pill in pillsToTake) {
+            index = self.dayTable.numberOfRows;
+            [self.dayTable insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withRowType:@"PillImageNameRow"];
+            PillImageNameRow *row = (PillImageNameRow *)[self.dayTable rowControllerAtIndex:index];
+            [row.pillImage setImage:nil];
+            [row.pillNameLabel setText:pill[@"name"]];
+        }
+    }
+}
 @end
 
 

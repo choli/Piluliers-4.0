@@ -7,6 +7,7 @@
 //
 
 #import "TimelineTableViewController.h"
+#import "TimelineDetailTableViewController.h"
 #import "TimelineTableViewCell.h"
 #import "UIColor+CustomColors.h"
 #import "TimelineHeaderView.h"
@@ -20,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"timeline", nil);
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addpill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
     [self.tableView reloadData];
 }
 
@@ -30,16 +32,27 @@
 
 - (void)addTableViewHeaderView {
     TimelineHeaderView *timelineHeaderView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([TimelineHeaderView class]) owner:self options:nil] firstObject];
-    timelineHeaderView.translatesAutoresizingMaskIntoConstraints = NO;
     //@meumannu: add username and image
-    timelineHeaderView.usernameLabel.text = @"Sandro";
+    timelineHeaderView.usernameLabel.text = @"Hallo Sandro";
     timelineHeaderView.userImageView.image = [UIImage imageNamed:@"sandro"];
+    timelineHeaderView.backgroundColor = [UIColor hackathonAccentColor];
+    timelineHeaderView.datePicker.backgroundColor = [UIColor whiteColor];
+    [timelineHeaderView.datePicker addTarget:self action:@selector(dateChanged:)
+     forControlEvents:UIControlEventValueChanged];
     self.tableView.tableHeaderView = timelineHeaderView;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)addMedication:(UIBarButtonItem*)barButtonItem {
+    //todo present detail view controller
+}
+
+- (void)dateChanged:(UIDatePicker*)datePicker {
+    // handle date changes
 }
 
 # pragma mark - Table View Data Source
@@ -77,7 +90,8 @@
     TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
     //todo meumannu: set data from model
     cell.intakeTime.text = @"12:00";
-    cell.pillImage.image = [UIImage imageNamed:@"pill"];
+    cell.pillImage.image = [UIImage imageNamed:@"crystal"];
+    [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
     cell.medicamentName.text = @"Medikament X";
     cell.medicamentDescription.text = @"Dies ist eine Pille";
     cell.medicamentDosage.text = @"1 Kapsel";
@@ -88,8 +102,38 @@
 # pragma mark - Table View Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //todo stoecklim: present detail view controller
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TimelineDetailTableViewController *timelineTableDetailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TimelineDetailTableViewController"];
+    timelineTableDetailViewController.titleString = @"Medikament X";
+    [self.navigationController pushViewController:timelineTableDetailViewController animated:YES];
+}
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewRowAction *takeAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"take", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        //todo stoecklim: mark as taken
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    }];
+    
+    takeAction.backgroundColor = [UIColor cellSwipeTakeColor];
+
+    UITableViewRowAction *skipAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"skip", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        //todo stoecklim: mark as skipped
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    }];
+    
+    skipAction.backgroundColor = [UIColor cellSwipeSkipColor];
+
+    UITableViewRowAction *ignoreAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"ignore", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        //todo stoecklim: mark as ignored
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+    }];
+    
+    ignoreAction.backgroundColor = [UIColor cellSwipeIgnoreColor];
+
+    return @[takeAction, skipAction, ignoreAction];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 @end

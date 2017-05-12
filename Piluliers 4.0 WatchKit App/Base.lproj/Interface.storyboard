@@ -21,7 +21,7 @@
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" weight="medium" pointSize="35"/>
                                 </label>
-                                <label height="35" alignment="left" verticalAlignment="bottom" text="AM" id="HAQ-1u-Bdx">
+                                <label height="35" alignment="left" verticalAlignment="bottom" text="am" id="HAQ-1u-Bdx">
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="25"/>
                                 </label>
@@ -33,14 +33,17 @@
                                 <tableRow identifier="PillImageNameRow" selectable="NO" id="8jm-TQ-JqE" customClass="PillImageNameRow">
                                     <group key="rootItem" width="1" alignment="left" id="9eh-rC-bzK">
                                         <items>
-                                            <imageView width="0.29999999999999999" alignment="left" verticalAlignment="center" contentMode="left" id="r0a-yp-KVd"/>
-                                            <label alignment="left" verticalAlignment="center" text="Label" id="SpH-KZ-HrS"/>
+                                            <imageView alignment="left" verticalAlignment="center" contentMode="left" id="r0a-yp-KVd"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="SpH-KZ-HrS">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
                                         </items>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </group>
                                     <connections>
                                         <outlet property="pillImage" destination="r0a-yp-KVd" id="Zd1-pu-zvY"/>
                                         <outlet property="pillNameLabel" destination="SpH-KZ-HrS" id="25a-HY-cJS"/>
+                                        <outlet property="rowGroup" destination="9eh-rC-bzK" id="fGP-2t-Dwj"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -48,7 +51,16 @@
                     </items>
                     <menu key="menu" id="krr-tf-tDe">
                         <items>
-                            <menuItem title="Today" icon="info" id="Fmb-08-Mpg"/>
+                            <menuItem title="Today" icon="info" id="Fmb-08-Mpg">
+                                <connections>
+                                    <action selector="showTodaysJourney" destination="AgC-eL-Hgc" id="Gs1-Fu-1vj"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="I feel bad" icon="trash" id="QtT-c5-7lu">
+                                <connections>
+                                    <action selector="iFeelBadAction" destination="AgC-eL-Hgc" id="DUQ-pz-ktF"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
@@ -64,7 +76,43 @@
         <!--DailyOverviewInterfaceController-->
         <scene sceneID="R0o-Gj-5Cb">
             <objects>
-                <controller identifier="DailyOverviewInterfaceController" id="lof-mT-Peq" customClass="DailyOverviewInterfaceController"/>
+                <controller identifier="DailyOverviewInterfaceController" id="lof-mT-Peq" customClass="DailyOverviewInterfaceController">
+                    <items>
+                        <table alignment="left" id="Sg6-3R-hpn">
+                            <items>
+                                <tableRow identifier="TimeTitleRow" selectable="NO" id="4no-WO-6yR" customClass="TimeTitleRow">
+                                    <group key="rootItem" width="1" alignment="left" id="GL4-uj-uRc">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="bottom" text="Label" id="KED-SW-7rF"/>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="timeLabel" destination="KED-SW-7rF" id="TMM-44-CSs"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="PillImageNameRow" id="98R-cq-uzf" customClass="PillImageNameRow">
+                                    <group key="rootItem" width="1" alignment="left" id="fty-Wo-G7r">
+                                        <items>
+                                            <imageView alignment="left" verticalAlignment="center" contentMode="left" id="CE5-FF-xcp"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="PDT-ln-3Bq">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="pillImage" destination="CE5-FF-xcp" id="yf6-Uq-dCu"/>
+                                        <outlet property="pillNameLabel" destination="PDT-ln-3Bq" id="3gg-yX-cCk"/>
+                                        <outlet property="rowGroup" destination="fty-Wo-G7r" id="vIH-Yb-9l0"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="dayTable" destination="Sg6-3R-hpn" id="LZe-Zx-c3r"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>

@@ -8,11 +8,14 @@
 
 #import "AppDelegate.h"
 #import "MainMenuTabBarController.h"
+#import "ConnectivityHandler.h"
+#import <WatchConnectivity/WatchConnectivity.h>
 #import "AppDelegate+Appearance.h"
 #import "BarCodeViewController.h"
+#import "RestManager.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) ConnectivityHandler *connectivityHandler;
 @end
 
 @implementation AppDelegate
@@ -20,10 +23,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIStoryboard * uiStroyboard = [UIStoryboard storyboardWithName:@"Qrcode" bundle:nil];
+    
+    RestManager *restManager = [RestManager sharedInstance];
+    [restManager initializeCoreData];
+    // [restManager fetchMedicationRequest];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [uiStroyboard instantiateViewControllerWithIdentifier:@"BarCodeViewController"];
     [self setupAppearance];
     [self.window makeKeyAndVisible];
+    
+    if ([WCSession isSupported]) {
+        self.connectivityHandler = [ConnectivityHandler new];
+    } else {
+        NSLog(@"WatchConnectivity not supported");
+    }
+    
     return YES;
 }
 
