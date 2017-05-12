@@ -1,5 +1,5 @@
 //
-//  NextIntakeInterfaceController.h
+//  DailyOverviewInterfaceController.h
 //  Piluliers 4.0
 //
 //  Created by Kolly Sandro, IT133 on 12.05.17.
@@ -9,6 +9,6 @@
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
 
-@interface NextIntakeInterfaceController : WKInterfaceController
+@interface DailyOverviewInterfaceController : WKInterfaceController
 
 @end
