@@ -25,11 +25,12 @@
 }
 
 - (void)setupTabBarTabs {
-    TimelineTableViewController *timelineTableViewController = [TimelineTableViewController alloc];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    TimelineTableViewController *timelineTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimelineTableViewController"];
     UINavigationController *timelineNavigationController = [[UINavigationController alloc] initWithRootViewController:timelineTableViewController];
     timelineNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"timeline", nil) image:[UIImage imageNamed:@"stoecklim"] tag:1];
 
-    
     UIViewController *historyViewController = [UIViewController new];
     historyViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"history", nil) image:[UIImage imageNamed:@"stoecklim"] tag:2];
     

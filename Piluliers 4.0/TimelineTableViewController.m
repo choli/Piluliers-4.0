@@ -7,10 +7,9 @@
 //
 
 #import "TimelineTableViewController.h"
-#import "TimelineTableViewDataSource.h"
-#import "TimelineTableViewDelegate.h"
+#import "TimelineTableViewCell.h"
 
-@interface TimelineTableViewController ()
+@interface TimelineTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -18,14 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    TimelineTableViewDataSource *dataSource = [TimelineTableViewDataSource new];
-    self.tableView.dataSource = dataSource;
-    TimelineTableViewDelegate *delegate = [TimelineTableViewDelegate new];
-    self.tableView.delegate = delegate;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     [self.navigationController.navigationBar setBarTintColor:[UIColor greenColor]];
     [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     self.title = NSLocalizedString(@"timeline", nil);
-    self.tableView.backgroundColor = [UIColor blueColor];
     [self.tableView reloadData];
 }
 
@@ -34,5 +30,42 @@
     // Dispose of any resources that can be recreated.
 }
 
+# pragma mark - Table View Data Source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 4;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return NSLocalizedString(@"morning", nil);;
+            break;
+        case 1:
+            return NSLocalizedString(@"midday", nil);;
+            break;
+        case 2:
+            return NSLocalizedString(@"evening", nil);;
+            break;
+        default:
+            return NSLocalizedString(@"night", nil);;
+            break;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
+    return cell;
+}
+
+# pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end
