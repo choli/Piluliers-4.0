@@ -22,9 +22,11 @@
 }
 
 - (void)saveMedication:(UIBarButtonItem*)barButtonItem {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)cancelEditMedication:(UIBarButtonItem*)barButtonItem {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
