@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainMenuTabBarController.h"
+#import "RestManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    RestManager *restManager = [RestManager sharedInstance];
+    [restManager initializeCoreData];
+    // [restManager fetchMedicationRequest];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[MainMenuTabBarController alloc] initWithNibName:@"MainMenuTabBarController" bundle:nil];
     [self.window makeKeyAndVisible];
