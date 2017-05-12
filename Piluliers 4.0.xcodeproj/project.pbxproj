@@ -12,7 +12,6 @@
 		C0C73D44CE7477E88A7E25FF /* libPods-Piluliers 4.0 WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */; };
 		C72E60251EC1F3770087D2FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60241EC1F3770087D2FD /* main.m */; };
 		C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60271EC1F3770087D2FD /* AppDelegate.m */; };
-		C72E602B1EC1F3770087D2FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E602A1EC1F3770087D2FD /* ViewController.m */; };
 		C72E602E1EC1F3770087D2FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E602C1EC1F3770087D2FD /* Main.storyboard */; };
 		C72E60301EC1F3770087D2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72E602F1EC1F3770087D2FD /* Assets.xcassets */; };
 		C72E60331EC1F3770087D2FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72E60311EC1F3770087D2FD /* LaunchScreen.storyboard */; };
@@ -25,6 +24,9 @@
 		C72E60551EC1F3770087D2FD /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60541EC1F3770087D2FD /* NotificationController.m */; };
 		C72E60581EC1F3770087D2FD /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60571EC1F3770087D2FD /* ComplicationController.m */; };
 		C72E605A1EC1F3770087D2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72E60591EC1F3770087D2FD /* Assets.xcassets */; };
+		F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */; };
+		F01A82551EC596C4008CEC5A /* MainMenuTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */; };
+		F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01A825B1EC59C6F008CEC5A /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +85,6 @@
 		C72E60241EC1F3770087D2FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C72E60261EC1F3770087D2FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C72E60271EC1F3770087D2FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C72E60291EC1F3770087D2FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C72E602A1EC1F3770087D2FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C72E602D1EC1F3770087D2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C72E602F1EC1F3770087D2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C72E60321EC1F3770087D2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,6 +105,13 @@
 		C72E60571EC1F3770087D2FD /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
 		C72E60591EC1F3770087D2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C72E605B1EC1F3770087D2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F01A82511EC596C4008CEC5A /* MainMenuTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTabBarController.h; sourceTree = "<group>"; };
+		F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTabBarController.m; sourceTree = "<group>"; };
+		F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuTabBarController.xib; sourceTree = "<group>"; };
+		F01A825A1EC59C6F008CEC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F01A825C1EC59C94008CEC5A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F01A825D1EC59CA2008CEC5A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F01A825E1EC59CAC008CEC5A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,14 +177,14 @@
 		C72E60221EC1F3770087D2FD /* Piluliers 4.0 */ = {
 			isa = PBXGroup;
 			children = (
+				F01A824F1EC595F1008CEC5A /* Presentation */,
 				C72E60261EC1F3770087D2FD /* AppDelegate.h */,
 				C72E60271EC1F3770087D2FD /* AppDelegate.m */,
-				C72E60291EC1F3770087D2FD /* ViewController.h */,
-				C72E602A1EC1F3770087D2FD /* ViewController.m */,
 				C72E602C1EC1F3770087D2FD /* Main.storyboard */,
 				C72E602F1EC1F3770087D2FD /* Assets.xcassets */,
 				C72E60311EC1F3770087D2FD /* LaunchScreen.storyboard */,
 				C72E60341EC1F3770087D2FD /* Info.plist */,
+				F01A82561EC59C12008CEC5A /* Resources */,
 				C72E60231EC1F3770087D2FD /* Supporting Files */,
 			);
 			path = "Piluliers 4.0";
@@ -238,6 +245,32 @@
 				C00B1934E3D1F690090DB8B3 /* Pods-Piluliers 4.0 WatchKit Extension.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F01A824F1EC595F1008CEC5A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F01A82501EC59606008CEC5A /* MainMenu */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		F01A82501EC59606008CEC5A /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F01A82511EC596C4008CEC5A /* MainMenuTabBarController.h */,
+				F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */,
+				F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */,
+			);
+			name = MainMenu;
+			sourceTree = "<group>";
+		};
+		F01A82561EC59C12008CEC5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F01A825B1EC59C6F008CEC5A /* Localizable.strings */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +369,9 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				fr,
+				it,
 			);
 			mainGroup = C72E60171EC1F3770087D2FD;
 			productRefGroup = C72E60211EC1F3770087D2FD /* Products */;
@@ -354,9 +390,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */,
 				C72E60331EC1F3770087D2FD /* LaunchScreen.storyboard in Resources */,
 				C72E60301EC1F3770087D2FD /* Assets.xcassets in Resources */,
 				C72E602E1EC1F3770087D2FD /* Main.storyboard in Resources */,
+				F01A82551EC596C4008CEC5A /* MainMenuTabBarController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,9 +545,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C72E602B1EC1F3770087D2FD /* ViewController.m in Sources */,
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
+				F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +602,18 @@
 			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
+		F01A825B1EC59C6F008CEC5A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F01A825A1EC59C6F008CEC5A /* Base */,
+				F01A825C1EC59C94008CEC5A /* de */,
+				F01A825D1EC59CA2008CEC5A /* fr */,
+				F01A825E1EC59CAC008CEC5A /* it */,
+			);
+			name = Localizable.strings;
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -571,6 +621,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -619,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
