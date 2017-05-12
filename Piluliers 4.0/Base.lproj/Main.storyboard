@@ -141,6 +141,86 @@
             </objects>
             <point key="canvasLocation" x="-554.39999999999998" y="134.48275862068968"/>
         </scene>
+        <!--History Table View Controller-->
+        <scene sceneID="2Hs-rb-j6h">
+            <objects>
+                <tableViewController storyboardIdentifier="HistoryTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gMS-fL-b5g" customClass="HistoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="PGM-jO-s64">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineTableViewCell" rowHeight="80" id="wDD-54-NJb" customClass="TimelineTableViewCell">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDD-54-NJb" id="LIj-dK-Nfz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="99:99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5o-C5-a2R">
+                                            <rect key="frame" x="8" y="8" width="55" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicament 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORz-1k-PiY">
+                                            <rect key="frame" x="118" y="8" width="249" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflux" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWF-8g-4ab">
+                                            <rect key="frame" x="118" y="33" width="249" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 gélule" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lw-8Y-Sf9">
+                                            <rect key="frame" x="118" y="53" width="249" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pill" translatesAutoresizingMaskIntoConstraints="NO" id="K7Z-re-ssa">
+                                            <rect key="frame" x="76" y="7" width="26" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="56z-DC-Na5"/>
+                                                <constraint firstAttribute="width" constant="26" id="Gi7-r5-PN7"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jWF-8g-4ab" firstAttribute="width" secondItem="ORz-1k-PiY" secondAttribute="width" id="0sE-eg-oUc"/>
+                                        <constraint firstItem="jWF-8g-4ab" firstAttribute="top" secondItem="ORz-1k-PiY" secondAttribute="bottom" constant="1" id="5JK-MN-K5M"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="h5o-C5-a2R" secondAttribute="leading" id="6BL-R8-0gt"/>
+                                        <constraint firstAttribute="topMargin" secondItem="h5o-C5-a2R" secondAttribute="top" id="72V-ag-ldt"/>
+                                        <constraint firstItem="K7Z-re-ssa" firstAttribute="leading" secondItem="h5o-C5-a2R" secondAttribute="trailing" constant="13" id="Bdi-lt-gLN"/>
+                                        <constraint firstItem="1Lw-8Y-Sf9" firstAttribute="leading" secondItem="jWF-8g-4ab" secondAttribute="leading" id="EjL-0J-Fcd"/>
+                                        <constraint firstItem="jWF-8g-4ab" firstAttribute="leading" secondItem="ORz-1k-PiY" secondAttribute="leading" id="L7x-mZ-y9y"/>
+                                        <constraint firstItem="K7Z-re-ssa" firstAttribute="centerY" secondItem="h5o-C5-a2R" secondAttribute="centerY" id="L9T-5T-JRX"/>
+                                        <constraint firstItem="1Lw-8Y-Sf9" firstAttribute="width" secondItem="jWF-8g-4ab" secondAttribute="width" id="STA-aD-6N2"/>
+                                        <constraint firstItem="ORz-1k-PiY" firstAttribute="centerY" secondItem="K7Z-re-ssa" secondAttribute="centerY" id="l5S-VE-rWl"/>
+                                        <constraint firstItem="ORz-1k-PiY" firstAttribute="leading" secondItem="K7Z-re-ssa" secondAttribute="trailing" constant="16" id="lL8-EF-pSz"/>
+                                        <constraint firstItem="1Lw-8Y-Sf9" firstAttribute="top" secondItem="jWF-8g-4ab" secondAttribute="bottom" constant="3" id="puY-1h-g6y"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ORz-1k-PiY" secondAttribute="trailing" id="tjy-XS-DuH"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="intakeTime" destination="h5o-C5-a2R" id="ziB-Ws-tez"/>
+                                    <outlet property="medicamentDescription" destination="jWF-8g-4ab" id="Hy1-89-WoB"/>
+                                    <outlet property="medicamentDosage" destination="1Lw-8Y-Sf9" id="wCk-Da-1aI"/>
+                                    <outlet property="medicamentName" destination="ORz-1k-PiY" id="s16-p9-po1"/>
+                                    <outlet property="pillImage" destination="K7Z-re-ssa" id="W9K-85-BnP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BuC-M2-M2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="134"/>
+        </scene>
     </scenes>
     <resources>
         <image name="pill" width="64" height="64"/>
