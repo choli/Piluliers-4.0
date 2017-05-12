@@ -91,6 +91,7 @@
 		F01A82971EC612AD008CEC5A /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82961EC612AD008CEC5A /* HistoryTableViewController.m */; };
 		F01A829E1EC635E9008CEC5A /* HistoryGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A829D1EC635E9008CEC5A /* HistoryGraphView.xib */; };
 		F01A82A11EC6383E008CEC5A /* HistoryGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82A01EC6383E008CEC5A /* HistoryGraphView.m */; };
+		F01A82A51EC66A76008CEC5A /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82A41EC66A76008CEC5A /* SettingsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -307,6 +308,8 @@
 		F01A829D1EC635E9008CEC5A /* HistoryGraphView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryGraphView.xib; sourceTree = "<group>"; };
 		F01A829F1EC6383E008CEC5A /* HistoryGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryGraphView.h; path = Source/HistoryGraphView.h; sourceTree = "<group>"; };
 		F01A82A01EC6383E008CEC5A /* HistoryGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryGraphView.m; path = Source/HistoryGraphView.m; sourceTree = "<group>"; };
+		F01A82A31EC66A76008CEC5A /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		F01A82A41EC66A76008CEC5A /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -711,6 +714,8 @@
 		F01A828A1EC5FDA4008CEC5A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				F01A82A31EC66A76008CEC5A /* SettingsTableViewController.h */,
+				F01A82A41EC66A76008CEC5A /* SettingsTableViewController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -1049,6 +1054,7 @@
 				2316DFF41EC61DEA006284D6 /* Attachment+CoreDataClass.m in Sources */,
 				2316DFFD1EC61DEA006284D6 /* CodeableConcept+CoreDataProperties.m in Sources */,
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
+				F01A82A51EC66A76008CEC5A /* SettingsTableViewController.m in Sources */,
 				2316DFF31EC61DEA006284D6 /* Ratio+CoreDataProperties.m in Sources */,
 				2316DFEC1EC61DEA006284D6 /* Note+CoreDataClass.m in Sources */,
 				2316DFE71EC61DEA006284D6 /* User+CoreDataProperties.m in Sources */,

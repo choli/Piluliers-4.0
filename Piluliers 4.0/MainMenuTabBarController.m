@@ -10,6 +10,7 @@
 #import "TimelineTableViewController.h"
 #import "HistoryTableViewController.h"
 #import "DrugsTableViewController.h"
+#import "SettingsTableViewController.h"
 
 @interface MainMenuTabBarController ()
 
@@ -41,10 +42,11 @@
     UINavigationController *drugsNavigationController = [[UINavigationController alloc] initWithRootViewController:drugsTableViewController];
     drugsNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"drugs", nil) image:[UIImage imageNamed:@"drug_icon"] tag:3];
     
-    UIViewController *settingsViewController = [UIViewController new];
-    settingsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"settings", nil) image:[UIImage imageNamed:@"settings_icon"] tag:4];
+    SettingsTableViewController *settingsTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"SettingsTableViewController"];
+    UINavigationController *settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsTableViewController];
+    settingsNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"settings", nil) image:[UIImage imageNamed:@"settings_icon"] tag:3];
     
-    [self setViewControllers:@[timelineNavigationController, historyNavigationController, drugsNavigationController, settingsViewController]];
+    [self setViewControllers:@[timelineNavigationController, historyNavigationController, drugsNavigationController, settingsNavigationController]];
 }
 
 @end
