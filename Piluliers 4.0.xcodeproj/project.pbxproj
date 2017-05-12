@@ -376,17 +376,15 @@
 					C72E601F1EC1F3770087D2FD = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = BURQ256D9M;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					C72E60361EC1F3770087D2FD = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = BURQ256D9M;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					C72E60451EC1F3770087D2FD = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = BURQ256D9M;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -744,11 +742,12 @@
 			baseConfigurationReference = A2DE46F55F3FE4D7C22FD363 /* Pods-Piluliers 4.0 WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = BURQ256D9M;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -761,11 +760,12 @@
 			baseConfigurationReference = C00B1934E3D1F690090DB8B3 /* Pods-Piluliers 4.0 WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = BURQ256D9M;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -778,11 +778,12 @@
 			baseConfigurationReference = 784FCB19BC7AB00AB21B0590 /* Pods-Piluliers 4.0 WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BURQ256D9M;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = Piluliers_4_0_WatchKit_Extension;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -795,11 +796,12 @@
 			baseConfigurationReference = 0AD7B1CB3057483E18828E20 /* Pods-Piluliers 4.0 WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BURQ256D9M;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = Piluliers_4_0_WatchKit_Extension;
 				INFOPLIST_FILE = "Piluliers 4.0 WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -815,8 +817,10 @@
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "65ecb868-e091-4cb1-81e6-66470282cac6";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Development_20170510;
 			};
 			name = Debug;
 		};
@@ -825,11 +829,14 @@
 			baseConfigurationReference = 05DF0918CC641785E1244598 /* Pods-Piluliers 4.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = BURQ256D9M;
 				INFOPLIST_FILE = "Piluliers 4.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.post.it.Piluliers-4-0";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dbb0cfd7-d8ef-4b57-96f3-9c1689f4e9b0";
+				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Distribution_20170510;
 			};
 			name = Release;
 		};
