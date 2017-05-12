@@ -1,24 +1,23 @@
 //
-//  DrugsTableViewController.m
+//  HistoryTableViewController.m
 //  Piluliers 4.0
 //
 //  Created by Stoeckli Michael, IT133 on 12.05.17.
 //  Copyright © 2017 Post CH AG. All rights reserved.
 //
 
-#import "DrugsTableViewController.h"
+#import "HistoryTableViewController.h"
 #import "TimelineTableViewCell.h"
-#import "DrugsTableViewCell.h"
 
-@interface DrugsTableViewController ()
+@interface HistoryTableViewController ()
 
 @end
 
-@implementation DrugsTableViewController
+@implementation HistoryTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"drugs", nil);
+    self.title = NSLocalizedString(@"history", nil);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,24 +28,27 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+    return 8;
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 66.0f;
+    return 80.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //todo stoecklim: use custom cell for this use case later
-    DrugsTableViewCell *cell = (DrugsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DrugsTableViewCell" forIndexPath:indexPath];
+    TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
     //todo meumannu: set data from model
-    cell.medicamentImage.image = [UIImage imageNamed:@"sandro"];
+    cell.intakeTime.text = @"12:00";
+    cell.pillImage.image = [UIImage imageNamed:@"pill"];
     cell.medicamentName.text = @"Medikament X";
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.medicamentDescription.text = @"Dies ist eine Pille";
+    cell.medicamentDosage.text = @"1 Kapsel";
+    cell.userInteractionEnabled = NO;
     return cell;
 }
 

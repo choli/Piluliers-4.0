@@ -11,7 +11,7 @@
 #import "RestManager.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) ConnectivityHandler *connectivityHandler;
 @end
 
 @implementation AppDelegate
@@ -25,7 +25,15 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[MainMenuTabBarController alloc] initWithNibName:@"MainMenuTabBarController" bundle:nil];
+    [self setupAppearance];
     [self.window makeKeyAndVisible];
+    
+    if ([WCSession isSupported]) {
+        self.connectivityHandler = [ConnectivityHandler new];
+    } else {
+        NSLog(@"WatchConnectivity not supported");
+    }
+    
     return YES;
 }
 

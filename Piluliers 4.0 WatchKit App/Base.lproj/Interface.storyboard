@@ -33,8 +33,10 @@
                                 <tableRow identifier="PillImageNameRow" selectable="NO" id="8jm-TQ-JqE" customClass="PillImageNameRow">
                                     <group key="rootItem" width="1" alignment="left" id="9eh-rC-bzK">
                                         <items>
-                                            <imageView width="0.29999999999999999" alignment="left" verticalAlignment="center" contentMode="left" id="r0a-yp-KVd"/>
-                                            <label alignment="left" verticalAlignment="center" text="Label" id="SpH-KZ-HrS"/>
+                                            <imageView alignment="left" verticalAlignment="center" contentMode="left" id="r0a-yp-KVd"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="SpH-KZ-HrS">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
                                         </items>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </group>
@@ -48,7 +50,16 @@
                     </items>
                     <menu key="menu" id="krr-tf-tDe">
                         <items>
-                            <menuItem title="Today" icon="info" id="Fmb-08-Mpg"/>
+                            <menuItem title="Today" icon="info" id="Fmb-08-Mpg">
+                                <connections>
+                                    <action selector="showTodaysJourney" destination="AgC-eL-Hgc" id="Gs1-Fu-1vj"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="I feel bad" icon="trash" id="QtT-c5-7lu">
+                                <connections>
+                                    <action selector="iFeelBadAction" destination="AgC-eL-Hgc" id="DUQ-pz-ktF"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
