@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>ch.post.it.Piluliers-4-0</string>
+	<string>ch.post.it.Pilulier4</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

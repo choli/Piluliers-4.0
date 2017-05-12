@@ -214,6 +214,7 @@
 				C72E60571EC1F3770087D2FD /* ComplicationController.m */,
 				C72E60591EC1F3770087D2FD /* Assets.xcassets */,
 				C72E605B1EC1F3770087D2FD /* Info.plist */,
+				C72E60691EC59B560087D2FD /* Resources */,
 				C72E604B1EC1F3770087D2FD /* Supporting Files */,
 			);
 			path = "Piluliers 4.0 WatchKit Extension";
@@ -225,6 +226,13 @@
 				C72E604C1EC1F3770087D2FD /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C72E60691EC59B560087D2FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		EDA70D607A53DDE2079370F6 /* Pods */ = {
