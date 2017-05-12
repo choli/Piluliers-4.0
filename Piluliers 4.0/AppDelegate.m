@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainMenuTabBarController.h"
+#import "AppDelegate+Appearance.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[MainMenuTabBarController alloc] initWithNibName:@"MainMenuTabBarController" bundle:nil];
+    [self setupAppearance];
     [self.window makeKeyAndVisible];
     return YES;
 }

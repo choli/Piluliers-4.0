@@ -40,6 +40,7 @@
 		F01A82811EC5D6FC008CEC5A /* TimelineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */; };
 		F01A82871EC5EA1E008CEC5A /* TimelineDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82861EC5EA1E008CEC5A /* TimelineDetailTableViewController.m */; };
 		F01A828D1EC5FDB9008CEC5A /* DrugsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */; };
+		F01A82901EC60640008CEC5A /* AppDelegate+Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A828F1EC60640008CEC5A /* AppDelegate+Appearance.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,8 @@
 		F01A82861EC5EA1E008CEC5A /* TimelineDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineDetailTableViewController.m; sourceTree = "<group>"; };
 		F01A828B1EC5FDB9008CEC5A /* DrugsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugsTableViewController.h; sourceTree = "<group>"; };
 		F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsTableViewController.m; sourceTree = "<group>"; };
+		F01A828E1EC60640008CEC5A /* AppDelegate+Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+Appearance.h"; path = "Source/AppDelegate+Appearance.h"; sourceTree = "<group>"; };
+		F01A828F1EC60640008CEC5A /* AppDelegate+Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+Appearance.m"; path = "Source/AppDelegate+Appearance.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +254,8 @@
 				C72E60341EC1F3770087D2FD /* Info.plist */,
 				F01A82561EC59C12008CEC5A /* Resources */,
 				C72E60231EC1F3770087D2FD /* Supporting Files */,
+				F01A828E1EC60640008CEC5A /* AppDelegate+Appearance.h */,
+				F01A828F1EC60640008CEC5A /* AppDelegate+Appearance.m */,
 			);
 			path = "Piluliers 4.0";
 			sourceTree = "<group>";
@@ -746,6 +751,7 @@
 				2316DF7B1EC602C7006284D6 /* MedicationManager.m in Sources */,
 				F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */,
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
+				F01A82901EC60640008CEC5A /* AppDelegate+Appearance.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
 				F01A828D1EC5FDB9008CEC5A /* DrugsTableViewController.m in Sources */,
 				F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */,
