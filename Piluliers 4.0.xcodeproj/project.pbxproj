@@ -30,6 +30,7 @@
 		C72E60971EC5DCF90087D2FD /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60921EC5DCF90087D2FD /* ComplicationController.m */; };
 		C72E60981EC5DCF90087D2FD /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60941EC5DCF90087D2FD /* ExtensionDelegate.m */; };
 		C72E60991EC5DCF90087D2FD /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60961EC5DCF90087D2FD /* NotificationController.m */; };
+		C72E60A31EC5F3A80087D2FD /* ConnectivityHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */; };
 		F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */; };
 		F01A82551EC596C4008CEC5A /* MainMenuTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */; };
 		F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01A825B1EC59C6F008CEC5A /* Localizable.strings */; };
@@ -136,6 +137,8 @@
 		C72E609D1EC5E3DC0087D2FD /* Piluliers 4.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Piluliers 4.0.entitlements"; sourceTree = "<group>"; };
 		C72E609E1EC5E5CC0087D2FD /* Piluliers 4.0 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Piluliers 4.0 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		C72E609F1EC5E5D60087D2FD /* Piluliers 4.0 WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Piluliers 4.0 WatchKit App.entitlements"; sourceTree = "<group>"; };
+		C72E60A11EC5F3A80087D2FD /* ConnectivityHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectivityHandler.h; path = WatchHelper/ConnectivityHandler.h; sourceTree = "<group>"; };
+		C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectivityHandler.m; path = WatchHelper/ConnectivityHandler.m; sourceTree = "<group>"; };
 		F01A82511EC596C4008CEC5A /* MainMenuTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTabBarController.h; sourceTree = "<group>"; };
 		F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTabBarController.m; sourceTree = "<group>"; };
 		F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuTabBarController.xib; sourceTree = "<group>"; };
@@ -249,6 +252,7 @@
 				C72E609D1EC5E3DC0087D2FD /* Piluliers 4.0.entitlements */,
 				F01A82781EC5D33E008CEC5A /* Additions */,
 				F01A824F1EC595F1008CEC5A /* Presentation */,
+				C72E60A01EC5F3530087D2FD /* WatchHelper */,
 				C72E60261EC1F3770087D2FD /* AppDelegate.h */,
 				C72E60271EC1F3770087D2FD /* AppDelegate.m */,
 				C72E602C1EC1F3770087D2FD /* Main.storyboard */,
@@ -346,6 +350,15 @@
 				C72E608C1EC5BD8A0087D2FD /* PillImageNameRow.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		C72E60A01EC5F3530087D2FD /* WatchHelper */ = {
+			isa = PBXGroup;
+			children = (
+				C72E60A11EC5F3A80087D2FD /* ConnectivityHandler.h */,
+				C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */,
+			);
+			name = WatchHelper;
 			sourceTree = "<group>";
 		};
 		EDA70D607A53DDE2079370F6 /* Pods */ = {
@@ -765,6 +778,7 @@
 				2316DF7B1EC602C7006284D6 /* MedicationManager.m in Sources */,
 				F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */,
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
+				C72E60A31EC5F3A80087D2FD /* ConnectivityHandler.m in Sources */,
 				F01A82901EC60640008CEC5A /* AppDelegate+Appearance.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
 				F01A828D1EC5FDB9008CEC5A /* DrugsTableViewController.m in Sources */,
@@ -960,7 +974,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "71ae234e-9aac-41a8-bbc6-742ebb8b9277";
+				PROVISIONING_PROFILE = "0aa8f1fc-9d74-4e8a-a3e7-7dc306e0d8ff";
 				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_WatchKitExtension_Development_20170512;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1043,7 +1057,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.post.it.Pilulier4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "68409b84-289b-4e57-ba24-e4f106f23bb2";
+				PROVISIONING_PROFILE = "a66ae419-b337-499e-8e3c-91ed3cf4f5bc";
 				PROVISIONING_PROFILE_SPECIFIER = Pilulier4_Development_20170512;
 			};
 			name = Debug;

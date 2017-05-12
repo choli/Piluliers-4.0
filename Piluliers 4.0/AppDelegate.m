@@ -8,10 +8,12 @@
 
 #import "AppDelegate.h"
 #import "MainMenuTabBarController.h"
+#import "ConnectivityHandler.h"
+#import <WatchConnectivity/WatchConnectivity.h>
 #import "AppDelegate+Appearance.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) ConnectivityHandler *connectivityHandler;
 @end
 
 @implementation AppDelegate
@@ -22,6 +24,13 @@
     self.window.rootViewController = [[MainMenuTabBarController alloc] initWithNibName:@"MainMenuTabBarController" bundle:nil];
     [self setupAppearance];
     [self.window makeKeyAndVisible];
+    
+    if ([WCSession isSupported]) {
+        self.connectivityHandler = [ConnectivityHandler new];
+    } else {
+        NSLog(@"WatchConnectivity not supported");
+    }
+    
     return YES;
 }
 
