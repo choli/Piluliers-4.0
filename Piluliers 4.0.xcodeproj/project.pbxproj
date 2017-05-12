@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2372DDFA1EC5B76900E18A0F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2372DDF61EC5B76900E18A0F /* CFNetwork.framework */; };
+		2372DDFB1EC5B76900E18A0F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2372DDF71EC5B76900E18A0F /* CoreData.framework */; };
+		2372DDFC1EC5B76900E18A0F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2372DDF81EC5B76900E18A0F /* MobileCoreServices.framework */; };
+		2372DDFD1EC5B76900E18A0F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2372DDF91EC5B76900E18A0F /* Security.framework */; };
+		2372DE001EC5B83000E18A0F /* RestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2372DDFF1EC5B83000E18A0F /* RestManager.m */; };
 		422AC6AF63948C7CF9418B04 /* libPods-Piluliers 4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */; };
 		BD1D6372524053B896173C45 /* libPods-Piluliers 4.0 WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8687B4E2155720F4DF9B6FE2 /* libPods-Piluliers 4.0 WatchKit Extension.a */; };
 		C0C73D44CE7477E88A7E25FF /* libPods-Piluliers 4.0 WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */; };
@@ -74,6 +79,12 @@
 /* Begin PBXFileReference section */
 		05DF0918CC641785E1244598 /* Pods-Piluliers 4.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0.release.xcconfig"; sourceTree = "<group>"; };
 		0AD7B1CB3057483E18828E20 /* Pods-Piluliers 4.0 WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0 WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0 WatchKit App/Pods-Piluliers 4.0 WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		2372DDF61EC5B76900E18A0F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2372DDF71EC5B76900E18A0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2372DDF81EC5B76900E18A0F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2372DDF91EC5B76900E18A0F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2372DDFE1EC5B83000E18A0F /* RestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestManager.h; path = Source/RestManager.h; sourceTree = "<group>"; };
+		2372DDFF1EC5B83000E18A0F /* RestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestManager.m; path = Source/RestManager.m; sourceTree = "<group>"; };
 		35EA955690DD6E672D8EEC8A /* Pods-Piluliers 4.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0.debug.xcconfig"; sourceTree = "<group>"; };
 		3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0 WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +138,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2372DDFA1EC5B76900E18A0F /* CFNetwork.framework in Frameworks */,
+				2372DDFB1EC5B76900E18A0F /* CoreData.framework in Frameworks */,
+				2372DDFC1EC5B76900E18A0F /* MobileCoreServices.framework in Frameworks */,
+				2372DDFD1EC5B76900E18A0F /* Security.framework in Frameworks */,
 				422AC6AF63948C7CF9418B04 /* libPods-Piluliers 4.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,11 +160,24 @@
 		070857A10BB09DF237AE2143 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2372DDF61EC5B76900E18A0F /* CFNetwork.framework */,
+				2372DDF71EC5B76900E18A0F /* CoreData.framework */,
+				2372DDF81EC5B76900E18A0F /* MobileCoreServices.framework */,
+				2372DDF91EC5B76900E18A0F /* Security.framework */,
 				3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */,
 				44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */,
 				8687B4E2155720F4DF9B6FE2 /* libPods-Piluliers 4.0 WatchKit Extension.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2372DDF21EC5A58400E18A0F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2372DDFE1EC5B83000E18A0F /* RestManager.h */,
+				2372DDFF1EC5B83000E18A0F /* RestManager.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		C72E60171EC1F3770087D2FD = {
@@ -177,6 +205,7 @@
 		C72E60221EC1F3770087D2FD /* Piluliers 4.0 */ = {
 			isa = PBXGroup;
 			children = (
+				2372DDF21EC5A58400E18A0F /* Network */,
 				F01A824F1EC595F1008CEC5A /* Presentation */,
 				C72E60261EC1F3770087D2FD /* AppDelegate.h */,
 				C72E60271EC1F3770087D2FD /* AppDelegate.m */,
@@ -548,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
+				2372DE001EC5B83000E18A0F /* RestManager.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
 				F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */,
 			);
