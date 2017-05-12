@@ -29,7 +29,7 @@
     NSString *requestKey = message[@"request"];
     NSDictionary *response = @{};
     if ([requestKey isEqualToString:@"dummy"]) {
-        response = @{@"time" : [NSDate dateWithTimeIntervalSince1970:1494591300],
+        response = @{@"time" : [NSDate dateWithTimeIntervalSince1970:1494616500],
                                    @"pills" : @[@{
                                                     @"name" : @"Mydocalm",
                                                     @"pictureName": @"pill.png"
@@ -46,9 +46,9 @@
 - (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError *)error {
     if (!error) {
         if (activationState == WCSessionActivationStateActivated) {
-            NSLog(@"activated");
+            NSLog(@"activated watch connectivity");
         } else {
-            NSLog(@"some other status than connected!");
+            NSLog(@"some other status than connected: %ld", (long)activationState);
         }
     } else {
         NSLog(@"Error: %@", error.localizedDescription);
@@ -60,6 +60,7 @@
 }
 
 - (void)sessionDidDeactivate:(WCSession *)session {
+    NSLog(@"session did deactivate, reactivating...");
     [self.session activateSession];
 }
 

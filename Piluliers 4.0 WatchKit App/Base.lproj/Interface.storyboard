@@ -50,7 +50,16 @@
                     </items>
                     <menu key="menu" id="krr-tf-tDe">
                         <items>
-                            <menuItem title="Today" icon="info" id="Fmb-08-Mpg"/>
+                            <menuItem title="Today" icon="info" id="Fmb-08-Mpg">
+                                <connections>
+                                    <action selector="showTodaysJourney" destination="AgC-eL-Hgc" id="Gs1-Fu-1vj"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="I feel bad" icon="trash" id="QtT-c5-7lu">
+                                <connections>
+                                    <action selector="iFeelBadAction" destination="AgC-eL-Hgc" id="DUQ-pz-ktF"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>

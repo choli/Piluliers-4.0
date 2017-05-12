@@ -11,4 +11,5 @@
 @interface RestManager : NSObject
 + (RestManager *)sharedInstance;
 - (void)initializeCoreData;
+- (void)fetchMedicationRequest;
 @end

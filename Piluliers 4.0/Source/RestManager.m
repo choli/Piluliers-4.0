@@ -9,6 +9,7 @@
 #import "RestManager.h"
 #import <RestKit/CoreData.h>
 #import <RestKit/RestKit.h>
+#import "Mappings.h"
 
 @interface RestManager ()
 @property (nonatomic, nullable) RKManagedObjectStore *managedObjectStore;
@@ -31,7 +32,7 @@
 
 - (void)initializeCoreData {
     
-    NSURL *baseURL = [NSURL URLWithString:@"http://api.feedzilla.com"];
+    NSURL *baseURL = [NSURL URLWithString:@"http://hl7.org/fhir"];
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
     [RKObjectManager setSharedManager:objectManager];
     
@@ -62,7 +63,7 @@
 }
     
 - (RKObjectMapping *)createMedicationRequestMapping {
-    RKEntityMapping *medicationRequestMapping = [RKEntityMapping mappingForEntityForName:@"Article" inManagedObjectStore:self.managedObjectStore];
+    RKObjectMapping *medicationRequestMapping = [Mappings createMappingMedicationRequest:self.managedObjectStore];
     
     return medicationRequestMapping;
 }
@@ -77,6 +78,19 @@
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         
+    }];
+}
+
+- (void)fetchMedicationRequest {
+    
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:[self createMedicationRequestMapping] method:RKRequestMethodGET pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    
+    [[RKObjectManager sharedManager] addResponseDescriptor:responseDescriptor];
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"medicationrequest0312.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        NSLog(@"Success");
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"Failure");
     }];
 }
 
