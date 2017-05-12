@@ -32,6 +32,8 @@
 		F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A827A1EC5D39A008CEC5A /* UIColor+CustomColors.m */; };
 		F01A827F1EC5D65F008CEC5A /* TimelineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A827E1EC5D65F008CEC5A /* TimelineHeaderView.m */; };
 		F01A82811EC5D6FC008CEC5A /* TimelineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */; };
+		F01A82871EC5EA1E008CEC5A /* TimelineDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82861EC5EA1E008CEC5A /* TimelineDetailTableViewController.m */; };
+		F01A828D1EC5FDB9008CEC5A /* DrugsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,10 @@
 		F01A827D1EC5D65F008CEC5A /* TimelineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineHeaderView.h; sourceTree = "<group>"; };
 		F01A827E1EC5D65F008CEC5A /* TimelineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineHeaderView.m; sourceTree = "<group>"; };
 		F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineHeaderView.xib; sourceTree = "<group>"; };
+		F01A82851EC5EA1E008CEC5A /* TimelineDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineDetailTableViewController.h; sourceTree = "<group>"; };
+		F01A82861EC5EA1E008CEC5A /* TimelineDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineDetailTableViewController.m; sourceTree = "<group>"; };
+		F01A828B1EC5FDB9008CEC5A /* DrugsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrugsTableViewController.h; sourceTree = "<group>"; };
+		F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrugsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +271,9 @@
 		F01A824F1EC595F1008CEC5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F01A828A1EC5FDA4008CEC5A /* Settings */,
+				F01A82891EC5FD9B008CEC5A /* Drugs */,
+				F01A82881EC5FD94008CEC5A /* History */,
 				F01A82611EC59DED008CEC5A /* Timeline */,
 				F01A82501EC59606008CEC5A /* MainMenu */,
 			);
@@ -296,6 +305,8 @@
 				F01A82701EC5AAD5008CEC5A /* TableViewCell */,
 				F01A82621EC59E2F008CEC5A /* TimelineTableViewController.h */,
 				F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */,
+				F01A82851EC5EA1E008CEC5A /* TimelineDetailTableViewController.h */,
+				F01A82861EC5EA1E008CEC5A /* TimelineDetailTableViewController.m */,
 			);
 			name = Timeline;
 			sourceTree = "<group>";
@@ -326,6 +337,29 @@
 				F01A82801EC5D6FC008CEC5A /* TimelineHeaderView.xib */,
 			);
 			name = TableViewHeaderView;
+			sourceTree = "<group>";
+		};
+		F01A82881EC5FD94008CEC5A /* History */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		F01A82891EC5FD9B008CEC5A /* Drugs */ = {
+			isa = PBXGroup;
+			children = (
+				F01A828B1EC5FDB9008CEC5A /* DrugsTableViewController.h */,
+				F01A828C1EC5FDB9008CEC5A /* DrugsTableViewController.m */,
+			);
+			name = Drugs;
+			sourceTree = "<group>";
+		};
+		F01A828A1EC5FDA4008CEC5A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,9 +641,11 @@
 				F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */,
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
+				F01A828D1EC5FDB9008CEC5A /* DrugsTableViewController.m in Sources */,
 				F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */,
 				F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */,
 				F01A82741EC5AAF2008CEC5A /* TimelineTableViewCell.m in Sources */,
+				F01A82871EC5EA1E008CEC5A /* TimelineDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
