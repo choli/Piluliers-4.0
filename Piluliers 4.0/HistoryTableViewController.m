@@ -71,7 +71,7 @@
     TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
     //todo meumannu: set data from model
     cell.intakeTime.text = @"12:00";
-    cell.pillImage.image = [UIImage imageNamed:@"pill"];
+    cell.pillImage.image = [UIImage imageNamed:@"syrup"];
     [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
     cell.medicamentName.text = @"Medikament X";
     cell.medicamentDescription.text = @"Dies ist eine Pille";
