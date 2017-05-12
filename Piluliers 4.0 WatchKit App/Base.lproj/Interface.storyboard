@@ -129,9 +129,18 @@
                         </label>
                         <imageView alignment="center" id="PPr-G2-dAj"/>
                         <label alignment="center" text="Label" id="Ykm-qT-NXm"/>
-                        <button width="1" alignment="center" title="Button" id="8lF-eD-zaY"/>
-                        <button width="1" alignment="center" title="Button" id="IYs-Qh-0xU"/>
-                        <button width="1" alignment="center" title="Button" id="bV5-y1-H6l"/>
+                        <button width="1" alignment="center" title="Button" id="8lF-eD-zaY">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="takeAction" destination="BIs-9w-9ET" id="PcC-Bk-2ep"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" title="Button" id="IYs-Qh-0xU">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </button>
+                        <button width="1" alignment="center" title="Button" id="bV5-y1-H6l">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="ignoreButton" destination="bV5-y1-H6l" id="yWH-RZ-Xon"/>

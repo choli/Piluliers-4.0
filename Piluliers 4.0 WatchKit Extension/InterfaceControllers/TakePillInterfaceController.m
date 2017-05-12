@@ -30,6 +30,9 @@
     [self.infoLabel setText:dict[@"info"]];
     [self.pillImage setImage:dict[@"pictureName"]];
     [self.quantityTimeLabel setText:[NSString stringWithFormat:@"%@, %@",dict[@"amount"], dict[@"time"]]];
+    [self.takeButton setTitle:NSLocalizedString(@"button_take_pill", nil)];
+    [self.skipButton setTitle:NSLocalizedString(@"button_skip_pill", nil)];
+    [self.ignoreButton setTitle:NSLocalizedString(@"button_ignore_pill", nil)];
     [self.takeButton setBackgroundColor:[self cellSwipeTakeColor]];
     [self.skipButton setBackgroundColor:[self cellSwipeSkipColor]];
     [self.ignoreButton setBackgroundColor:[self cellSwipeIgnoreColor]];
@@ -45,16 +48,30 @@
     [super didDeactivate];
 }
 
+#pragma mark - button actions
+- (IBAction)takeAction {
+    [self dismissController];
+}
+
+- (IBAction)skipAction {
+    [self dismissController];
+}
+
+- (IBAction)ignoreAction {
+    [self dismissController];
+}
+
+#pragma mark - color helper
 - (UIColor*)cellSwipeTakeColor {
     return [UIColor colorWithRed:139/255.0 green:195/255.0 blue:74/255.0 alpha:1];
 }
 
 - (UIColor*)cellSwipeSkipColor {
-    return [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1];//colorWithHexString:@"#FFEB3B"];
+    return [UIColor colorWithRed:255/255.0 green:235/255.0 blue:59/255.0 alpha:1];
 }
 
 - (UIColor*)cellSwipeIgnoreColor {
-    return [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1];//colorWithHexString:@"#E74C3C"];
+    return [UIColor colorWithRed:231/255.0 green:76/255.0 blue:60/255.0 alpha:1];
 }
 
 @end
