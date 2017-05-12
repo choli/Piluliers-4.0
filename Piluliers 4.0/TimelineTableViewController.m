@@ -30,7 +30,6 @@
 
 - (void)addTableViewHeaderView {
     TimelineHeaderView *timelineHeaderView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([TimelineHeaderView class]) owner:self options:nil] firstObject];
-    timelineHeaderView.translatesAutoresizingMaskIntoConstraints = NO;
     //@meumannu: add username and image
     timelineHeaderView.usernameLabel.text = @"Sandro";
     timelineHeaderView.userImageView.image = [UIImage imageNamed:@"sandro"];

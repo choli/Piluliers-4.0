@@ -11,7 +11,11 @@
 @implementation UIColor (CustomColors)
 
 + (UIColor*)colorPostYellow {
-    return [UIColor colorWithHexString:@"#ffcc00"];
+    return [UIColor colorWithHexString:@"#8bc34a"]; //#607d8b
+}
+
++ (UIColor*)hackathonTintColor {
+    return [UIColor colorWithHexString:@"#607d8b"];
 }
 
 -(NSString *)hexString {

@@ -8,8 +8,11 @@
 
 #import "HistoryTableViewController.h"
 #import "TimelineTableViewCell.h"
+#import "HistoryGraphView.h"
 
 @interface HistoryTableViewController ()
+
+@property (nonatomic, weak) NSLayoutConstraint *topDistanceConstraint;
 
 @end
 
@@ -18,11 +21,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"history", nil);
+    
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    [self.navigationController.view addSubview:blurEffectView];
+    blurEffectView.translatesAutoresizingMaskIntoConstraints = NO;
+    [blurEffectView.heightAnchor constraintEqualToConstant:150].active = YES;
+    self.topDistanceConstraint = [blurEffectView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:[self getNavBarHeight]];
+    self.topDistanceConstraint.active = YES;
+    [blurEffectView.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor].active = YES;
+    [blurEffectView.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor].active = YES;
+    
+    HistoryGraphView *historyGraphView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([HistoryGraphView class]) owner:self options:nil] firstObject];
+    [blurEffectView addSubview:historyGraphView];
+    historyGraphView.backgroundColor = [UIColor clearColor];
+    [historyGraphView.leftAnchor constraintEqualToAnchor:blurEffectView.leftAnchor].active = YES;
+    [historyGraphView.rightAnchor constraintEqualToAnchor:blurEffectView.rightAnchor].active = YES;    [historyGraphView.topAnchor constraintEqualToAnchor:blurEffectView.topAnchor].active = YES;
+    [historyGraphView.bottomAnchor constraintEqualToAnchor:blurEffectView.bottomAnchor].active = YES;
+    
+    [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(150, 0, 0, 0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(150, 0, 0, 0)];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (CGFloat)getNavBarHeight {
+    CGFloat navigationBarHeight = self.navigationController.navigationBar.frame.size.height;
+    CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    return navigationBarHeight + statusBarHeight;
 }
 
 #pragma mark - Table view data source

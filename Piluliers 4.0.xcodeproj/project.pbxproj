@@ -43,6 +43,8 @@
 		F01A82901EC60640008CEC5A /* AppDelegate+Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A828F1EC60640008CEC5A /* AppDelegate+Appearance.m */; };
 		F01A82941EC60D99008CEC5A /* DrugsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82931EC60D99008CEC5A /* DrugsTableViewCell.m */; };
 		F01A82971EC612AD008CEC5A /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82961EC612AD008CEC5A /* HistoryTableViewController.m */; };
+		F01A829E1EC635E9008CEC5A /* HistoryGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A829D1EC635E9008CEC5A /* HistoryGraphView.xib */; };
+		F01A82A11EC6383E008CEC5A /* HistoryGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82A01EC6383E008CEC5A /* HistoryGraphView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +166,9 @@
 		F01A82931EC60D99008CEC5A /* DrugsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrugsTableViewCell.m; path = Source/DrugsTableViewCell.m; sourceTree = "<group>"; };
 		F01A82951EC612AD008CEC5A /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
 		F01A82961EC612AD008CEC5A /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
+		F01A829D1EC635E9008CEC5A /* HistoryGraphView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryGraphView.xib; sourceTree = "<group>"; };
+		F01A829F1EC6383E008CEC5A /* HistoryGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryGraphView.h; path = Source/HistoryGraphView.h; sourceTree = "<group>"; };
+		F01A82A01EC6383E008CEC5A /* HistoryGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryGraphView.m; path = Source/HistoryGraphView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +453,7 @@
 		F01A82881EC5FD94008CEC5A /* History */ = {
 			isa = PBXGroup;
 			children = (
+				F01A82991EC6348A008CEC5A /* HistoryGraphView */,
 				F01A82951EC612AD008CEC5A /* HistoryTableViewController.h */,
 				F01A82961EC612AD008CEC5A /* HistoryTableViewController.m */,
 			);
@@ -478,6 +484,16 @@
 				F01A82931EC60D99008CEC5A /* DrugsTableViewCell.m */,
 			);
 			name = DrugsTableViewCell;
+			sourceTree = "<group>";
+		};
+		F01A82991EC6348A008CEC5A /* HistoryGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				F01A829D1EC635E9008CEC5A /* HistoryGraphView.xib */,
+				F01A829F1EC6383E008CEC5A /* HistoryGraphView.h */,
+				F01A82A01EC6383E008CEC5A /* HistoryGraphView.m */,
+			);
+			name = HistoryGraphView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,6 +637,7 @@
 				F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */,
 				C72E60331EC1F3770087D2FD /* LaunchScreen.storyboard in Resources */,
 				C72E60301EC1F3770087D2FD /* Assets.xcassets in Resources */,
+				F01A829E1EC635E9008CEC5A /* HistoryGraphView.xib in Resources */,
 				C72E602E1EC1F3770087D2FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -784,6 +801,7 @@
 				F01A82901EC60640008CEC5A /* AppDelegate+Appearance.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
 				F01A828D1EC5FDB9008CEC5A /* DrugsTableViewController.m in Sources */,
+				F01A82A11EC6383E008CEC5A /* HistoryGraphView.m in Sources */,
 				F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */,
 				F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */,
 				2316DF7C1EC602C7006284D6 /* RestManager.m in Sources */,
