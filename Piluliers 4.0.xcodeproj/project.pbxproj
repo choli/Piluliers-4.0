@@ -27,6 +27,12 @@
 		F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */; };
 		F01A82551EC596C4008CEC5A /* MainMenuTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82531EC596C4008CEC5A /* MainMenuTabBarController.xib */; };
 		F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01A825B1EC59C6F008CEC5A /* Localizable.strings */; };
+		F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */; };
+		F01A82661EC59E2F008CEC5A /* TimelineTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82641EC59E2F008CEC5A /* TimelineTableViewController.xib */; };
+		F01A826C1EC59F4E008CEC5A /* TimelineTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A826B1EC59F4E008CEC5A /* TimelineTableViewDataSource.m */; };
+		F01A826F1EC59F68008CEC5A /* TimelineTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A826E1EC59F68008CEC5A /* TimelineTableViewDelegate.m */; };
+		F01A82741EC5AAF2008CEC5A /* TimelineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */; };
+		F01A82751EC5AAF2008CEC5A /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01A82731EC5AAF2008CEC5A /* TimelineTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +118,16 @@
 		F01A825C1EC59C94008CEC5A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F01A825D1EC59CA2008CEC5A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F01A825E1EC59CAC008CEC5A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F01A82621EC59E2F008CEC5A /* TimelineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewController.h; sourceTree = "<group>"; };
+		F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewController.m; sourceTree = "<group>"; };
+		F01A82641EC59E2F008CEC5A /* TimelineTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewController.xib; sourceTree = "<group>"; };
+		F01A826A1EC59F4E008CEC5A /* TimelineTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewDataSource.h; sourceTree = "<group>"; };
+		F01A826B1EC59F4E008CEC5A /* TimelineTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewDataSource.m; sourceTree = "<group>"; };
+		F01A826D1EC59F68008CEC5A /* TimelineTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewDelegate.h; sourceTree = "<group>"; };
+		F01A826E1EC59F68008CEC5A /* TimelineTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewDelegate.m; sourceTree = "<group>"; };
+		F01A82711EC5AAF2008CEC5A /* TimelineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineTableViewCell.h; sourceTree = "<group>"; };
+		F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineTableViewCell.m; sourceTree = "<group>"; };
+		F01A82731EC5AAF2008CEC5A /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +266,7 @@
 		F01A824F1EC595F1008CEC5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F01A82611EC59DED008CEC5A /* Timeline */,
 				F01A82501EC59606008CEC5A /* MainMenu */,
 			);
 			name = Presentation;
@@ -271,6 +288,31 @@
 				F01A825B1EC59C6F008CEC5A /* Localizable.strings */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		F01A82611EC59DED008CEC5A /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				F01A82701EC5AAD5008CEC5A /* TableViewCell */,
+				F01A826A1EC59F4E008CEC5A /* TimelineTableViewDataSource.h */,
+				F01A826B1EC59F4E008CEC5A /* TimelineTableViewDataSource.m */,
+				F01A826D1EC59F68008CEC5A /* TimelineTableViewDelegate.h */,
+				F01A826E1EC59F68008CEC5A /* TimelineTableViewDelegate.m */,
+				F01A82621EC59E2F008CEC5A /* TimelineTableViewController.h */,
+				F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */,
+				F01A82641EC59E2F008CEC5A /* TimelineTableViewController.xib */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		F01A82701EC5AAD5008CEC5A /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F01A82711EC5AAF2008CEC5A /* TimelineTableViewCell.h */,
+				F01A82721EC5AAF2008CEC5A /* TimelineTableViewCell.m */,
+				F01A82731EC5AAF2008CEC5A /* TimelineTableViewCell.xib */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,7 +437,9 @@
 				F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */,
 				C72E60331EC1F3770087D2FD /* LaunchScreen.storyboard in Resources */,
 				C72E60301EC1F3770087D2FD /* Assets.xcassets in Resources */,
+				F01A82751EC5AAF2008CEC5A /* TimelineTableViewCell.xib in Resources */,
 				C72E602E1EC1F3770087D2FD /* Main.storyboard in Resources */,
+				F01A82661EC59E2F008CEC5A /* TimelineTableViewController.xib in Resources */,
 				F01A82551EC596C4008CEC5A /* MainMenuTabBarController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,7 +593,11 @@
 			files = (
 				C72E60281EC1F3770087D2FD /* AppDelegate.m in Sources */,
 				C72E60251EC1F3770087D2FD /* main.m in Sources */,
+				F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */,
 				F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */,
+				F01A82741EC5AAF2008CEC5A /* TimelineTableViewCell.m in Sources */,
+				F01A826C1EC59F4E008CEC5A /* TimelineTableViewDataSource.m in Sources */,
+				F01A826F1EC59F68008CEC5A /* TimelineTableViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
