@@ -12,5 +12,6 @@
 @interface PillImageNameRow : NSObject
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage *pillImage;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *pillNameLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceGroup *rowGroup;
 
 @end

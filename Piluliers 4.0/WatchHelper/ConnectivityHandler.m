@@ -29,16 +29,29 @@
     NSString *requestKey = message[@"request"];
     NSDictionary *response = @{};
     if ([requestKey isEqualToString:@"dummy"]) {
-        response = @{@"time" : [NSDate dateWithTimeIntervalSince1970:1494616500],
-                                   @"pills" : @[@{
-                                                    @"name" : @"Mydocalm",
-                                                    @"pictureName": @"pill.png"
-                                                    },
-                                                @{
-                                                    @"name" : @"Aricept",
-                                                    @"pictureName": @"capsule.png"
-                                                    }]
-                                   };
+        response = @{@"todaysPills" : @[@{@"time" : [NSDate dateWithTimeIntervalSince1970:1494616500],
+                                          @"pills" : @[@{
+                                                           @"name" : @"Mydocalm",
+                                                           @"pictureName": @"pill.png"
+                                                           },
+                                                       @{
+                                                           @"name" : @"Aricept",
+                                                           @"pictureName": @"capsule.png"
+                                                           }]
+                                          },
+                                        @{@"time" : [NSDate dateWithTimeIntervalSince1970:1494620100],
+                                          @"pills" : @[@{
+                                                           @"name" : @"Mydocalm",
+                                                           @"pictureName": @"pill.png"
+                                                           },
+                                                       @{
+                                                           @"name" : @"Aricept",
+                                                           @"pictureName": @"capsule.png"
+                                                           }]
+                                          }]};
+    }
+    if ([requestKey isEqualToString:@"ifeelbad"]) {
+        //TODO: "I feel bad" handling...
     }
     replyHandler(response);
 }
