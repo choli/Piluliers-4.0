@@ -17,6 +17,7 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *ampmLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *pillsTable;
 @property (nonatomic) WCSession *session;
+@property (nonatomic) NSDictionary *allPills;
 @end
 
 
@@ -38,6 +39,11 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    if ([self.session activationState] != WCSessionActivationStateActivated) {
+        [self.session activateSession];
+    } else {
+        [self loadDataForTable];
+    }
 }
 
 - (void)didDeactivate {
@@ -47,7 +53,9 @@
 
 #pragma mark - menu actions
 - (IBAction)showTodaysJourney {
-    [self presentControllerWithName:@"DailyOverviewInterfaceController" context:nil];
+    [self pushControllerWithName:@"DailyOverviewInterfaceController" context:self.allPills];
+//    [self presentControllerWithNames:@[@"DailyOverviewInterfaceController", @"DailyOverviewInterfaceController"]
+//                            contexts:@[self.allPills[@"todaysPills"], self.allPills[@"tomorrowsPills"]]];
 }
 
 - (IBAction)iFeelBadAction {
@@ -68,7 +76,6 @@
     [dateFormatter setDoesRelativeDateFormatting:YES];
     dateFormatter.locale = [NSLocale currentLocale];
     NSString *dateString = [dateFormatter stringFromDate:nextReminderDate];
-    [self.timeLabel setText:dateString];
     
     NSRange amRange = [dateString rangeOfString:[dateFormatter AMSymbol]];
     NSRange pmRange = [dateString rangeOfString:[dateFormatter PMSymbol]];
@@ -77,13 +84,15 @@
     [self.ampmLabel setText:@""];
     if (amRange.location == NSNotFound) {
         if (pmRange.location == NSNotFound) {
-            return;
         } else {
             ampmString = @"PM";
+            dateString = [dateString substringToIndex:5];
         }
     } else {
         ampmString = @"AM";
+        dateString = [dateString substringToIndex:5];
     }
+    [self.timeLabel setText:dateString];
     [self.ampmLabel setText:ampmString];
 }
 
@@ -132,9 +141,17 @@
                  }];
 }
 
-- (void)setupTableWithDict:(NSDictionary *)nextReminderData {
-    [self setNextReminderTime:nextReminderData[@"time"]];
+- (void)setupTableWithDict:(NSDictionary *)allPillsDict {
+    self.allPills = allPillsDict;
+    NSArray *todaysPills = allPillsDict[@"todaysPills"];
     
+    //TODO: calculate todays pills
+    NSDictionary *nextReminderData = todaysPills[0];
+    //end calculate todays pills
+    
+    if (nextReminderData[@"time"]) {
+        [self setNextReminderTime:nextReminderData[@"time"]];
+    }
     NSArray *pillsToTake = nextReminderData[@"pills"];
     [self.pillsTable setNumberOfRows:pillsToTake.count withRowType:@"PillImageNameRow"];
     

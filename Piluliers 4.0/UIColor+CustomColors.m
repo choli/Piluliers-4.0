@@ -10,8 +10,33 @@
 
 @implementation UIColor (CustomColors)
 
-+ (UIColor*)colorPostYellow {
-    return [UIColor colorWithHexString:@"#ffcc00"];
++ (UIColor*)hackathonTintColor {
+    return [UIColor colorWithHexString:@"#8bc34a"]; //#607d8b
+}
+
++ (UIColor*)hackathonAccentColor {
+    return [UIColor colorWithHexString:@"#607d8b"];
+}
+
++ (UIColor*)colorPostDarkBlue {
+    return [UIColor colorWithHexString:@"#103A76"];
+}
+
++ (UIColor*)cellSwipeTakeColor {
+    return [UIColor colorWithHexString:@"#8BC34A"];
+}
+
++ (UIColor*)cellSwipeSkipColor {
+    return [UIColor colorWithHexString:@"#FFEB3B"];
+}
+
++ (UIColor*)cellSwipeIgnoreColor {
+    return [UIColor colorWithHexString:@"#E74C3C"];
+}
+
++ (void)colorIconImageView:(UIImageView*)imageView color:(UIColor*)color {
+    imageView.image = [imageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    [imageView setTintColor:color];
 }
 
 -(NSString *)hexString {

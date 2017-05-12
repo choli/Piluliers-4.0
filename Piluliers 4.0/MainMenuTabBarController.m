@@ -31,18 +31,18 @@
     
     TimelineTableViewController *timelineTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimelineTableViewController"];
     UINavigationController *timelineNavigationController = [[UINavigationController alloc] initWithRootViewController:timelineTableViewController];
-    timelineNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"timeline", nil) image:[UIImage imageNamed:@"pill"] tag:1];
+    timelineNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"timeline", nil) image:[UIImage imageNamed:@"timeline_icon"] tag:1];
 
     HistoryTableViewController *historyTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"HistoryTableViewController"];
     UINavigationController *historyNavigationController = [[UINavigationController alloc] initWithRootViewController:historyTableViewController];
-    historyNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"history", nil) image:[UIImage imageNamed:@"pill"] tag:2];
+    historyNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"history", nil) image:[UIImage imageNamed:@"history_icon"] tag:2];
     
     DrugsTableViewController *drugsTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"DrugsTableViewController"];
     UINavigationController *drugsNavigationController = [[UINavigationController alloc] initWithRootViewController:drugsTableViewController];
-    drugsNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"drugs", nil) image:[UIImage imageNamed:@"pill"] tag:3];
+    drugsNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"drugs", nil) image:[UIImage imageNamed:@"drug_icon"] tag:3];
     
     UIViewController *settingsViewController = [UIViewController new];
-    settingsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"settings", nil) image:[UIImage imageNamed:@"pill"] tag:4];
+    settingsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"settings", nil) image:[UIImage imageNamed:@"settings_icon"] tag:4];
     
     [self setViewControllers:@[timelineNavigationController, historyNavigationController, drugsNavigationController, settingsViewController]];
 }

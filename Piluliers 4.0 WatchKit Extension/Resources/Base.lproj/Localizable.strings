@@ -7,11 +7,16 @@
 */
 
 //Apple Watch
-//Buttons
+//Labels
 "label_next_reminder"="Next reminder";
+
+//Alert messages
 "alert_thanks"="Thank you 😃";
 "alert_title_come_on!"="Come on!";
 "alert_message_feel_better"="I hope I can make you feel better with this little hug 🤗";
 "alert_ok"="OK";
 "alert_title_error"="Error";
 "alert_message_no_connection"="Connection to your phone failed";
+
+//Controler title
+"controller_title_back"="Back";
