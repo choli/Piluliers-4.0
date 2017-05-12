@@ -8,6 +8,7 @@
 
 #import "DrugsTableViewController.h"
 #import "TimelineTableViewCell.h"
+#import "DrugsTableViewCell.h"
 
 @interface DrugsTableViewController ()
 
@@ -36,20 +37,24 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80.0f;
+    return 66.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //todo stoecklim: use custom cell for this use case later
-    TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
+    DrugsTableViewCell *cell = (DrugsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DrugsTableViewCell" forIndexPath:indexPath];
     //todo meumannu: set data from model
-    cell.intakeTime.text = @"12:00";
-    cell.pillImage.image = [UIImage imageNamed:@"pill"];
+    cell.medicamentImage.image = [UIImage imageNamed:@"sandro"];
     cell.medicamentName.text = @"Medikament X";
-    cell.medicamentDescription.text = @"Dies ist eine Pille";
-    cell.medicamentDosage.text = @"1 Kapsel";
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+}
+
+# pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //todo stoecklim: present detail view controller
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
