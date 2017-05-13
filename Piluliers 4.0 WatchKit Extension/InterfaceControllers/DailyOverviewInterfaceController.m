@@ -63,7 +63,7 @@
             index = self.dayTable.numberOfRows;
             [self.dayTable insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:index] withRowType:@"PillImageNameRow"];
             PillImageNameRow *row = (PillImageNameRow *)[self.dayTable rowControllerAtIndex:index];
-            [row.pillImage setImage:nil];
+            [row setPillImageNamed:pill[@"pictureName"]];
             [row.pillNameLabel setText:pill[@"name"]];
             NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObject:dateString forKey:@"time"];
             [dict addEntriesFromDictionary:pill];

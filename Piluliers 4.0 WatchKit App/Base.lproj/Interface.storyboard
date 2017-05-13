@@ -31,9 +31,9 @@
                         <table alignment="left" id="3t2-hC-Dc5">
                             <items>
                                 <tableRow identifier="PillImageNameRow" selectable="NO" id="8jm-TQ-JqE" customClass="PillImageNameRow">
-                                    <group key="rootItem" width="1" alignment="left" id="9eh-rC-bzK">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="9eh-rC-bzK">
                                         <items>
-                                            <imageView alignment="left" verticalAlignment="center" contentMode="left" id="r0a-yp-KVd"/>
+                                            <imageView width="20" height="20" alignment="left" verticalAlignment="center" contentMode="left" id="r0a-yp-KVd"/>
                                             <label alignment="left" verticalAlignment="center" text="Label" id="SpH-KZ-HrS">
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
@@ -92,9 +92,9 @@
                                     </connections>
                                 </tableRow>
                                 <tableRow identifier="PillImageNameRow" id="98R-cq-uzf" customClass="PillImageNameRow">
-                                    <group key="rootItem" width="1" alignment="left" id="fty-Wo-G7r">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="fty-Wo-G7r">
                                         <items>
-                                            <imageView alignment="left" verticalAlignment="center" contentMode="left" id="CE5-FF-xcp"/>
+                                            <imageView width="20" height="20" alignment="left" verticalAlignment="center" contentMode="left" id="CE5-FF-xcp"/>
                                             <label alignment="left" verticalAlignment="center" text="Label" id="PDT-ln-3Bq">
                                                 <fontDescription key="font" style="UICTFontTextStyleBody"/>
                                             </label>
@@ -127,7 +127,7 @@
                         <label alignment="center" text="Label" id="ahL-fX-afk">
                             <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
-                        <imageView alignment="center" id="PPr-G2-dAj"/>
+                        <imageView width="40" height="40" alignment="center" id="PPr-G2-dAj"/>
                         <label alignment="center" text="Label" id="Ykm-qT-NXm"/>
                         <button width="1" alignment="center" title="Button" id="8lF-eD-zaY">
                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
