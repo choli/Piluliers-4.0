@@ -14,6 +14,7 @@
 #import "BarCodeViewController.h"
 #import "RestManager.h"
 #import "MedicationData.h"
+#import "MedicationManager.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) ConnectivityHandler *connectivityHandler;
@@ -23,6 +24,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    /*
+    MedicationManager *medicationManager = [MedicationManager new];
+    [medicationManager getDailyMedicationsForPatient:@".PAT_10" withCompletionBlock:^(NSDictionary *medications, NSError *error) {
+        NSLog(@"Medications: %@", medications);
+    }];
+    */
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Qrcode" bundle:nil];
     UINavigationController *loginNavigationController = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"BarCodeViewController"]];
