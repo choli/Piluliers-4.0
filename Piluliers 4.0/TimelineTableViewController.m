@@ -32,13 +32,19 @@
     [self addTableViewHeaderView];
     self.restManager = [RestManager sharedInstance];
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor blackColor];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(loadData)
+                  forControlEvents:UIControlEventValueChanged];
+    [self loadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self loadData];
+    
 }
-
 - (void)loadData {
     NSString * userId;
     if ([[NSUserDefaults standardUserDefaults]
