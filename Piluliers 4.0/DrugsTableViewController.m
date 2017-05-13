@@ -16,7 +16,8 @@
 @interface DrugsTableViewController ()
 
 @property (nonatomic, weak) RestManager *restManager;
-@property (nonatomic, weak) NSArray<NSObject*>* data;
+@property (nonatomic, weak) NSArray<NSObject*> *data;
+@property (nonatomic, weak) NSString *userData;
 
 @end
 

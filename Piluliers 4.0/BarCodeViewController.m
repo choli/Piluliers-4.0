@@ -11,6 +11,7 @@
 #import "QRCodeReader.h"
 #import "MainMenuTabBarController.h"
 #import "RestManager.h"
+#import "UIColor+CustomColors.h"
 
 @interface BarCodeViewController ()
 
@@ -100,6 +101,7 @@ RestManager * restManager;
 - (void)viewDidLoad {
     [super viewDidLoad];
     restManager = [RestManager sharedInstance];
+    self.view.backgroundColor = [UIColor hackathonAccentColor];
     // Do any additional setup after loading the view.
 }
 
