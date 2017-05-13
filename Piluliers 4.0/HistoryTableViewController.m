@@ -14,7 +14,6 @@
 
 @interface HistoryTableViewController ()
 
-@property (nonatomic, weak) NSLayoutConstraint *topDistanceConstraint;
 @property (nonatomic, weak) RestManager *restManager;
 @property (nonatomic, weak) NSArray<NSObject*>* data;
 
@@ -28,17 +27,19 @@
     
     HistoryGraphView *historyGraphView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([HistoryGraphView class]) owner:self options:nil] firstObject];
     [historyGraphView setBackgroundColor:[UIColor hackathonAccentColor]];
+
     [self.navigationController.view addSubview:historyGraphView];
     historyGraphView.translatesAutoresizingMaskIntoConstraints = NO;
     [historyGraphView.heightAnchor constraintEqualToConstant:150].active = YES;
-    self.topDistanceConstraint = [historyGraphView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:[self getNavBarHeight]];
-    self.topDistanceConstraint.active = YES;
+    [historyGraphView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:[self getNavBarHeight]].active = YES;
     [historyGraphView.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor].active = YES;
     [historyGraphView.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor].active = YES;
     
     self.restManager = [RestManager sharedInstance];
     [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(150, 0, 0, 0)];
     [self.tableView setContentInset:UIEdgeInsetsMake(150, 0, 0, 0)];
+    
+    [historyGraphView populateData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
