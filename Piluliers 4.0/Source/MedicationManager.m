@@ -72,4 +72,10 @@
         }
     }];
 }
+
++ (NSString *)timeStringForTiming:(NSString *)timing {
+    
+    NSDictionary *timings = @{@"MORN" : @"8:15", @"AFT" : @"12:00", @"EVE" : @"18:30", @"NIGHT": @"22:45"};
+    return [timings objectForKey:timing];
+}
 @end
