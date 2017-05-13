@@ -157,7 +157,7 @@
     
     for (NSDictionary *pill in pillsToTake) {
         PillImageNameRow *row = (PillImageNameRow *)[self.pillsTable rowControllerAtIndex:[pillsToTake indexOfObject:pill]];
-        [row.pillImage setImage:nil];
+        [row setPillImageNamed:pill[@"pictureName"]];
         [row.pillNameLabel setText:pill[@"name"]];
     }
 }

@@ -12,6 +12,7 @@
 
 + (UIColor*)hackathonTintColor;
 + (UIColor*)hackathonAccentColor;
++ (UIColor*)hackathonTabBarColor;
 + (UIColor*)colorPostDarkBlue;
 + (UIColor*)cellSwipeTakeColor;
 + (UIColor*)cellSwipeSkipColor;

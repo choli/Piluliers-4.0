@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *medicamentName;
 @property (weak, nonatomic) IBOutlet UILabel *medicamentDescription;
 @property (weak, nonatomic) IBOutlet UILabel *medicamentDosage;
+@property (weak, nonatomic) IBOutlet UILabel *intakeIndicator;
 
 @end

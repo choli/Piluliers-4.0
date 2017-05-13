@@ -28,7 +28,16 @@
     NSDictionary *dict = (NSDictionary *)context;
     [self.nameLabel setText:dict[@"name"]];
     [self.infoLabel setText:dict[@"info"]];
-    [self.pillImage setImage:dict[@"pictureName"]];
+    NSString *imageName = dict[@"pictureName"];
+    [self.pillImage setImage:[UIImage imageNamed:imageName]];
+    UIColor *color = [UIColor blueColor];
+    if ([imageName isEqualToString:@"pill"]) {
+        color = [UIColor redColor];
+    }
+    if ([imageName isEqualToString:@"capsule"]) {
+        color = [UIColor whiteColor];
+    }
+    [self.pillImage setTintColor:color];
     [self.quantityTimeLabel setText:[NSString stringWithFormat:@"%@, %@",dict[@"amount"], dict[@"time"]]];
     [self.takeButton setTitle:NSLocalizedString(@"button_take_pill", nil)];
     [self.skipButton setTitle:NSLocalizedString(@"button_skip_pill", nil)];
@@ -67,7 +76,7 @@
 }
 
 - (UIColor*)cellSwipeSkipColor {
-    return [UIColor colorWithRed:255/255.0 green:235/255.0 blue:59/255.0 alpha:1];
+    return [UIColor colorWithRed:243/255.0 green:156/255.0 blue:18/255.0 alpha:1];
 }
 
 - (UIColor*)cellSwipeIgnoreColor {

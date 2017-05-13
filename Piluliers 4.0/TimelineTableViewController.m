@@ -99,6 +99,11 @@
     cell.medicamentName.text = @"Medikament X";
     cell.medicamentDescription.text = @"Dies ist eine Pille";
     cell.medicamentDosage.text = @"1 Kapsel";
+    cell.intakeIndicator.text = @"Taken";
+    cell.intakeIndicator.backgroundColor = [UIColor cellSwipeTakeColor];
+    cell.intakeIndicator.layer.cornerRadius = 5.0f;
+    cell.intakeIndicator.layer.masksToBounds = YES;
+    cell.intakeIndicator.textColor = [UIColor whiteColor];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }

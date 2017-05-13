@@ -11,7 +11,11 @@
 @implementation UIColor (CustomColors)
 
 + (UIColor*)hackathonTintColor {
-    return [UIColor colorWithHexString:@"#8bc34a"]; //#607d8b
+    return [UIColor colorWithHexString:@"#8bc34a"];
+}
+
++ (UIColor*)hackathonTabBarColor {
+    return [UIColor colorWithHexString:@"#33691E"];
 }
 
 + (UIColor*)hackathonAccentColor {
@@ -27,7 +31,7 @@
 }
 
 + (UIColor*)cellSwipeSkipColor {
-    return [UIColor colorWithHexString:@"#FFEB3B"];
+    return [UIColor colorWithHexString:@"#f39c12"];
 }
 
 + (UIColor*)cellSwipeIgnoreColor {
