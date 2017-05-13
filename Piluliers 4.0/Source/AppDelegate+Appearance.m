@@ -13,7 +13,7 @@
 
 - (void)setupAppearance {
     [[UINavigationBar appearance] setBarTintColor:[UIColor hackathonTintColor]];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     [[UITabBar appearance] setUnselectedItemTintColor:[UIColor hackathonAccentColor]];
     [[UITabBar appearance] setTintColor:[UIColor hackathonTabBarColor]];
     [[UIButton appearance] setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
