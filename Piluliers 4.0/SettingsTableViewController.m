@@ -14,9 +14,16 @@
 
 @implementation SettingsTableViewController
 
+//todo stoecklim: finish up if there is time
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"settings", nil);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,7 +36,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 12;
+    return 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

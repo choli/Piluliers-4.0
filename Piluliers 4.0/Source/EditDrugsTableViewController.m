@@ -8,6 +8,7 @@
 
 #import "EditDrugsTableViewController.h"
 #import "EditDrugsTableViewCell.h"
+#import "UIColor+CustomColors.h"
 
 @interface EditDrugsTableViewController ()
 
@@ -23,6 +24,7 @@
 }
 
 - (void)saveMedication:(UIBarButtonItem*)barButtonItem {
+    //todo stoecklim: persist medication object
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -40,13 +42,52 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 12;
+    return 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EditDrugsTableViewCell *cell = (EditDrugsTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"EditDrugsTableViewCell" forIndexPath:indexPath];
-    cell.inputTitle.text = @"TODO";
-    cell.inputValue.placeholder = @"TODOOOOO";
+    switch (indexPath.row) {
+        case 0:
+            cell.inputTitle.text = @"Name of drug";
+            cell.inputValue.placeholder = @"Enter name of drug";
+            break;
+        case 1:
+            cell.inputTitle.text = @"Form";
+            cell.inputValue.placeholder = @"Enter form";
+            break;
+        case 2:
+            cell.inputTitle.text = @"Package size / Quantity";
+            cell.inputValue.placeholder = @"Enter package size";
+            break;
+        case 3:
+            cell.inputTitle.text = @"Frequency";
+            cell.inputValue.placeholder = @"Enter frequency";
+            break;
+        case 4:
+            cell.inputTitle.text = @"Duration";
+            cell.inputValue.placeholder = @"Enter duration";
+            break;
+        case 5:
+            cell.inputTitle.text = @"Start date";
+            cell.inputValue.placeholder = @"Enter start date";
+            break;
+        case 6:
+            cell.inputTitle.text = @"Time";
+            cell.inputValue.placeholder = @"Enter intake time";
+            break;
+        case 7:
+            cell.inputTitle.text = @"Notes";
+            cell.inputValue.placeholder = @"Enter notes";
+            break;
+        default:
+            cell.inputTitle.text = @"NOT IMPLEMENTED";
+            cell.inputValue.placeholder = @"NOT IMPLEMENTED";
+            break;
+    }
+    
+    cell.inputTitle.textColor = [UIColor hackathonTabBarColor];
+    cell.inputValue.textColor = [UIColor hackathonAccentColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

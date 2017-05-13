@@ -11,8 +11,13 @@
 #import "DrugsTableViewCell.h"
 #import "TimelineDetailTableViewController.h"
 #import "EditDrugsTableViewController.h"
+#import "RestManager.h"
 
 @interface DrugsTableViewController ()
+
+@property (nonatomic, weak) RestManager *restManager;
+@property (nonatomic, weak) NSArray<NSObject*> *data;
+@property (nonatomic, weak) NSString *userData;
 
 @end
 
@@ -22,7 +27,17 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"drugs", nil);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addpill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
+    self.restManager = [RestManager sharedInstance];
+}
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadData];
+    [self.tableView reloadData];
+}
+
+- (void)loadData {
+    //todo stoecklim
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,10 +55,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    //todo stoecklim: make dynamic
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //todo stoecklim: make dynamic
     return 7;
 }
 
@@ -52,9 +69,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //todo stoecklim: use custom cell for this use case later
     DrugsTableViewCell *cell = (DrugsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DrugsTableViewCell" forIndexPath:indexPath];
-    //todo meumannu: set data from model
+    //todo stoecklim: set data from model
     cell.medicamentImage.image = [UIImage imageNamed:@"sandro"];
     cell.medicamentName.text = @"Medikament X";
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -66,6 +82,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TimelineDetailTableViewController *timelineTableDetailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TimelineDetailTableViewController"];
+    //todo stoecklim: pass data model
     timelineTableDetailViewController.titleString = @"Medikament X";
     [self.navigationController pushViewController:timelineTableDetailViewController animated:YES];
 }

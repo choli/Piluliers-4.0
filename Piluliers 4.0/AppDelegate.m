@@ -22,10 +22,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UIStoryboard * uiStroyboard = [UIStoryboard storyboardWithName:@"Qrcode" bundle:nil];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [uiStroyboard instantiateViewControllerWithIdentifier:@"BarCodeViewController"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Qrcode" bundle:nil];
+    UINavigationController *loginNavigationController = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"BarCodeViewController"]];
+    self.window.rootViewController = loginNavigationController;
     [self setupAppearance];
     [self.window makeKeyAndVisible];
     

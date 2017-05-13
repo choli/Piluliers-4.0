@@ -7,6 +7,7 @@
 //
 
 #import "TimelineDetailTableViewController.h"
+#import "UIColor+CustomColors.h"
 
 @interface TimelineDetailTableViewController ()
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.titleString;
+    self.title = self.titleString;     //todo stoecklim: read from model
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,15 +28,18 @@
 # pragma mark - Table View Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    //todo stoecklim: make dynamic
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //todo stoecklim: make dynamic
     return 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimelineDetailTableViewCell" forIndexPath:indexPath];
+    //todo stoecklim: read from model
     switch (indexPath.row) {
         case 0:
             cell.textLabel.text = @"Name of drug";
@@ -74,6 +78,8 @@
             cell.detailTextLabel.text = @"NOT IMPLEMENTED";
             break;
     }
+    cell.textLabel.textColor = [UIColor hackathonTabBarColor];
+    cell.detailTextLabel.textColor = [UIColor hackathonAccentColor];
     cell.userInteractionEnabled = NO;
     return cell;
 }

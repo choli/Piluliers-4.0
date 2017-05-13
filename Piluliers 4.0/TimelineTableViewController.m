@@ -12,8 +12,12 @@
 #import "UIColor+CustomColors.h"
 #import "TimelineHeaderView.h"
 #import "EditDrugsTableViewController.h"
+#import "RestManager.h"
 
 @interface TimelineTableViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak) RestManager *restManager;
+@property (nonatomic, weak) NSArray<NSObject*>* data;
 
 @end
 
@@ -23,17 +27,23 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"timeline", nil);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addpill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
-    [self.tableView reloadData];
+    self.restManager = [RestManager sharedInstance];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self addTableViewHeaderView];
+    [self loadData];
+    [self.tableView reloadData];
+}
+
+- (void)loadData {
+    //todo stoecklim
 }
 
 - (void)addTableViewHeaderView {
     TimelineHeaderView *timelineHeaderView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([TimelineHeaderView class]) owner:self options:nil] firstObject];
-    //@meumannu: add username and image
+    //todo stoecklim: add username and image from model
     timelineHeaderView.usernameLabel.text = @"Hallo Sandro";
     timelineHeaderView.userImageView.image = [UIImage imageNamed:@"sandro"];
     timelineHeaderView.backgroundColor = [UIColor hackathonAccentColor];
@@ -56,17 +66,18 @@
 }
 
 - (void)dateChanged:(UIDatePicker*)datePicker {
-    // handle date changes
+    //todo stoecklim: handle date change
+    [self.tableView reloadData];
 }
 
 # pragma mark - Table View Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 4; //todo stoecklim: make dynamic
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 2; //todo stoecklim: make dynamic
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -92,9 +103,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
-    //todo meumannu: set data from model
+    //todo stoecklim: set data from model
     cell.intakeTime.text = @"12:00";
-    cell.pillImage.image = [UIImage imageNamed:@"crystal"];
+    cell.pillImage.image = [UIImage imageNamed:@"crystal"]; //todo stoecklim: show appropriate image
     [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
     cell.medicamentName.text = @"Medikament X";
     cell.medicamentDescription.text = @"Dies ist eine Pille";
@@ -103,7 +114,7 @@
     cell.intakeIndicator.backgroundColor = [UIColor cellSwipeTakeColor];
     cell.intakeIndicator.layer.cornerRadius = 5.0f;
     cell.intakeIndicator.layer.masksToBounds = YES;
-    cell.intakeIndicator.textColor = [UIColor whiteColor];
+    cell.intakeIndicator.textColor = [UIColor blackColor];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
@@ -113,27 +124,27 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TimelineDetailTableViewController *timelineTableDetailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TimelineDetailTableViewController"];
-    timelineTableDetailViewController.titleString = @"Medikament X";
+    timelineTableDetailViewController.titleString = @"Medikament X"; //todo stoecklim: pass model instead of string
     [self.navigationController pushViewController:timelineTableDetailViewController animated:YES];
 }
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewRowAction *takeAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"take", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        //todo stoecklim: mark as taken
+        //todo stoecklim: mark as taken and persist
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }];
     
     takeAction.backgroundColor = [UIColor cellSwipeTakeColor];
 
     UITableViewRowAction *skipAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"skip", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        //todo stoecklim: mark as skipped
+        //todo stoecklim: mark as skipped and persist
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }];
     
     skipAction.backgroundColor = [UIColor cellSwipeSkipColor];
 
     UITableViewRowAction *ignoreAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"ignore", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        //todo stoecklim: mark as ignored
+        //todo stoecklim: mark as ignored and persist
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }];
     
