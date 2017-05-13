@@ -254,4 +254,20 @@ RestManager *restManager = [RestManager sharedInstance];
     }
 }];
 */
+/*-(void)getImageForId:(NSString *)imageId {
+    NSString * urlstring = [restManager urlPictureMedicationByGtin:@"7680336700367" :@"PA" :@"Front" :@"M"];
+    dispatch_queue_t myqueue = dispatch_queue_create("myqueue", NULL);
+    
+    // execute a task on that queue asynchronously
+    dispatch_async(myqueue, ^{
+        NSURL *url = [NSURL URLWithString:[urlstring stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];;
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _medicationPicture.image = [UIImage imageWithData:data]; //UI updates should be done on the main thread
+        });
+    });
+    
+    
+}*/
+
 @end
