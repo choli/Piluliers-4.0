@@ -23,4 +23,6 @@
 @property (nonatomic, nullable) NSNumber *intakeStatus;
 
 - (NSString *)formImageName;
+
+- (MedicationData *)deepCopy;
 @end

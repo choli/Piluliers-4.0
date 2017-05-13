@@ -64,4 +64,9 @@
     return @"Before eating";
 }
 
+- (MedicationData *)deepCopy {
+    MedicationData *medicationData = [MedicationData new];
+    medicationData.json = self.json;
+    return medicationData;
+}
 @end
