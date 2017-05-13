@@ -13,6 +13,7 @@
 #import "AppDelegate+Appearance.h"
 #import "BarCodeViewController.h"
 #import "RestManager.h"
+#import "MedicationData.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) ConnectivityHandler *connectivityHandler;
