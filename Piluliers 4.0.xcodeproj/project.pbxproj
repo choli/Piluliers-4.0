@@ -103,6 +103,7 @@
 		F01A82A11EC6383E008CEC5A /* HistoryGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82A01EC6383E008CEC5A /* HistoryGraphView.m */; };
 		F01A82A51EC66A76008CEC5A /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82A41EC66A76008CEC5A /* SettingsTableViewController.m */; };
 		F01A82A91EC66C33008CEC5A /* EditDrugsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82A81EC66C33008CEC5A /* EditDrugsTableViewController.m */; };
+		F01A82AD1EC6F2C9008CEC5A /* EditDrugsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82AC1EC6F2C9008CEC5A /* EditDrugsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -342,6 +343,8 @@
 		F01A82A41EC66A76008CEC5A /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		F01A82A71EC66C33008CEC5A /* EditDrugsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditDrugsTableViewController.h; path = Source/EditDrugsTableViewController.h; sourceTree = "<group>"; };
 		F01A82A81EC66C33008CEC5A /* EditDrugsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditDrugsTableViewController.m; path = Source/EditDrugsTableViewController.m; sourceTree = "<group>"; };
+		F01A82AB1EC6F2C9008CEC5A /* EditDrugsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDrugsTableViewCell.h; sourceTree = "<group>"; };
+		F01A82AC1EC6F2C9008CEC5A /* EditDrugsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDrugsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -802,10 +805,20 @@
 		F01A82A61EC66C0F008CEC5A /* Edit Drugs */ = {
 			isa = PBXGroup;
 			children = (
+				F01A82AA1EC6F0B9008CEC5A /* EditDrugsTableViewCell */,
 				F01A82A71EC66C33008CEC5A /* EditDrugsTableViewController.h */,
 				F01A82A81EC66C33008CEC5A /* EditDrugsTableViewController.m */,
 			);
 			name = "Edit Drugs";
+			sourceTree = "<group>";
+		};
+		F01A82AA1EC6F0B9008CEC5A /* EditDrugsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F01A82AB1EC6F2C9008CEC5A /* EditDrugsTableViewCell.h */,
+				F01A82AC1EC6F2C9008CEC5A /* EditDrugsTableViewCell.m */,
+			);
+			name = EditDrugsTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1019,7 +1032,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		85720DEF5D9CF1F9ED86A245 /* [CP] Check Pods Manifest.lock */ = {
@@ -1034,7 +1047,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A13222EAC06888FCB8ED12DD /* [CP] Check Pods Manifest.lock */ = {
@@ -1049,7 +1062,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B0C45CF099D6AD131BD111B4 /* [CP] Copy Pods Resources */ = {
@@ -1169,6 +1182,7 @@
 				2316DFEE1EC61DEA006284D6 /* Content+CoreDataClass.m in Sources */,
 				2316E0051EC61DEA006284D6 /* MedicationRequest+CoreDataProperties.m in Sources */,
 				2316DFE11EC61DEA006284D6 /* Quantity+CoreDataProperties.m in Sources */,
+				F01A82AD1EC6F2C9008CEC5A /* EditDrugsTableViewCell.m in Sources */,
 				2316DFDD1EC61DEA006284D6 /* EventTiming+CoreDataProperties.m in Sources */,
 				2316DFF51EC61DEA006284D6 /* Attachment+CoreDataProperties.m in Sources */,
 				2316DFE01EC61DEA006284D6 /* Quantity+CoreDataClass.m in Sources */,

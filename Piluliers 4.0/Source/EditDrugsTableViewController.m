@@ -7,6 +7,7 @@
 //
 
 #import "EditDrugsTableViewController.h"
+#import "EditDrugsTableViewCell.h"
 
 @interface EditDrugsTableViewController ()
 
@@ -43,10 +44,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimelineDetailTableViewCell" forIndexPath:indexPath];
-    cell.textLabel.text = @"Mein Titel";
-    cell.detailTextLabel.text = @"Mein Detail";
-    cell.userInteractionEnabled = NO;
+    EditDrugsTableViewCell *cell = (EditDrugsTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"EditDrugsTableViewCell" forIndexPath:indexPath];
+    cell.inputTitle.text = @"TODO";
+    cell.inputValue.placeholder = @"TODOOOOO";
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

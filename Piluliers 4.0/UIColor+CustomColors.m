@@ -11,7 +11,11 @@
 @implementation UIColor (CustomColors)
 
 + (UIColor*)hackathonTintColor {
-    return [UIColor colorWithHexString:@"#8bc34a"]; //#607d8b
+    return [UIColor colorWithHexString:@"#8bc34a"];
+}
+
++ (UIColor*)hackathonTabBarColor {
+    return [UIColor colorWithHexString:@"#33691E"];
 }
 
 + (UIColor*)hackathonAccentColor {
