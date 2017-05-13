@@ -29,30 +29,30 @@
     NSString *requestKey = message[@"request"];
     NSDictionary *response = @{};
     if ([requestKey isEqualToString:@"dummy"]) {
-        response = @{@"todaysPills" : @[@{@"time" : [NSDate dateWithTimeIntervalSince1970:1494616500],
+        response = @{@"todaysPills" : @[@{@"time" : [NSDate dateWithTimeIntervalSince1970:1494680400],
                                           @"pills" : @[@{
-                                                           @"name" : @"Mydocalm",
-                                                           @"pictureName": @"pill",
-                                                           @"info" : @"5mg",
-                                                           @"amount": @"1 pill"
-                                                           },
-                                                       @{
-                                                           @"name" : @"Aricept",
+                                                           @"name" : @"Quetiapine",
                                                            @"pictureName": @"capsule",
                                                            @"info" : @"5mg",
+                                                           @"amount": @"1 capsule"
+                                                           },
+                                                       @{
+                                                           @"name" : @"Dafalgan",
+                                                           @"pictureName": @"pill",
+                                                           @"info" : @"2mg",
                                                            @"amount": @"1 pill"
                                                            }]
                                           },
-                                        @{@"time" : [NSDate dateWithTimeIntervalSince1970:1494620100],
+                                        @{@"time" : [NSDate dateWithTimeIntervalSince1970:1494702000],
                                           @"pills" : @[@{
-                                                           @"name" : @"Mydocalm",
+                                                           @"name" : @"Aspirine",
                                                            @"pictureName": @"pill",
                                                            @"info" : @"5mg",
                                                            @"amount": @"1 pill"
                                                            },
                                                        @{
-                                                           @"name" : @"Aricept",
-                                                           @"pictureName": @"capsule",
+                                                           @"name" : @"Roaccutan",
+                                                           @"pictureName": @"pill",
                                                            @"info" : @"5mg",
                                                            @"amount": @"1 pill"
                                                            }]
