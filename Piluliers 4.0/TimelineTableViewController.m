@@ -133,7 +133,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TimelineDetailTableViewController *timelineTableDetailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TimelineDetailTableViewController"];
-    timelineTableDetailViewController.titleString = @"Medikament X"; //todo stoecklim: pass model instead of string
+//    timelineTableDetailViewController.titleString = @"Medikament X"; //todo stoecklim: pass model instead of string
     [self.navigationController pushViewController:timelineTableDetailViewController animated:YES];
 }
 

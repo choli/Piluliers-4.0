@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.titleString;     //todo stoecklim: read from model
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,35 +42,35 @@
     switch (indexPath.row) {
         case 0:
             cell.textLabel.text = @"Name of drug";
-            cell.detailTextLabel.text = @"Medikament X";
+            cell.detailTextLabel.text = self.medicationData.title;
             break;
         case 1:
             cell.textLabel.text = @"Form";
-            cell.detailTextLabel.text = @"Pill";
+            cell.detailTextLabel.text = self.medicationData.form;
             break;
         case 2:
             cell.textLabel.text = @"Package size / Quantity";
-            cell.detailTextLabel.text = @"12 Pills";
+            cell.detailTextLabel.text = self.medicationData.quantity;
             break;
         case 3:
             cell.textLabel.text = @"Frequency";
-            cell.detailTextLabel.text = @"3 times daily";
+            cell.detailTextLabel.text = self.medicationData.frequency;
             break;
         case 4:
             cell.textLabel.text = @"Duration";
-            cell.detailTextLabel.text = @"6 weeks";
+            cell.detailTextLabel.text = self.medicationData.duration;
             break;
         case 5:
             cell.textLabel.text = @"Start date";
-            cell.detailTextLabel.text = @"13.05.2017";
+            cell.detailTextLabel.text = self.medicationData.startDate;
             break;
         case 6:
             cell.textLabel.text = @"Time";
-            cell.detailTextLabel.text = @"08:00, 12:00, 18:00";
+            cell.detailTextLabel.text = self.medicationData.time;
             break;
         case 7:
             cell.textLabel.text = @"Notes";
-            cell.detailTextLabel.text = @"Before eating";
+            cell.detailTextLabel.text = self.medicationData.notes;
             break;
         default:
             cell.textLabel.text = @"NOT IMPLEMENTED";
