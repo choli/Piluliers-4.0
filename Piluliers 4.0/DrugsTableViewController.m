@@ -52,9 +52,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //todo stoecklim: use custom cell for this use case later
     DrugsTableViewCell *cell = (DrugsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DrugsTableViewCell" forIndexPath:indexPath];
-    //todo meumannu: set data from model
+    //todo stoecklim: set data from model
     cell.medicamentImage.image = [UIImage imageNamed:@"sandro"];
     cell.medicamentName.text = @"Medikament X";
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

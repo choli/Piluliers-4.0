@@ -7,6 +7,7 @@
 //
 
 #import "TimelineDetailTableViewController.h"
+#import "UIColor+CustomColors.h"
 
 @interface TimelineDetailTableViewController ()
 
@@ -74,6 +75,8 @@
             cell.detailTextLabel.text = @"NOT IMPLEMENTED";
             break;
     }
+    cell.textLabel.textColor = [UIColor hackathonTabBarColor];
+    cell.detailTextLabel.textColor = [UIColor hackathonAccentColor];
     cell.userInteractionEnabled = NO;
     return cell;
 }

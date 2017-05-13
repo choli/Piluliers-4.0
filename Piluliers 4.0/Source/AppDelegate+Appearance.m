@@ -16,7 +16,7 @@
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UITabBar appearance] setUnselectedItemTintColor:[UIColor hackathonAccentColor]];
     [[UITabBar appearance] setTintColor:[UIColor hackathonTabBarColor]];
-//    [[UIButton appearance] setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [[UIButton appearance] setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 }
 
 @end

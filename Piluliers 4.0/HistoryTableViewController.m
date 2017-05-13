@@ -83,8 +83,7 @@
 # pragma mark - Table View Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //todo stoecklim: present detail view controller
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //nothing to do, cell is read only
 }
 
 @end

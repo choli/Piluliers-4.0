@@ -92,7 +92,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
-    //todo meumannu: set data from model
+    //todo stoecklim: set data from model
     cell.intakeTime.text = @"12:00";
     cell.pillImage.image = [UIImage imageNamed:@"crystal"];
     [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
@@ -103,7 +103,7 @@
     cell.intakeIndicator.backgroundColor = [UIColor cellSwipeTakeColor];
     cell.intakeIndicator.layer.cornerRadius = 5.0f;
     cell.intakeIndicator.layer.masksToBounds = YES;
-    cell.intakeIndicator.textColor = [UIColor whiteColor];
+    cell.intakeIndicator.textColor = [UIColor blackColor];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
