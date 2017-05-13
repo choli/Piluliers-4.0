@@ -33,8 +33,8 @@
     self.restManager = [RestManager sharedInstance];
     
     self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.backgroundColor = [UIColor blackColor];
-    self.refreshControl.tintColor = [UIColor whiteColor];
+    self.refreshControl.backgroundColor = [UIColor clearColor];
+    self.refreshControl.tintColor = [UIColor blackColor];
     [self.refreshControl addTarget:self
                             action:@selector(loadData)
                   forControlEvents:UIControlEventValueChanged];
@@ -70,6 +70,7 @@
         NSLog(@"Medications: %@", medications);
         self.data = medications;
         [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
     }];
 }
      
