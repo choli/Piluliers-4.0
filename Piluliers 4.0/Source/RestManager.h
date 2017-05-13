@@ -12,8 +12,8 @@
 @interface RestManager : NSObject
 + (RestManager *)sharedInstance;
 - (void)initializeCoreData;
-- (void)fetchMedicationRequest;
-- (void)fetchMedicationsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock;
-- (void)fetchPatientDataForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock;
 - (void)getPatient:(NSString *)patentId withCompletionBlock:(void (^)(PatientData *patient, NSError *error))completionBlock;
+- (void)getMedicationsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSArray *medications, NSError *error))completionBlock;
+
+- (void)fetchPatientDataForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock;
 @end
