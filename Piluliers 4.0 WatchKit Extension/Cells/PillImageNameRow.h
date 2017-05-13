@@ -15,4 +15,5 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceGroup *rowGroup;
 @property (nonatomic) NSDictionary *infoDict;
 
+-(void)setPillImageNamed:(NSString *)pillImageName;
 @end
