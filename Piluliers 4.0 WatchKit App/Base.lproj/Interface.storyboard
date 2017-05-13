@@ -31,7 +31,7 @@
                         <table alignment="left" id="3t2-hC-Dc5">
                             <items>
                                 <tableRow identifier="PillImageNameRow" selectable="NO" id="8jm-TQ-JqE" customClass="PillImageNameRow">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="9eh-rC-bzK">
+                                    <group key="rootItem" width="1" height="30" alignment="left" id="9eh-rC-bzK">
                                         <items>
                                             <imageView width="20" height="20" alignment="left" verticalAlignment="center" contentMode="left" id="r0a-yp-KVd"/>
                                             <label alignment="left" verticalAlignment="center" text="Label" id="SpH-KZ-HrS">
@@ -92,7 +92,7 @@
                                     </connections>
                                 </tableRow>
                                 <tableRow identifier="PillImageNameRow" id="98R-cq-uzf" customClass="PillImageNameRow">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="fty-Wo-G7r">
+                                    <group key="rootItem" width="1" height="30" alignment="left" id="fty-Wo-G7r">
                                         <items>
                                             <imageView width="20" height="20" alignment="left" verticalAlignment="center" contentMode="left" id="CE5-FF-xcp"/>
                                             <label alignment="left" verticalAlignment="center" text="Label" id="PDT-ln-3Bq">
