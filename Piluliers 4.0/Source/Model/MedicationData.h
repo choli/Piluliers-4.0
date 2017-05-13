@@ -14,5 +14,5 @@
 @property (nonatomic, nullable) NSString *title;
 @property (nonatomic, nullable) NSString *form;
 
-- (NSArray *)timings;
+- (NSString *)formImageName;
 @end

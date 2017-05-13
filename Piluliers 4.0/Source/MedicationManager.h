@@ -13,4 +13,5 @@
 - (void)saveMedication:(NSMutableDictionary *)data toDate:(NSDate *)date;
 - (NSDictionary *)getDayListFromMedications:(NSArray *)medications;
 - (void)getDailyMedicationsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSDictionary *medications, NSError *error))completionBlock;
++ (NSString *)timeStringForTiming:(NSString *)timing;
 @end
