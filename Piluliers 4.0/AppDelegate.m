@@ -23,15 +23,7 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    /*
-    MedicationManager *medicationManager = [MedicationManager new];
-    [medicationManager getDailyMedicationsForPatient:@".PAT_10" withCompletionBlock:^(NSDictionary *medications, NSError *error) {
-        NSLog(@"Medications: %@", medications);
-    }];
-    */
-    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Qrcode" bundle:nil];
     UINavigationController *loginNavigationController = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"BarCodeViewController"]];

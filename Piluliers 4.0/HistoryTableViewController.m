@@ -62,7 +62,7 @@
     }
 
     MedicationManager *medicationManager = [MedicationManager new];
-    [medicationManager getDailyMedicationsForPatient:@".PAT_10" withCompletionBlock:^(NSDictionary *medications, NSError *error) {
+    [medicationManager getDailyMedicationsForPatient:userId withCompletionBlock:^(NSDictionary *medications, NSError *error) {
         NSLog(@"Medications: %@", medications);
         self.data = medications;
         [self.tableView reloadData];
@@ -83,11 +83,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return [self.data.allKeys count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    NSArray *allSections = [self.data allValues];
+    return [[allSections objectAtIndex:section] count];
 }
 
 
@@ -96,7 +97,20 @@
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"12.05.2017";
+    switch (section) {
+        case 0:
+            return NSLocalizedString(@"12.05.2017", nil);;
+            break;
+        case 1:
+            return NSLocalizedString(@"11.05.2017", nil);;
+            break;
+        case 2:
+            return NSLocalizedString(@"10.05.2017", nil);;
+            break;
+        default:
+            return NSLocalizedString(@"09.05.2017", nil);;
+            break;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

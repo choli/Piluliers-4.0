@@ -60,7 +60,7 @@
     }];
     
     MedicationManager *medicationManager = [MedicationManager new];
-    [medicationManager getDailyMedicationsForPatient:@".PAT_10" withCompletionBlock:^(NSDictionary *medications, NSError *error) {
+    [medicationManager getDailyMedicationsForPatient:userId withCompletionBlock:^(NSDictionary *medications, NSError *error) {
         NSLog(@"Medications: %@", medications);
         self.data = medications;
         [self.tableView reloadData];
