@@ -76,7 +76,7 @@
 }
 
 - (UIColor*)cellSwipeSkipColor {
-    return [UIColor colorWithRed:255/255.0 green:235/255.0 blue:59/255.0 alpha:1];
+    return [UIColor colorWithRed:243/255.0 green:156/255.0 blue:18/255.0 alpha:1];
 }
 
 - (UIColor*)cellSwipeIgnoreColor {
