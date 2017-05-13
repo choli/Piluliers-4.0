@@ -13,11 +13,12 @@
 #import "TimelineHeaderView.h"
 #import "EditDrugsTableViewController.h"
 #import "RestManager.h"
+#import "MedicationManager.h"
 
 @interface TimelineTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) RestManager *restManager;
-@property (nonatomic, weak) NSArray<NSObject*>* data;
+@property (nonatomic, strong) NSDictionary *data;
 @property (nonatomic, weak) TimelineHeaderView *timelineHeaderView;
 
 @end
@@ -36,20 +37,21 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self loadData];
-    [self.tableView reloadData];
 }
 
 - (void)loadData {
     //todo stoecklim
     [self.restManager getPatient:@".PAT_10" withCompletionBlock:^(PatientData *patient, NSError *error) {
-//        NSLog(@"Patient: %@", patient);
-//        NSLog(@"Patient-Name: %@", patient.family);
-//        NSLog(@"Patient-Vorname: %@", patient.given);
-//        NSLog(@"Patient-Image: %@", patient.photo);
         self.timelineHeaderView.usernameLabel.text = [NSString stringWithFormat:@"%@ %@", @"Hallo", patient.given];
         self.timelineHeaderView.userImageView.image = patient.photo;
     }];
     
+    MedicationManager *medicationManager = [MedicationManager new];
+    [medicationManager getDailyMedicationsForPatient:@".PAT_10" withCompletionBlock:^(NSDictionary *medications, NSError *error) {
+        NSLog(@"Medications: %@", medications);
+        self.data = medications;
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)addTableViewHeaderView {
@@ -82,11 +84,12 @@
 # pragma mark - Table View Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4; //todo stoecklim: make dynamic
+    return [self.data.allKeys count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2; //todo stoecklim: make dynamic
+    NSArray *allSections = [self.data allValues];
+    return [[allSections objectAtIndex:section] count];
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -113,11 +116,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
     //todo stoecklim: set data from model
+    NSArray *allSections = [self.data allValues];
+    MedicationData *medicationData = [[allSections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     cell.intakeTime.text = @"12:00";
     cell.pillImage.image = [UIImage imageNamed:@"crystal"]; //todo stoecklim: show appropriate image
     [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
-    cell.medicamentName.text = @"Medikament X";
-    cell.medicamentDescription.text = @"Dies ist eine Pille";
+    cell.medicamentName.text = medicationData.title;
+    cell.medicamentDescription.text = medicationData;
     cell.medicamentDosage.text = @"1 Kapsel";
     cell.intakeIndicator.text = @"Taken";
     cell.intakeIndicator.backgroundColor = [UIColor cellSwipeTakeColor];
