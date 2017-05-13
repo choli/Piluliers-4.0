@@ -27,7 +27,7 @@
 }
 
 + (UIColor*)cellSwipeSkipColor {
-    return [UIColor colorWithHexString:@"#FFEB3B"];
+    return [UIColor colorWithHexString:@"#f39c12"];
 }
 
 + (UIColor*)cellSwipeIgnoreColor {

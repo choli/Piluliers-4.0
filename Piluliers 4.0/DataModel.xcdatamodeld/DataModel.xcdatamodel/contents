@@ -51,6 +51,7 @@
         <relationship name="itemCodeableConcept" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
     </entity>
     <entity name="Medication" representedClassName="Medication" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isBrand" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isOverTheCounter" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
@@ -59,6 +60,9 @@
         <relationship name="image" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attachment" syncable="YES"/>
         <relationship name="ingredient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" syncable="YES"/>
         <relationship name="package" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Package" syncable="YES"/>
+    </entity>
+    <entity name="MedicationEntry" representedClassName="MedicationEntry" syncable="YES" codeGenerationType="class">
+        <relationship name="entry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MedicationResource" syncable="YES"/>
     </entity>
     <entity name="MedicationPlan" representedClassName="MedicationPlan" syncable="YES">
         <relationship name="medications" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MedicationRequest" syncable="YES"/>
@@ -73,6 +77,19 @@
         <relationship name="note" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Note" syncable="YES"/>
         <relationship name="reasonCode" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
     </entity>
+    <entity name="MedicationRequestEntry" representedClassName="MedicationRequestEntry" syncable="YES" codeGenerationType="class">
+        <relationship name="entry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MedicationRequestEntry" syncable="YES"/>
+    </entity>
+    <entity name="MedicationRequestResource" representedClassName="MedicationRequestResource" syncable="YES" codeGenerationType="class">
+        <relationship name="resource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MedicationRequest" syncable="YES"/>
+    </entity>
+    <entity name="MedicationResource" representedClassName="MedicationResource" syncable="YES" codeGenerationType="class">
+        <relationship name="resource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medication" syncable="YES"/>
+    </entity>
+    <entity name="Name" representedClassName="Name" syncable="YES" codeGenerationType="class">
+        <attribute name="family" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Note" representedClassName="Note" syncable="YES">
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -81,6 +98,18 @@
         <relationship name="batch" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Batch" syncable="YES"/>
         <relationship name="container" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CodeableConcept" syncable="YES"/>
         <relationship name="content" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Patient" representedClassName="Patient" syncable="YES" codeGenerationType="class">
+        <attribute name="birthDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="name" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Name" syncable="YES"/>
+    </entity>
+    <entity name="PatientEntry" representedClassName="PatientEntry" syncable="YES" codeGenerationType="class">
+        <relationship name="entry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PatientResource" syncable="YES"/>
+    </entity>
+    <entity name="PatientResource" representedClassName="PatientResource" syncable="YES" codeGenerationType="class">
+        <relationship name="resource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" syncable="YES"/>
     </entity>
     <entity name="Period" representedClassName="Period" syncable="YES">
         <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -127,13 +156,15 @@
         <element name="Content" positionX="-36" positionY="-54" width="128" height="75"/>
         <element name="DispenseRequest" positionX="27" positionY="99" width="128" height="90"/>
         <element name="Dosage" positionX="-18" positionY="135" width="128" height="240"/>
-        <element name="EventTiming" positionX="72" positionY="210" width="128" height="285"/>
+        <element name="EventTiming" positionX="72" positionY="210" width="128" height="60"/>
         <element name="Ingredient" positionX="0" positionY="-18" width="128" height="90"/>
-        <element name="Medication" positionX="-27" positionY="-45" width="128" height="165"/>
+        <element name="Medication" positionX="-27" positionY="-45" width="128" height="180"/>
         <element name="MedicationPlan" positionX="-27" positionY="-54" width="128" height="75"/>
         <element name="MedicationRequest" positionX="-243" positionY="-171" width="128" height="150"/>
+        <element name="Name" positionX="0" positionY="-18" width="128" height="75"/>
         <element name="Note" positionX="-47" positionY="279" width="128" height="75"/>
         <element name="Package" positionX="18" positionY="0" width="128" height="90"/>
+        <element name="Patient" positionX="-9" positionY="-27" width="128" height="30"/>
         <element name="Period" positionX="187" positionY="-0" width="128" height="75"/>
         <element name="Quantity" positionX="-108" positionY="-216" width="128" height="120"/>
         <element name="Range" positionX="43" positionY="-174" width="128" height="75"/>
@@ -141,5 +172,11 @@
         <element name="Repeat" positionX="-173" positionY="144" width="128" height="135"/>
         <element name="Timing" positionX="-243" positionY="-18" width="128" height="75"/>
         <element name="User" positionX="-36" positionY="-63" width="128" height="90"/>
+        <element name="PatientEntry" positionX="18" positionY="-9" width="128" height="60"/>
+        <element name="MedicationEntry" positionX="-36" positionY="-63" width="128" height="60"/>
+        <element name="MedicationResource" positionX="-27" positionY="-54" width="128" height="60"/>
+        <element name="PatientResource" positionX="-18" positionY="-45" width="128" height="60"/>
+        <element name="MedicationRequestEntry" positionX="-9" positionY="-36" width="128" height="60"/>
+        <element name="MedicationRequestResource" positionX="0" positionY="-27" width="128" height="60"/>
     </elements>
 </model>

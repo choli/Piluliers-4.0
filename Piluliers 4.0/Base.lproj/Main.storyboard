@@ -57,6 +57,16 @@
                                                 <constraint firstAttribute="height" constant="26" id="y3a-V1-mSx"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nar-sh-0MN">
+                                            <rect key="frame" x="8" y="49" width="55" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="vjT-nY-Twr"/>
+                                                <constraint firstAttribute="width" constant="55" id="xf6-AA-lsn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="2Sz-pn-haW" firstAttribute="leading" secondItem="tx6-CJ-rZh" secondAttribute="leading" id="9Bq-7O-mHR"/>
@@ -67,14 +77,17 @@
                                         <constraint firstAttribute="topMargin" secondItem="How-HS-IDB" secondAttribute="top" id="IfA-Fl-JSd"/>
                                         <constraint firstItem="NEt-4W-zbs" firstAttribute="centerY" secondItem="i82-Kp-sKT" secondAttribute="centerY" id="OJX-Fi-oFa"/>
                                         <constraint firstItem="tx6-CJ-rZh" firstAttribute="leading" secondItem="NEt-4W-zbs" secondAttribute="leading" id="WC4-mZ-6R9"/>
+                                        <constraint firstItem="Nar-sh-0MN" firstAttribute="top" secondItem="How-HS-IDB" secondAttribute="bottom" constant="17" id="Yw8-s1-zYj"/>
                                         <constraint firstItem="i82-Kp-sKT" firstAttribute="centerY" secondItem="How-HS-IDB" secondAttribute="centerY" id="c6v-a7-Znq"/>
                                         <constraint firstItem="tx6-CJ-rZh" firstAttribute="top" secondItem="NEt-4W-zbs" secondAttribute="bottom" constant="1" id="c9a-01-5LJ"/>
                                         <constraint firstItem="tx6-CJ-rZh" firstAttribute="width" secondItem="NEt-4W-zbs" secondAttribute="width" id="e6w-Ek-xRA"/>
                                         <constraint firstItem="NEt-4W-zbs" firstAttribute="leading" secondItem="i82-Kp-sKT" secondAttribute="trailing" constant="16" id="gHl-pc-9bG"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="How-HS-IDB" secondAttribute="leading" id="mZS-pu-7FV"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="Nar-sh-0MN" secondAttribute="leading" id="zhd-px-s3X"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="intakeIndicator" destination="Nar-sh-0MN" id="zVb-aH-5Tg"/>
                                     <outlet property="intakeTime" destination="How-HS-IDB" id="28i-HA-XTN"/>
                                     <outlet property="medicamentDescription" destination="tx6-CJ-rZh" id="Z0v-fC-uFH"/>
                                     <outlet property="medicamentDosage" destination="2Sz-pn-haW" id="aO1-Ck-dB0"/>
