@@ -21,7 +21,7 @@
     self.title = NSLocalizedString(@"history", nil);
     
     HistoryGraphView *historyGraphView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([HistoryGraphView class]) owner:self options:nil] firstObject];
-    //[historyGraphView setBackgroundColor:[UIColor hackathonAccentColor]];
+    [historyGraphView setBackgroundColor:[UIColor hackathonAccentColor]];
 
     [self.navigationController.view addSubview:historyGraphView];
     historyGraphView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -32,6 +32,8 @@
     
     [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(150, 0, 0, 0)];
     [self.tableView setContentInset:UIEdgeInsetsMake(150, 0, 0, 0)];
+    
+    [historyGraphView populateData];
 }
 
 - (void)didReceiveMemoryWarning {

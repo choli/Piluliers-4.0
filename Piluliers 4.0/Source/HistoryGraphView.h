@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ios-linechart/LCLineChartView.h>
 
-@interface HistoryGraphView : UIView
+@interface HistoryGraphView : LCLineChartView
+
+- (void)populateData;
 
 @end
