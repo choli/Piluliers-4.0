@@ -12,9 +12,6 @@
 #import "UIColor+CustomColors.h"
 
 @interface HistoryTableViewController ()
-
-@property (nonatomic, weak) NSLayoutConstraint *topDistanceConstraint;
-
 @end
 
 @implementation HistoryTableViewController
@@ -24,12 +21,12 @@
     self.title = NSLocalizedString(@"history", nil);
     
     HistoryGraphView *historyGraphView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([HistoryGraphView class]) owner:self options:nil] firstObject];
-    [historyGraphView setBackgroundColor:[UIColor hackathonAccentColor]];
+    //[historyGraphView setBackgroundColor:[UIColor hackathonAccentColor]];
+
     [self.navigationController.view addSubview:historyGraphView];
     historyGraphView.translatesAutoresizingMaskIntoConstraints = NO;
     [historyGraphView.heightAnchor constraintEqualToConstant:150].active = YES;
-    self.topDistanceConstraint = [historyGraphView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:[self getNavBarHeight]];
-    self.topDistanceConstraint.active = YES;
+    [historyGraphView.topAnchor constraintEqualToAnchor:self.navigationController.view.topAnchor constant:[self getNavBarHeight]].active = YES;
     [historyGraphView.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor].active = YES;
     [historyGraphView.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor].active = YES;
     
