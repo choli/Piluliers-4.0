@@ -15,6 +15,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "MedicationData.h"
 #import "MedicationRequestData.h"
+#import <AFNetworking/UIKit+AFNetworking.h>
 
 @interface RestManager ()
 @property (nonatomic, nullable) RKManagedObjectStore *managedObjectStore;
@@ -302,4 +303,23 @@ RestManager *restManager = [RestManager sharedInstance];
     }
 }];
 */
+- (void)getImageForId:(NSString *)imageId withCompletionBlock:(void (^)(UIImage *image, NSError *error))completionBlock {
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@/%@/gtin/PI/Front/M", [ConfigurationManager pictureUrl], imageId];//7680336700367
+    
+    NSURLRequest *imageRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]
+                                                  cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                              timeoutInterval:60];
+    [[AFImageDownloader defaultInstance]downloadImageForURLRequest:imageRequest success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
+        if (completionBlock) {
+            completionBlock(responseObject, nil);
+        }
+    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+        if (completionBlock) {
+            completionBlock(nil, error);
+        }
+    }];
+
+}
+
 @end

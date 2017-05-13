@@ -13,4 +13,8 @@
     return @"https://hackathon.test.docdesk.ch:4443/medication-web-module/hackathon/fhir";
     // return @"http://hl7.org/fhir";
 }
+
++ (NSString *)pictureUrl {
+    return @"https://apps.hcisolutions.ch/MyProducts/picture";
+}
 @end

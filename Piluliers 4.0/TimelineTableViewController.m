@@ -40,8 +40,21 @@
 }
 
 - (void)loadData {
-    //todo stoecklim
-    [self.restManager getPatient:@".PAT_10" withCompletionBlock:^(PatientData *patient, NSError *error) {
+    NSString * userId;
+    if ([[NSUserDefaults standardUserDefaults]
+         stringForKey:@"userId"]!=nil){
+        userId =[[NSUserDefaults standardUserDefaults]
+                 stringForKey:@"userId"];
+    }
+    else{
+        userId = @".PAT_10";
+    }
+    
+    [self.restManager getPatient:userId withCompletionBlock:^(PatientData *patient, NSError *error) {
+        //        NSLog(@"Patient: %@", patient);
+        //        NSLog(@"Patient-Name: %@", patient.family);
+        //        NSLog(@"Patient-Vorname: %@", patient.given);
+        //        NSLog(@"Patient-Image: %@", patient.photo);
         self.timelineHeaderView.usernameLabel.text = [NSString stringWithFormat:@"%@ %@", @"Hallo", patient.given];
         self.timelineHeaderView.userImageView.image = patient.photo;
     }];
@@ -53,6 +66,7 @@
         [self.tableView reloadData];
     }];
 }
+     
 
 - (void)addTableViewHeaderView {
     self.timelineHeaderView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([TimelineHeaderView class]) owner:self options:nil] firstObject];
@@ -60,7 +74,7 @@
     self.timelineHeaderView.backgroundColor = [UIColor hackathonAccentColor];
     self.timelineHeaderView.datePicker.backgroundColor = [UIColor whiteColor];
     [self.timelineHeaderView.datePicker addTarget:self action:@selector(dateChanged:)
-     forControlEvents:UIControlEventValueChanged];
+                                 forControlEvents:UIControlEventValueChanged];
     self.tableView.tableHeaderView = self.timelineHeaderView;
 }
 
@@ -122,7 +136,7 @@
     cell.pillImage.image = [UIImage imageNamed:@"crystal"]; //todo stoecklim: show appropriate image
     [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
     cell.medicamentName.text = medicationData.title;
-    cell.medicamentDescription.text = medicationData;
+    cell.medicamentDescription.text = medicationData.title;
     cell.medicamentDosage.text = @"1 Kapsel";
     cell.intakeIndicator.text = @"Taken";
     cell.intakeIndicator.backgroundColor = [UIColor cellSwipeTakeColor];
@@ -149,21 +163,21 @@
     }];
     
     takeAction.backgroundColor = [UIColor cellSwipeTakeColor];
-
+    
     UITableViewRowAction *skipAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"skip", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         //todo stoecklim: mark as skipped and persist
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }];
     
     skipAction.backgroundColor = [UIColor cellSwipeSkipColor];
-
+    
     UITableViewRowAction *ignoreAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"ignore", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         //todo stoecklim: mark as ignored and persist
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }];
     
     ignoreAction.backgroundColor = [UIColor cellSwipeIgnoreColor];
-
+    
     return @[takeAction, skipAction, ignoreAction];
 }
 
