@@ -12,8 +12,12 @@
 #import "UIColor+CustomColors.h"
 #import "TimelineHeaderView.h"
 #import "EditDrugsTableViewController.h"
+#import "RestManager.h"
 
 @interface TimelineTableViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak) RestManager *restManager;
+@property (nonatomic, weak) NSArray<NSObject*>* data;
 
 @end
 
@@ -23,13 +27,18 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"timeline", nil);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addpill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
-    [self.tableView reloadData];
+    self.restManager = [RestManager sharedInstance];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self addTableViewHeaderView];
+    [self loadData];
     [self.tableView reloadData];
+}
+
+- (void)loadData {
+    //todo stoecklim
 }
 
 - (void)addTableViewHeaderView {

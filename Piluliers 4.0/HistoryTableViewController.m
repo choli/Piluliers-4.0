@@ -10,10 +10,13 @@
 #import "TimelineTableViewCell.h"
 #import "HistoryGraphView.h"
 #import "UIColor+CustomColors.h"
+#import "RestManager.h"
 
 @interface HistoryTableViewController ()
 
 @property (nonatomic, weak) NSLayoutConstraint *topDistanceConstraint;
+@property (nonatomic, weak) RestManager *restManager;
+@property (nonatomic, weak) NSArray<NSObject*>* data;
 
 @end
 
@@ -33,13 +36,19 @@
     [historyGraphView.leftAnchor constraintEqualToAnchor:self.navigationController.view.leftAnchor].active = YES;
     [historyGraphView.rightAnchor constraintEqualToAnchor:self.navigationController.view.rightAnchor].active = YES;
     
+    self.restManager = [RestManager sharedInstance];
     [self.tableView setScrollIndicatorInsets:UIEdgeInsetsMake(150, 0, 0, 0)];
     [self.tableView setContentInset:UIEdgeInsetsMake(150, 0, 0, 0)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self loadData];
     [self.tableView reloadData];
+}
+
+- (void)loadData {
+    //todo stoecklim
 }
 
 - (void)didReceiveMemoryWarning {

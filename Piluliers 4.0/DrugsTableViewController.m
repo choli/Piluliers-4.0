@@ -11,8 +11,12 @@
 #import "DrugsTableViewCell.h"
 #import "TimelineDetailTableViewController.h"
 #import "EditDrugsTableViewController.h"
+#import "RestManager.h"
 
 @interface DrugsTableViewController ()
+
+@property (nonatomic, weak) RestManager *restManager;
+@property (nonatomic, weak) NSArray<NSObject*>* data;
 
 @end
 
@@ -22,11 +26,17 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"drugs", nil);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addpill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
+    self.restManager = [RestManager sharedInstance];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self loadData];
     [self.tableView reloadData];
+}
+
+- (void)loadData {
+    //todo stoecklim
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,6 +81,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TimelineDetailTableViewController *timelineTableDetailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TimelineDetailTableViewController"];
+    //todo stoecklim: pass data model
     timelineTableDetailViewController.titleString = @"Medikament X";
     [self.navigationController pushViewController:timelineTableDetailViewController animated:YES];
 }
