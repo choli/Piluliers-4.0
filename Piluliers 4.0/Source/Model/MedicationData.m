@@ -32,6 +32,14 @@
     return nil;
 }
 
+- (NSString *)formImageName {
+    
+    NSDictionary *formImageDict = @{
+                                    @"PILL": @"pill",
+                                    @"CAP": @"capsule"};
+    return self.form != nil ? [formImageDict objectForKey:self.form] : nil;
+}
+
 - (NSString *)quantity {
     return @"12 Pills";
 }
@@ -56,11 +64,4 @@
     return @"Before eating";
 }
 
-- (NSString *)formImageName {
-    
-    NSDictionary *formImageDict = @{
-                                    @"PILL": @"pill",
-                                    @"CAP": @"capsule"};
-    return self.form != nil ? [formImageDict objectForKey:self.form] : nil;
-}
 @end

@@ -21,4 +21,5 @@
 @property (nonatomic, nullable) NSString *time;
 @property (nonatomic, nullable) NSString *notes;
 
+- (NSString *)formImageName;
 @end
