@@ -58,6 +58,9 @@ RestManager * restManager;
         [restManager fetchPatientDataForPatient:result withCompletionBlock:(^(NSError* err){
             if(err==nil){
                 NSLog(@"%@",result);
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                [[NSUserDefaults standardUserDefaults] setObject:result forKey:@"userId"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
                 [self goToMainMenu];
             }
             else{
@@ -74,14 +77,41 @@ RestManager * restManager;
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+/**/
 
+
+
+- (void)login {
+    
+    NSString * userId = _loginUITextField.text;
+    
+    [restManager fetchPatientDataForPatient:userId withCompletionBlock:(^(NSError* err){
+        if(err==nil){
+            
+            
+            NSLog(@"%@",userId);
+            [[NSUserDefaults standardUserDefaults] setObject:userId forKey:@"userId"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [self goToMainMenu];
+        }
+        else{
+            NSLog(@"%@",err);
+        }
+    })];
+    //[self goToMainMenu];
+}
 - (IBAction)LoginAction:(id)sender {
 
     NSString * userId = _loginUITextField.text;
 
     [restManager fetchPatientDataForPatient:userId withCompletionBlock:(^(NSError* err){
         if(err==nil){
+            
+      
             NSLog(@"%@",userId);
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [[NSUserDefaults standardUserDefaults] setObject:userId forKey:@"userId"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
             [self goToMainMenu];
         }
         else{
@@ -104,11 +134,13 @@ RestManager * restManager;
     restManager = [RestManager sharedInstance];
     self.view.backgroundColor = [UIColor hackathonAccentColor];
     self.title = @"Pilulier 4.0";
-    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStylePlain target:self action:@selector(goToMainMenu)];
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStylePlain target:self action:@selector(login)];
     self.navigationItem.rightBarButtonItem = anotherButton;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qrcode"] style:UIBarButtonItemStylePlain target:self action:@selector(scan)];
 
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"userId"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     // Do any additional setup after loading the view.
 }
 
