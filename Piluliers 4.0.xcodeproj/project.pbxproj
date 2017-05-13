@@ -56,6 +56,10 @@
 		2316E0041EC61DEA006284D6 /* MedicationRequest+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DFD71EC61DEA006284D6 /* MedicationRequest+CoreDataClass.m */; };
 		2316E0051EC61DEA006284D6 /* MedicationRequest+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316DFD91EC61DEA006284D6 /* MedicationRequest+CoreDataProperties.m */; };
 		2316E0081EC63477006284D6 /* ConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316E0071EC63477006284D6 /* ConfigurationManager.m */; };
+		2316E0181EC6EA24006284D6 /* MedicationBundleMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316E0151EC6EA24006284D6 /* MedicationBundleMapping.m */; };
+		2316E0191EC6EA24006284D6 /* PatientBundleMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316E0171EC6EA24006284D6 /* PatientBundleMapping.m */; };
+		2316E01C1EC6EAA9006284D6 /* MedicationRequestBundleMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316E01B1EC6EAA9006284D6 /* MedicationRequestBundleMapping.m */; };
+		2327ECAC1EC6FC44003CC27D /* PatientData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2327ECAB1EC6FC44003CC27D /* PatientData.m */; };
 		422AC6AF63948C7CF9418B04 /* libPods-Piluliers 4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */; };
 		BD1D6372524053B896173C45 /* libPods-Piluliers 4.0 WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8687B4E2155720F4DF9B6FE2 /* libPods-Piluliers 4.0 WatchKit Extension.a */; };
 		C0C73D44CE7477E88A7E25FF /* libPods-Piluliers 4.0 WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */; };
@@ -247,6 +251,14 @@
 		2316DFD91EC61DEA006284D6 /* MedicationRequest+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MedicationRequest+CoreDataProperties.m"; path = "Source/Model/MedicationRequest+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2316E0061EC63477006284D6 /* ConfigurationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigurationManager.h; path = Source/ConfigurationManager.h; sourceTree = "<group>"; };
 		2316E0071EC63477006284D6 /* ConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigurationManager.m; path = Source/ConfigurationManager.m; sourceTree = "<group>"; };
+		2316E0141EC6EA24006284D6 /* MedicationBundleMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MedicationBundleMapping.h; path = Source/Model/Mappings/MedicationBundleMapping.h; sourceTree = "<group>"; };
+		2316E0151EC6EA24006284D6 /* MedicationBundleMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MedicationBundleMapping.m; path = Source/Model/Mappings/MedicationBundleMapping.m; sourceTree = "<group>"; };
+		2316E0161EC6EA24006284D6 /* PatientBundleMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientBundleMapping.h; path = Source/Model/Mappings/PatientBundleMapping.h; sourceTree = "<group>"; };
+		2316E0171EC6EA24006284D6 /* PatientBundleMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientBundleMapping.m; path = Source/Model/Mappings/PatientBundleMapping.m; sourceTree = "<group>"; };
+		2316E01A1EC6EAA9006284D6 /* MedicationRequestBundleMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MedicationRequestBundleMapping.h; path = Source/Model/Mappings/MedicationRequestBundleMapping.h; sourceTree = "<group>"; };
+		2316E01B1EC6EAA9006284D6 /* MedicationRequestBundleMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MedicationRequestBundleMapping.m; path = Source/Model/Mappings/MedicationRequestBundleMapping.m; sourceTree = "<group>"; };
+		2327ECAA1EC6FC44003CC27D /* PatientData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientData.h; path = Source/Model/PatientData.h; sourceTree = "<group>"; };
+		2327ECAB1EC6FC44003CC27D /* PatientData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientData.m; path = Source/Model/PatientData.m; sourceTree = "<group>"; };
 		35EA955690DD6E672D8EEC8A /* Pods-Piluliers 4.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0.debug.xcconfig"; sourceTree = "<group>"; };
 		3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0 WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -400,10 +412,11 @@
 		2316DF731EC602AE006284D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2316E0131EC6E9F1006284D6 /* Mappings */,
 				2316DF811EC61D96006284D6 /* ModelClasses */,
-				2316DF7E1EC60A32006284D6 /* Mappings.h */,
-				2316DF7F1EC60A32006284D6 /* Mappings.m */,
 				2316DF741EC602BA006284D6 /* DataModel.xcdatamodeld */,
+				2327ECAA1EC6FC44003CC27D /* PatientData.h */,
+				2327ECAB1EC6FC44003CC27D /* PatientData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -501,6 +514,21 @@
 				2316DFD91EC61DEA006284D6 /* MedicationRequest+CoreDataProperties.m */,
 			);
 			name = ModelClasses;
+			sourceTree = "<group>";
+		};
+		2316E0131EC6E9F1006284D6 /* Mappings */ = {
+			isa = PBXGroup;
+			children = (
+				2316E01A1EC6EAA9006284D6 /* MedicationRequestBundleMapping.h */,
+				2316E01B1EC6EAA9006284D6 /* MedicationRequestBundleMapping.m */,
+				2316E0141EC6EA24006284D6 /* MedicationBundleMapping.h */,
+				2316E0151EC6EA24006284D6 /* MedicationBundleMapping.m */,
+				2316E0161EC6EA24006284D6 /* PatientBundleMapping.h */,
+				2316E0171EC6EA24006284D6 /* PatientBundleMapping.m */,
+				2316DF7E1EC60A32006284D6 /* Mappings.h */,
+				2316DF7F1EC60A32006284D6 /* Mappings.m */,
+			);
+			name = Mappings;
 			sourceTree = "<group>";
 		};
 		C72E60171EC1F3770087D2FD = {
@@ -1019,7 +1047,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		85720DEF5D9CF1F9ED86A245 /* [CP] Check Pods Manifest.lock */ = {
@@ -1034,7 +1062,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A13222EAC06888FCB8ED12DD /* [CP] Check Pods Manifest.lock */ = {
@@ -1049,7 +1077,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B0C45CF099D6AD131BD111B4 /* [CP] Copy Pods Resources */ = {
@@ -1109,8 +1137,10 @@
 				F01A82971EC612AD008CEC5A /* HistoryTableViewController.m in Sources */,
 				2316DFE31EC61DEA006284D6 /* MedicationPlan+CoreDataProperties.m in Sources */,
 				F01A827F1EC5D65F008CEC5A /* TimelineHeaderView.m in Sources */,
+				2327ECAC1EC6FC44003CC27D /* PatientData.m in Sources */,
 				2316E0021EC61DEA006284D6 /* Period+CoreDataClass.m in Sources */,
 				F01A82941EC60D99008CEC5A /* DrugsTableViewCell.m in Sources */,
+				2316E0181EC6EA24006284D6 /* MedicationBundleMapping.m in Sources */,
 				2316DF761EC602BA006284D6 /* DataModel.xcdatamodeld in Sources */,
 				2316DFE21EC61DEA006284D6 /* MedicationPlan+CoreDataClass.m in Sources */,
 				2316DFEF1EC61DEA006284D6 /* Content+CoreDataProperties.m in Sources */,
@@ -1122,6 +1152,7 @@
 				F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */,
 				2316DFF91EC61DEA006284D6 /* Timing+CoreDataProperties.m in Sources */,
 				2316DFDB1EC61DEA006284D6 /* Repeat+CoreDataProperties.m in Sources */,
+				2316E0191EC6EA24006284D6 /* PatientBundleMapping.m in Sources */,
 				2316DFED1EC61DEA006284D6 /* Note+CoreDataProperties.m in Sources */,
 				2316DFF41EC61DEA006284D6 /* Attachment+CoreDataClass.m in Sources */,
 				2316DFFD1EC61DEA006284D6 /* CodeableConcept+CoreDataProperties.m in Sources */,
@@ -1174,6 +1205,7 @@
 				2316DFE01EC61DEA006284D6 /* Quantity+CoreDataClass.m in Sources */,
 				2316DFFE1EC61DEA006284D6 /* Dosage+CoreDataClass.m in Sources */,
 				F01A82871EC5EA1E008CEC5A /* TimelineDetailTableViewController.m in Sources */,
+				2316E01C1EC6EAA9006284D6 /* MedicationRequestBundleMapping.m in Sources */,
 				CFAEE8941EC60FCA00CC8974 /* BarCodeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

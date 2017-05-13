@@ -103,6 +103,21 @@
     }];
 }
 
+- (void)fetchPatient {
+    
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:[self createMedicationRequestMapping] method:RKRequestMethodGET pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    
+    [[RKObjectManager sharedManager] addResponseDescriptor:responseDescriptor];
+    // @"medicationrequest0312.json"
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"Medication?patient_id=.PAT_10&_format=json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        NSLog(@"Success");
+        MedicationManager *medicationManager = [[MedicationManager alloc] init];
+        [medicationManager fetchMedicationRequestFromContext];
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"Failure");
+    }];
+}
+
 - (void)fetchMedicationsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock {
     
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/Medication?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId]];
@@ -134,9 +149,7 @@
 
 - (void)fetchPatientDataForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock {
     
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/Patient?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId]];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    NSString *url = [NSString stringWithFormat:@"%@/Patient?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
@@ -144,7 +157,7 @@
     [manager.securityPolicy setValidatesDomainName:NO];
     manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"application/fhir+json"];
     
-    [manager GET:[NSString stringWithFormat:@"%@/Patient?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    [manager GET:[NSString stringWithFormat:url, [ConfigurationManager baseUrl], patientId] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
         [userDefaults setObject:responseObject forKey:@"patient"];
@@ -160,6 +173,75 @@
     }];
 }
 
+- (void)fetchMedicationForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock {
+    
+    NSString *url = [NSString stringWithFormat:@"%@/Medication?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    [manager.securityPolicy setValidatesDomainName:NO];
+    manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"application/fhir+json"];
+    
+    [manager GET:[NSString stringWithFormat:url, [ConfigurationManager baseUrl], patientId] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
+        [userDefaults setObject:responseObject forKey:@"medication"];
+        [userDefaults synchronize];
+        if (completionBlock != nil) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (completionBlock != nil) {
+            completionBlock(error);
+        }
+    }];
+}
+
+- (void)fetchMedicationRequestForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock {
+    
+    NSString *url = [NSString stringWithFormat:@"%@/MedicationRequest?patient_id=%@&_format=json", [ConfigurationManager baseUrl], patientId];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    [manager.securityPolicy setValidatesDomainName:NO];
+    manager.responseSerializer.acceptableContentTypes=[NSSet setWithObject:@"application/fhir+json"];
+    
+    [manager GET:[NSString stringWithFormat:url, [ConfigurationManager baseUrl], patientId] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
+        [userDefaults setObject:responseObject forKey:@"medicationrequest"];
+        [userDefaults synchronize];
+        if (completionBlock != nil) {
+            completionBlock(nil);
+        }
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        if (completionBlock != nil) {
+            completionBlock(error);
+        }
+    }];
+}
+
+- (void)getPatient:(NSString *)patientId withCompletionBlock:(void (^)(PatientData *patient, NSError *error))completionBlock {
+    [self fetchPatientDataForPatient:patientId withCompletionBlock:^(NSError *error) {
+        if (error != nil ) {
+            if (completionBlock != nil) {
+                completionBlock(nil, error);
+            }
+        }
+        else {
+            NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
+            NSDictionary *json = [userDefaults objectForKey:@"patient"];
+            PatientData *patient = [PatientData new];
+            NSDictionary *patientJson = [[[json objectForKey:@"entry"] objectAtIndex:0] objectForKey:@"resource"];
+            patient.json = patientJson;
+            completionBlock(patient, nil);
+        }
+    }];
+}
 /*
 RestManager *restManager = [RestManager sharedInstance];
 

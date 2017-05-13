@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PatientData.h"
 
 @interface RestManager : NSObject
 + (RestManager *)sharedInstance;
@@ -14,4 +15,5 @@
 - (void)fetchMedicationRequest;
 - (void)fetchMedicationsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock;
 - (void)fetchPatientDataForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock;
+- (void)getPatient:(NSString *)patentId withCompletionBlock:(void (^)(PatientData *patient, NSError *error))completionBlock;
 @end
