@@ -10,6 +10,7 @@
 #import <RestKit/CoreData.h>
 #import <RestKit/RestKit.h>
 #import "RestManager.h"
+#import "MedicationData.h"
 
 @implementation MedicationManager
 
@@ -47,12 +48,21 @@
 - (NSDictionary *)getDayListFromMedications:(NSArray *)medications {
     
     NSMutableDictionary *dayList = [NSMutableDictionary new];
-    [dayList setValue:medications forKey:@"MORN"];
-    [dayList setValue:medications forKey:@"AFT"];
-    [dayList setValue:medications forKey:@"EVE"];
-    [dayList setValue:medications forKey:@"NIGHT"];
+    
+    [dayList setValue:[self copyOfMedications:medications] forKey:@"MORN"];
+    [dayList setValue:[self copyOfMedications:medications] forKey:@"AFT"];
+    [dayList setValue:[self copyOfMedications:medications] forKey:@"EVE"];
+    [dayList setValue:[self copyOfMedications:medications] forKey:@"NIGHT"];
     
     return dayList;
+}
+
+- (NSArray *)copyOfMedications:(NSArray *)medications {
+    NSMutableArray *arrayCopy = [NSMutableArray new];
+    for (MedicationData *data in medications) {
+        [arrayCopy addObject:[data deepCopy]];
+    }
+    return arrayCopy;
 }
 
 - (void)getDailyMedicationsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSDictionary *medications, NSError *error))completionBlock {
@@ -71,5 +81,11 @@
             }
         }
     }];
+}
+
++ (NSString *)timeStringForTiming:(NSNumber *)timing {
+    
+    NSDictionary *timings = @{@0 : @"8:15", @1 : @"12:00", @2 : @"18:30", @3: @"22:45"};
+    return [timings objectForKey:timing];
 }
 @end

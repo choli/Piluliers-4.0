@@ -27,12 +27,10 @@
 # pragma mark - Table View Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //todo stoecklim: make dynamic
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //todo stoecklim: make dynamic
     return 8;
 }
 

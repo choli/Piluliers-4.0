@@ -22,5 +22,9 @@
 @property (nonatomic, nullable) NSString *time;
 @property (nonatomic, nullable) NSString *notes;
 @property (nonatomic, nullable) UIImage *image;
+@property (nonatomic, nullable) NSNumber *intakeStatus;
 
+- (NSString *)formImageName;
+
+- (MedicationData *)deepCopy;
 @end

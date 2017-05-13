@@ -19,15 +19,16 @@
 RestManager * restManager;
 @implementation BarCodeViewController
 
-- (IBAction)scanAction:(id)sender
-{
+
+
+-(void)scan{
     if ([QRCodeReader supportsMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]]) {
         static QRCodeReaderViewController *vc = nil;
         static dispatch_once_t onceToken;
         
         dispatch_once(&onceToken, ^{
             QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
-            vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Annuler" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
+            vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
             vc.modalPresentationStyle = UIModalPresentationFormSheet;
         });
         vc.delegate = self;
@@ -57,6 +58,9 @@ RestManager * restManager;
         [restManager fetchPatientDataForPatient:result withCompletionBlock:(^(NSError* err){
             if(err==nil){
                 NSLog(@"%@",result);
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                [[NSUserDefaults standardUserDefaults] setObject:result forKey:@"userId"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
                 [self goToMainMenu];
             }
             else{
@@ -64,8 +68,8 @@ RestManager * restManager;
             }
         })];
 	
-        /*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];*/
+        //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+       // [alert show];
     }];
 }
 
@@ -73,15 +77,42 @@ RestManager * restManager;
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+/**/
 
+
+
+- (void)login {
+    
+    NSString * userId = _loginUITextField.text;
+    
+    [restManager fetchPatientDataForPatient:userId withCompletionBlock:(^(NSError* err){
+        if(err==nil){
+            
+            
+            NSLog(@"%@",userId);
+            [[NSUserDefaults standardUserDefaults] setObject:userId forKey:@"userId"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [self goToMainMenu];
+        }
+        else{
+            NSLog(@"%@",err);
+        }
+    })];
+    //[self goToMainMenu];
+}
 - (IBAction)LoginAction:(id)sender {
 
     NSString * userId = _loginUITextField.text;
-    [self goToMainMenu];
 
     [restManager fetchPatientDataForPatient:userId withCompletionBlock:(^(NSError* err){
         if(err==nil){
+            
+      
             NSLog(@"%@",userId);
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [[NSUserDefaults standardUserDefaults] setObject:userId forKey:@"userId"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [self goToMainMenu];
         }
         else{
             NSLog(@"%@",err);
@@ -102,10 +133,16 @@ RestManager * restManager;
     [super viewDidLoad];
     restManager = [RestManager sharedInstance];
     self.view.backgroundColor = [UIColor hackathonAccentColor];
-    self.title = @"Login";
+    self.title = @"Pilulier 4.0";
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStylePlain target:self action:@selector(login)];
+    self.navigationItem.rightBarButtonItem = anotherButton;
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qrcode"] style:UIBarButtonItemStylePlain target:self action:@selector(scan)];
+
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"userId"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     // Do any additional setup after loading the view.
 }
-
 
 
 /*

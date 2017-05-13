@@ -11,11 +11,13 @@
 #import "HistoryGraphView.h"
 #import "UIColor+CustomColors.h"
 #import "RestManager.h"
+#import "MedicationManager.h"
+#import "MedicationData.h"
 
 @interface HistoryTableViewController ()
 
 @property (nonatomic, weak) RestManager *restManager;
-@property (nonatomic, weak) NSArray<NSObject*>* data;
+@property (nonatomic, strong) NSDictionary *data;
 
 @end
 
@@ -49,7 +51,22 @@
 }
 
 - (void)loadData {
-    //todo stoecklim
+    NSString * userId;
+    if ([[NSUserDefaults standardUserDefaults]
+         stringForKey:@"userId"]!=nil){
+        userId =[[NSUserDefaults standardUserDefaults]
+                 stringForKey:@"userId"];
+    }
+    else{
+        userId = @".PAT_10";
+    }
+
+    MedicationManager *medicationManager = [MedicationManager new];
+    [medicationManager getDailyMedicationsForPatient:userId withCompletionBlock:^(NSDictionary *medications, NSError *error) {
+        NSLog(@"Medications: %@", medications);
+        self.data = medications;
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,13 +83,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //todo stoecklim: make dynamic
-    return 3;
+    return [self.data.allKeys count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //todo stoecklim: make dynamic
-    return 8;
+    NSArray *allSections = [self.data allValues];
+    return [[allSections objectAtIndex:section] count];
 }
 
 
@@ -81,19 +97,59 @@
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    //todo stoecklim: make dynamic
-    return @"12.05.2017";
+    switch (section) {
+        case 0:
+            return NSLocalizedString(@"12.05.2017", nil);;
+            break;
+        case 1:
+            return NSLocalizedString(@"11.05.2017", nil);;
+            break;
+        case 2:
+            return NSLocalizedString(@"10.05.2017", nil);;
+            break;
+        default:
+            return NSLocalizedString(@"09.05.2017", nil);;
+            break;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
-    //todo stoecklim: set data from model
-    cell.intakeTime.text = @"12:00";
-    cell.pillImage.image = [UIImage imageNamed:@"syrup"];
+    NSArray *allSections = [self.data allValues];
+    MedicationData *medicationData = [[allSections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    cell.intakeTime.text = [MedicationManager timeStringForTiming:@(indexPath.section)];
+    cell.pillImage.image = [UIImage imageNamed:[medicationData formImageName]];
     [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
-    cell.medicamentName.text = @"Medikament X";
-    cell.medicamentDescription.text = @"Dies ist eine Pille";
-    cell.medicamentDosage.text = @"1 Kapsel";
+    cell.medicamentName.text = medicationData.title;
+    cell.medicamentDescription.text = medicationData.notes;
+    cell.medicamentDosage.text = [NSString stringWithFormat:@"1 %@", medicationData.form];
+    
+    if (medicationData.intakeStatus) {
+        cell.intakeIndicator.hidden = NO;
+        switch ([medicationData.intakeStatus intValue]) {
+            case 0:
+                cell.intakeIndicator.text = @"Taken";
+                cell.intakeIndicator.backgroundColor = [UIColor cellSwipeTakeColor];
+                break;
+            case 1:
+                cell.intakeIndicator.text = @"Skipped";
+                cell.intakeIndicator.backgroundColor = [UIColor cellSwipeSkipColor];
+                break;
+            case 2:
+                cell.intakeIndicator.text = @"Ignored";
+                cell.intakeIndicator.backgroundColor = [UIColor cellSwipeIgnoreColor];
+                break;
+            default:
+                break;
+        }
+        
+        cell.intakeIndicator.layer.cornerRadius = 5.0f;
+        cell.intakeIndicator.layer.masksToBounds = YES;
+        cell.intakeIndicator.textColor = [UIColor blackColor];
+    } else {
+        cell.intakeIndicator.hidden = YES;
+    }
+    
     cell.userInteractionEnabled = NO;
     return cell;
 }

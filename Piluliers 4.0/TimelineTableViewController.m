@@ -13,11 +13,12 @@
 #import "TimelineHeaderView.h"
 #import "EditDrugsTableViewController.h"
 #import "RestManager.h"
+#import "MedicationManager.h"
 
 @interface TimelineTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) RestManager *restManager;
-@property (nonatomic, weak) NSArray<NSObject*>* data;
+@property (nonatomic, strong) NSDictionary *data;
 @property (nonatomic, weak) TimelineHeaderView *timelineHeaderView;
 
 @end
@@ -31,26 +32,47 @@
     [self addTableViewHeaderView];
     self.restManager = [RestManager sharedInstance];
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor blackColor];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(loadData)
+                  forControlEvents:UIControlEventValueChanged];
+    [self loadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self loadData];
-    [self.tableView reloadData];
+    
 }
-
 - (void)loadData {
-    //todo stoecklim
-    [self.restManager getPatient:@".PAT_10" withCompletionBlock:^(PatientData *patient, NSError *error) {
-//        NSLog(@"Patient: %@", patient);
-//        NSLog(@"Patient-Name: %@", patient.family);
-//        NSLog(@"Patient-Vorname: %@", patient.given);
-//        NSLog(@"Patient-Image: %@", patient.photo);
+    NSString * userId;
+    if ([[NSUserDefaults standardUserDefaults]
+         stringForKey:@"userId"]!=nil){
+        userId =[[NSUserDefaults standardUserDefaults]
+                 stringForKey:@"userId"];
+    }
+    else{
+        userId = @".PAT_10";
+    }
+    
+    [self.restManager getPatient:userId withCompletionBlock:^(PatientData *patient, NSError *error) {
+        //        NSLog(@"Patient: %@", patient);
+        //        NSLog(@"Patient-Name: %@", patient.family);
+        //        NSLog(@"Patient-Vorname: %@", patient.given);
+        //        NSLog(@"Patient-Image: %@", patient.photo);
         self.timelineHeaderView.usernameLabel.text = [NSString stringWithFormat:@"%@ %@", @"Hallo", patient.given];
         self.timelineHeaderView.userImageView.image = patient.photo;
     }];
     
+    MedicationManager *medicationManager = [MedicationManager new];
+    [medicationManager getDailyMedicationsForPatient:userId withCompletionBlock:^(NSDictionary *medications, NSError *error) {
+        NSLog(@"Medications: %@", medications);
+        self.data = medications;
+        [self.tableView reloadData];
+    }];
 }
+     
 
 - (void)addTableViewHeaderView {
     self.timelineHeaderView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([TimelineHeaderView class]) owner:self options:nil] firstObject];
@@ -58,7 +80,7 @@
     self.timelineHeaderView.backgroundColor = [UIColor hackathonAccentColor];
     self.timelineHeaderView.datePicker.backgroundColor = [UIColor whiteColor];
     [self.timelineHeaderView.datePicker addTarget:self action:@selector(dateChanged:)
-     forControlEvents:UIControlEventValueChanged];
+                                 forControlEvents:UIControlEventValueChanged];
     self.tableView.tableHeaderView = self.timelineHeaderView;
 }
 
@@ -82,11 +104,12 @@
 # pragma mark - Table View Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4; //todo stoecklim: make dynamic
+    return [self.data.allKeys count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2; //todo stoecklim: make dynamic
+    NSArray *allSections = [self.data allValues];
+    return [[allSections objectAtIndex:section] count];
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -112,18 +135,41 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
-    //todo stoecklim: set data from model
-    cell.intakeTime.text = @"12:00";
-    cell.pillImage.image = [UIImage imageNamed:@"crystal"]; //todo stoecklim: show appropriate image
+    NSArray *allSections = [self.data allValues];
+    MedicationData *medicationData = [[allSections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    cell.intakeTime.text = [MedicationManager timeStringForTiming:@(indexPath.section)];
+    cell.pillImage.image = [UIImage imageNamed:[medicationData formImageName]];
     [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
-    cell.medicamentName.text = @"Medikament X";
-    cell.medicamentDescription.text = @"Dies ist eine Pille";
-    cell.medicamentDosage.text = @"1 Kapsel";
-    cell.intakeIndicator.text = @"Taken";
-    cell.intakeIndicator.backgroundColor = [UIColor cellSwipeTakeColor];
-    cell.intakeIndicator.layer.cornerRadius = 5.0f;
-    cell.intakeIndicator.layer.masksToBounds = YES;
-    cell.intakeIndicator.textColor = [UIColor blackColor];
+    cell.medicamentName.text = medicationData.title;
+    cell.medicamentDescription.text = medicationData.notes;
+    cell.medicamentDosage.text = [NSString stringWithFormat:@"1 %@", medicationData.form];
+
+    if (medicationData.intakeStatus) {
+        cell.intakeIndicator.hidden = NO;
+        switch ([medicationData.intakeStatus intValue]) {
+            case 0:
+                cell.intakeIndicator.text = @"Taken";
+                cell.intakeIndicator.backgroundColor = [UIColor cellSwipeTakeColor];
+                break;
+            case 1:
+                cell.intakeIndicator.text = @"Skipped";
+                cell.intakeIndicator.backgroundColor = [UIColor cellSwipeSkipColor];
+                break;
+            case 2:
+                cell.intakeIndicator.text = @"Ignored";
+                cell.intakeIndicator.backgroundColor = [UIColor cellSwipeIgnoreColor];
+                break;
+            default:
+                break;
+        }
+        
+        cell.intakeIndicator.layer.cornerRadius = 5.0f;
+        cell.intakeIndicator.layer.masksToBounds = YES;
+        cell.intakeIndicator.textColor = [UIColor blackColor];
+    } else {
+        cell.intakeIndicator.hidden = YES;
+    }
+
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
@@ -133,32 +179,35 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TimelineDetailTableViewController *timelineTableDetailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TimelineDetailTableViewController"];
-//    timelineTableDetailViewController.titleString = @"Medikament X"; //todo stoecklim: pass model instead of string
+    NSArray *allSections = [self.data allValues];
+    MedicationData *medicationData = [[allSections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    timelineTableDetailViewController.medicationData = medicationData;
     [self.navigationController pushViewController:timelineTableDetailViewController animated:YES];
 }
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewRowAction *takeAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"take", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        //todo stoecklim: mark as taken and persist
+        NSArray *allSections = [self.data allValues];
+        [[[allSections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] setIntakeStatus:@0];
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }];
     
     takeAction.backgroundColor = [UIColor cellSwipeTakeColor];
-
+    
     UITableViewRowAction *skipAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"skip", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        //todo stoecklim: mark as skipped and persist
-        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+        NSArray *allSections = [self.data allValues];
+        [[[allSections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] setIntakeStatus:@1];        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }];
     
     skipAction.backgroundColor = [UIColor cellSwipeSkipColor];
-
+    
     UITableViewRowAction *ignoreAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:NSLocalizedString(@"ignore", nil) handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        //todo stoecklim: mark as ignored and persist
-        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+        NSArray *allSections = [self.data allValues];
+        [[[allSections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] setIntakeStatus:@2];        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
     }];
     
     ignoreAction.backgroundColor = [UIColor cellSwipeIgnoreColor];
-
+    
     return @[takeAction, skipAction, ignoreAction];
 }
 
