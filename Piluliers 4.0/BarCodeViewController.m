@@ -10,10 +10,12 @@
 #import "QRCodeReaderViewController.h"
 #import "QRCodeReader.h"
 #import "MainMenuTabBarController.h"
+#import "RestManager.h"
+
 @interface BarCodeViewController ()
 
 @end
-
+RestManager * restManager;
 @implementation BarCodeViewController
 
 - (IBAction)scanAction:(id)sender
@@ -34,6 +36,7 @@
         }];
         
         [self presentViewController:vc animated:YES completion:NULL];
+        
     }
     else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erreur" message:@"Lecteur non pris en charge par le périphérique actuel" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -49,8 +52,19 @@
     [reader stopScanning];
     
     [self dismissViewControllerAnimated:YES completion:^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        [self goToMainMenu];
+
+        [restManager fetchPatientDataForPatient:result withCompletionBlock:(^(NSError* err){
+            if(err==nil){
+                NSLog(@"%@",result);
+            }
+            else{
+                NSLog(@"%@",err);
+            }
+        })];
+	
+        /*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];*/
     }];
 }
 
@@ -60,10 +74,20 @@
 }
 
 - (IBAction)LoginAction:(id)sender {
-    
+
     NSString * userId = _loginUITextField.text;
-    NSLog(@"%@",userId);
     [self goToMainMenu];
+
+    [restManager fetchPatientDataForPatient:userId withCompletionBlock:(^(NSError* err){
+        if(err==nil){
+            NSLog(@"%@",userId);
+        }
+        else{
+            NSLog(@"%@",err);
+        }
+    })];
+    NSLog(@"%@",userId);
+    //[self goToMainMenu];
 }
 
 -(void)goToMainMenu{
@@ -75,6 +99,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    restManager = [RestManager sharedInstance];
     // Do any additional setup after loading the view.
 }
 
