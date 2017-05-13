@@ -37,6 +37,11 @@
     [self.tableView setContentInset:UIEdgeInsetsMake(150, 0, 0, 0)];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -51,10 +56,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    //todo stoecklim: make dynamic
     return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //todo stoecklim: make dynamic
     return 8;
 }
 
@@ -64,12 +71,13 @@
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    //todo stoecklim: make dynamic
     return @"12.05.2017";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TimelineTableViewCell *cell = (TimelineTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TimelineTableViewCell" forIndexPath:indexPath];
-    //todo meumannu: set data from model
+    //todo stoecklim: set data from model
     cell.intakeTime.text = @"12:00";
     cell.pillImage.image = [UIImage imageNamed:@"syrup"];
     [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
@@ -78,12 +86,6 @@
     cell.medicamentDosage.text = @"1 Kapsel";
     cell.userInteractionEnabled = NO;
     return cell;
-}
-
-# pragma mark - Table View Delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //nothing to do, cell is read only
 }
 
 @end
