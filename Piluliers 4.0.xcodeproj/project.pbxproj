@@ -397,9 +397,8 @@
 		2316DF731EC602AE006284D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2316E0091EC6E448006284D6 /* Mappings */,
 				2316DF811EC61D96006284D6 /* ModelClasses */,
-				2316DF7E1EC60A32006284D6 /* Mappings.h */,
-				2316DF7F1EC60A32006284D6 /* Mappings.m */,
 				2316DF741EC602BA006284D6 /* DataModel.xcdatamodeld */,
 			);
 			name = Model;
@@ -498,6 +497,15 @@
 				2316DFD91EC61DEA006284D6 /* MedicationRequest+CoreDataProperties.m */,
 			);
 			name = ModelClasses;
+			sourceTree = "<group>";
+		};
+		2316E0091EC6E448006284D6 /* Mappings */ = {
+			isa = PBXGroup;
+			children = (
+				2316DF7E1EC60A32006284D6 /* Mappings.h */,
+				2316DF7F1EC60A32006284D6 /* Mappings.m */,
+			);
+			name = Mappings;
 			sourceTree = "<group>";
 		};
 		C72E60171EC1F3770087D2FD = {
