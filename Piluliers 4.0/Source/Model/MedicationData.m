@@ -37,7 +37,7 @@
     NSDictionary *formImageDict = @{
                                     @"PILL": @"pill",
                                     @"CAP": @"capsule"};
-    return self.form != nil ? [formImageDict objectForKey:self.form] : nil;
+    return self.form != nil ? [formImageDict objectForKey:self.form] : @"capsule";
 }
 
 - (NSString *)quantity {

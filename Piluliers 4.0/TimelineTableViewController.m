@@ -132,8 +132,8 @@
     //todo stoecklim: set data from model
     NSArray *allSections = [self.data allValues];
     MedicationData *medicationData = [[allSections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-    cell.intakeTime.text = @"12:00";
-    cell.pillImage.image = [UIImage imageNamed:@"crystal"]; //todo stoecklim: show appropriate image
+    cell.intakeTime.text = [MedicationManager timeStringForTiming:@(indexPath.section)];
+    cell.pillImage.image = [UIImage imageNamed:[medicationData formImageName]];
     [UIColor colorIconImageView:cell.pillImage color:[UIColor hackathonAccentColor]];
     cell.medicamentName.text = medicationData.title;
     cell.medicamentDescription.text = medicationData.title;
