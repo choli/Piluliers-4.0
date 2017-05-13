@@ -28,7 +28,7 @@ RestManager * restManager;
         
         dispatch_once(&onceToken, ^{
             QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
-            vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Annuler" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
+            vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
             vc.modalPresentationStyle = UIModalPresentationFormSheet;
         });
         vc.delegate = self;
@@ -54,19 +54,19 @@ RestManager * restManager;
     [reader stopScanning];
     
     [self dismissViewControllerAnimated:YES completion:^{
-        [self goToMainMenu];
 
-        /*[restManager fetchPatientDataForPatient:result withCompletionBlock:(^(NSError* err){
+        [restManager fetchPatientDataForPatient:result withCompletionBlock:(^(NSError* err){
             if(err==nil){
                 NSLog(@"%@",result);
+                [self goToMainMenu];
             }
             else{
                 NSLog(@"%@",err);
             }
-        })];*/
+        })];
 	
-        /*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];*/
+        //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+       // [alert show];
     }];
 }
 
@@ -78,11 +78,11 @@ RestManager * restManager;
 - (IBAction)LoginAction:(id)sender {
 
     NSString * userId = _loginUITextField.text;
-    [self goToMainMenu];
 
     [restManager fetchPatientDataForPatient:userId withCompletionBlock:(^(NSError* err){
         if(err==nil){
             NSLog(@"%@",userId);
+            [self goToMainMenu];
         }
         else{
             NSLog(@"%@",err);
@@ -109,9 +109,6 @@ RestManager * restManager;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qrcode"] style:UIBarButtonItemStylePlain target:self action:@selector(scan)];
 
-    
-    
-    
     // Do any additional setup after loading the view.
 }
 

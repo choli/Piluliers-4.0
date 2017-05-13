@@ -18,6 +18,7 @@
 
 @property (nonatomic, weak) RestManager *restManager;
 @property (nonatomic, weak) NSArray<NSObject*>* data;
+@property (nonatomic, weak) TimelineHeaderView *timelineHeaderView;
 
 @end
 
@@ -27,30 +28,38 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"timeline", nil);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addpill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
+    [self addTableViewHeaderView];
     self.restManager = [RestManager sharedInstance];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self addTableViewHeaderView];
     [self loadData];
     [self.tableView reloadData];
 }
 
 - (void)loadData {
     //todo stoecklim
+    [self.restManager getPatient:@".PAT_10" withCompletionBlock:^(PatientData *patient, NSError *error) {
+//        NSLog(@"Patient: %@", patient);
+//        NSLog(@"Patient-Name: %@", patient.family);
+//        NSLog(@"Patient-Vorname: %@", patient.given);
+//        NSLog(@"Patient-Image: %@", patient.photo);
+        self.timelineHeaderView.usernameLabel.text = [NSString stringWithFormat:@"%@ %@", @"Hallo", patient.given];
+        self.timelineHeaderView.userImageView.image = patient.photo;
+    }];
+    
 }
 
 - (void)addTableViewHeaderView {
-    TimelineHeaderView *timelineHeaderView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([TimelineHeaderView class]) owner:self options:nil] firstObject];
+    self.timelineHeaderView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([TimelineHeaderView class]) owner:self options:nil] firstObject];
     //todo stoecklim: add username and image from model
-    timelineHeaderView.usernameLabel.text = @"Hallo Sandro";
-    timelineHeaderView.userImageView.image = [UIImage imageNamed:@"sandro"];
-    timelineHeaderView.backgroundColor = [UIColor hackathonAccentColor];
-    timelineHeaderView.datePicker.backgroundColor = [UIColor whiteColor];
-    [timelineHeaderView.datePicker addTarget:self action:@selector(dateChanged:)
+    self.timelineHeaderView.backgroundColor = [UIColor hackathonAccentColor];
+    self.timelineHeaderView.datePicker.backgroundColor = [UIColor whiteColor];
+    [self.timelineHeaderView.datePicker addTarget:self action:@selector(dateChanged:)
      forControlEvents:UIControlEventValueChanged];
-    self.tableView.tableHeaderView = timelineHeaderView;
+    self.tableView.tableHeaderView = self.timelineHeaderView;
 }
 
 - (void)didReceiveMemoryWarning {
