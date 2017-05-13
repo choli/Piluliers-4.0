@@ -78,6 +78,7 @@
 		C72E60991EC5DCF90087D2FD /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60961EC5DCF90087D2FD /* NotificationController.m */; };
 		C72E60A31EC5F3A80087D2FD /* ConnectivityHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */; };
 		C72E60A61EC644DC0087D2FD /* TimeTitleRow.m in Sources */ = {isa = PBXBuildFile; fileRef = C72E60A51EC644DC0087D2FD /* TimeTitleRow.m */; };
+		C78208A91EC65E7C00CD80AF /* TakePillInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78208A81EC65E7C00CD80AF /* TakePillInterfaceController.m */; };
 		CFAEE8901EC60A7400CC8974 /* Qrcode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAEE88F1EC60A7400CC8974 /* Qrcode.storyboard */; };
 		CFAEE8941EC60FCA00CC8974 /* BarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEE8931EC60FCA00CC8974 /* BarCodeViewController.m */; };
 		CFAEE8A01EC61AB500CC8974 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEE8971EC61AB500CC8974 /* QRCodeReaderViewController.m */; };
@@ -85,7 +86,6 @@
 		CFAEE8A21EC61AB500CC8974 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEE89B1EC61AB500CC8974 /* QRCodeReader.m */; };
 		CFAEE8A31EC61AB500CC8974 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEE89D1EC61AB500CC8974 /* QRCameraSwitchButton.m */; };
 		CFAEE8A41EC61AB500CC8974 /* QRToggleTorchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CFAEE89F1EC61AB500CC8974 /* QRToggleTorchButton.m */; };
-		C78208A91EC65E7C00CD80AF /* TakePillInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78208A81EC65E7C00CD80AF /* TakePillInterfaceController.m */; };
 		F01A82541EC596C4008CEC5A /* MainMenuTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */; };
 		F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01A825B1EC59C6F008CEC5A /* Localizable.strings */; };
 		F01A82651EC59E2F008CEC5A /* TimelineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01A82631EC59E2F008CEC5A /* TimelineTableViewController.m */; };
@@ -292,6 +292,8 @@
 		C72E60A21EC5F3A80087D2FD /* ConnectivityHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectivityHandler.m; path = WatchHelper/ConnectivityHandler.m; sourceTree = "<group>"; };
 		C72E60A41EC644DC0087D2FD /* TimeTitleRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeTitleRow.h; path = Cells/TimeTitleRow.h; sourceTree = "<group>"; };
 		C72E60A51EC644DC0087D2FD /* TimeTitleRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTitleRow.m; path = Cells/TimeTitleRow.m; sourceTree = "<group>"; };
+		C78208A71EC65E7C00CD80AF /* TakePillInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TakePillInterfaceController.h; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/TakePillInterfaceController.h"; sourceTree = "<group>"; };
+		C78208A81EC65E7C00CD80AF /* TakePillInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TakePillInterfaceController.m; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/TakePillInterfaceController.m"; sourceTree = "<group>"; };
 		CFAEE88F1EC60A7400CC8974 /* Qrcode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Qrcode.storyboard; path = ../Qrcode.storyboard; sourceTree = "<group>"; };
 		CFAEE8921EC60FCA00CC8974 /* BarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCodeViewController.h; sourceTree = "<group>"; };
 		CFAEE8931EC60FCA00CC8974 /* BarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCodeViewController.m; sourceTree = "<group>"; };
@@ -306,8 +308,6 @@
 		CFAEE89D1EC61AB500CC8974 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
 		CFAEE89E1EC61AB500CC8974 /* QRToggleTorchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRToggleTorchButton.h; sourceTree = "<group>"; };
 		CFAEE89F1EC61AB500CC8974 /* QRToggleTorchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRToggleTorchButton.m; sourceTree = "<group>"; };
-		C78208A71EC65E7C00CD80AF /* TakePillInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TakePillInterfaceController.h; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/TakePillInterfaceController.h"; sourceTree = "<group>"; };
-		C78208A81EC65E7C00CD80AF /* TakePillInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TakePillInterfaceController.m; path = "Piluliers 4.0 WatchKit Extension/InterfaceControllers/TakePillInterfaceController.m"; sourceTree = "<group>"; };
 		F01A82511EC596C4008CEC5A /* MainMenuTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTabBarController.h; sourceTree = "<group>"; };
 		F01A82521EC596C4008CEC5A /* MainMenuTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTabBarController.m; sourceTree = "<group>"; };
 		F01A825A1EC59C6F008CEC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -397,9 +397,8 @@
 		2316DF731EC602AE006284D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2316E0091EC6E448006284D6 /* Mappings */,
 				2316DF811EC61D96006284D6 /* ModelClasses */,
-				2316DF7E1EC60A32006284D6 /* Mappings.h */,
-				2316DF7F1EC60A32006284D6 /* Mappings.m */,
 				2316DF741EC602BA006284D6 /* DataModel.xcdatamodeld */,
 			);
 			name = Model;
@@ -498,6 +497,15 @@
 				2316DFD91EC61DEA006284D6 /* MedicationRequest+CoreDataProperties.m */,
 			);
 			name = ModelClasses;
+			sourceTree = "<group>";
+		};
+		2316E0091EC6E448006284D6 /* Mappings */ = {
+			isa = PBXGroup;
+			children = (
+				2316DF7E1EC60A32006284D6 /* Mappings.h */,
+				2316DF7F1EC60A32006284D6 /* Mappings.m */,
+			);
+			name = Mappings;
 			sourceTree = "<group>";
 		};
 		C72E60171EC1F3770087D2FD = {
@@ -1015,7 +1023,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		85720DEF5D9CF1F9ED86A245 /* [CP] Check Pods Manifest.lock */ = {
@@ -1030,7 +1038,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A13222EAC06888FCB8ED12DD /* [CP] Check Pods Manifest.lock */ = {
@@ -1045,7 +1053,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B0C45CF099D6AD131BD111B4 /* [CP] Copy Pods Resources */ = {
