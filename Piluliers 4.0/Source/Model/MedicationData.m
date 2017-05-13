@@ -26,9 +26,18 @@
 - (NSString *)form {
     if (self.json != nil) {
         NSArray *codings = [[self.json objectForKey:@"form"] objectForKey:@"coding"];
-        return [[codings objectAtIndex:0] objectForKey:@"code"];
+        if (codings != nil)
+            return [[codings objectAtIndex:0] objectForKey:@"code"];
     }
     return nil;
+}
+
+- (NSString *)formImageName {
+    
+    NSDictionary *formImageDict = @{
+                                    @"PILL": @"pill",
+                                    @"CAP": @"capsule"};
+    return self.form != nil ? [formImageDict objectForKey:self.form] : nil;
 }
 
 - (NSString *)quantity {
