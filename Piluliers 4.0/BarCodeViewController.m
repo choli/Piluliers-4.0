@@ -19,8 +19,9 @@
 RestManager * restManager;
 @implementation BarCodeViewController
 
-- (IBAction)scanAction:(id)sender
-{
+
+
+-(void)scan{
     if ([QRCodeReader supportsMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]]) {
         static QRCodeReaderViewController *vc = nil;
         static dispatch_once_t onceToken;
@@ -55,14 +56,14 @@ RestManager * restManager;
     [self dismissViewControllerAnimated:YES completion:^{
         [self goToMainMenu];
 
-        [restManager fetchPatientDataForPatient:result withCompletionBlock:(^(NSError* err){
+        /*[restManager fetchPatientDataForPatient:result withCompletionBlock:(^(NSError* err){
             if(err==nil){
                 NSLog(@"%@",result);
             }
             else{
                 NSLog(@"%@",err);
             }
-        })];
+        })];*/
 	
         /*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];*/
@@ -102,9 +103,17 @@ RestManager * restManager;
     [super viewDidLoad];
     restManager = [RestManager sharedInstance];
     self.view.backgroundColor = [UIColor hackathonAccentColor];
+    self.title = @"Pilulier 4.0";
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStylePlain target:self action:@selector(goToMainMenu)];
+    self.navigationItem.rightBarButtonItem = anotherButton;
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qrcode"] style:UIBarButtonItemStylePlain target:self action:@selector(scan)];
+
+    
+    
+    
     // Do any additional setup after loading the view.
 }
-
 
 
 /*
