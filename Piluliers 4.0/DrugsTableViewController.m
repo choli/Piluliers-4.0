@@ -17,8 +17,8 @@
 @interface DrugsTableViewController ()
 
 @property (nonatomic, weak) RestManager *restManager;
-@property (nonatomic, weak) NSArray<MedicationData*> *data;
-@property (nonatomic, weak) NSString *userData;
+@property (nonatomic, strong) NSArray<MedicationData*> *data;
+@property (nonatomic, weak) NSString *userId;
 
 @end
 
@@ -29,16 +29,33 @@
     self.title = NSLocalizedString(@"drugs", nil);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addpill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
     self.restManager = [RestManager sharedInstance];
+    self.userId = @".PAT_10";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self loadData];
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
 }
 
 - (void)loadData {
-//    self.restManager getMedicationsForPatient:@".PAT" withCompletionBlock:<#^(NSArray *medications, NSError *error)completionBlock#>
+    [self.restManager getMedicationsForPatient:self.userId withCompletionBlock:^(NSArray *medications, NSError *error) {
+        self.data = medications;
+        __block NSInteger count = 0;
+        for (MedicationData *dict in medications) {
+            dict.image = [UIImage imageNamed:[NSString stringWithFormat:@"hardmedi-%ld", count]];
+            count = (count+1)%5;
+//   This would work, but Images not there...
+//            [self.restManager getImageForId:dict.medicationId withCompletionBlock:^(UIImage *image, NSError *error) {
+//                dict.image = image;
+//                count = count + 1;
+//                if (count == medications.count) {
+//                    [self.tableView reloadData];
+//                }
+//            }];
+        }
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,9 +87,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DrugsTableViewCell *cell = (DrugsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DrugsTableViewCell" forIndexPath:indexPath];
     MedicationData *medicationData = [self.data objectAtIndex:indexPath.row];
-    cell.medicamentImage.image = [UIImage imageNamed:@"sandro"];
     cell.medicamentName.text = medicationData.title;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.medicamentImage.image = medicationData.image;
     return cell;
 }
 

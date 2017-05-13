@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface MedicationData : NSObject
 
@@ -20,6 +21,7 @@
 @property (nonatomic, nullable) NSString *startDate;
 @property (nonatomic, nullable) NSString *time;
 @property (nonatomic, nullable) NSString *notes;
+@property (nonatomic, nullable) UIImage *image;
 @property (nonatomic, nullable) NSNumber *intakeStatus;
 
 - (NSString *)formImageName;
