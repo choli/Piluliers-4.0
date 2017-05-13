@@ -20,6 +20,7 @@
 @property (nonatomic, nullable) NSString *startDate;
 @property (nonatomic, nullable) NSString *time;
 @property (nonatomic, nullable) NSString *notes;
+@property (nonatomic, nullable) NSNumber *intakeStatus;
 
 - (NSString *)formImageName;
 @end

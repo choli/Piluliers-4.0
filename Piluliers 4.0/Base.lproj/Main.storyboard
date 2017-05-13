@@ -58,10 +58,10 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nar-sh-0MN">
-                                            <rect key="frame" x="8" y="48" width="55" height="24"/>
+                                            <rect key="frame" x="8" y="48" width="70" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="vjT-nY-Twr"/>
-                                                <constraint firstAttribute="width" constant="55" id="xf6-AA-lsn"/>
+                                                <constraint firstAttribute="width" constant="70" id="xf6-AA-lsn"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                             <nil key="textColor"/>

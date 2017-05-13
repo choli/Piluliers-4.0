@@ -29,7 +29,7 @@
         if (codings != nil)
             return [[codings objectAtIndex:0] objectForKey:@"code"];
     }
-    return nil;
+    return @"CAP";
 }
 
 - (NSString *)formImageName {
