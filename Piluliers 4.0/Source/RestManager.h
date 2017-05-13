@@ -16,4 +16,5 @@
 - (void)fetchMedicationsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock;
 - (void)fetchPatientDataForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSError *error))completionBlock;
 - (void)getPatient:(NSString *)patentId withCompletionBlock:(void (^)(PatientData *patient, NSError *error))completionBlock;
+- (void)getImageForId:(NSString *)imageId withCompletionBlock:(void (^)(UIImage *image, NSError *error))completionBlock;
 @end

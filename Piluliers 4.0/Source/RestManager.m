@@ -13,6 +13,7 @@
 #import "MedicationManager.h"
 #import "ConfigurationManager.h"
 #import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/UIKit+AFNetworking.h>
 
 @interface RestManager ()
 @property (nonatomic, nullable) RKManagedObjectStore *managedObjectStore;
@@ -254,20 +255,23 @@ RestManager *restManager = [RestManager sharedInstance];
     }
 }];
 */
-/*-(void)getImageForId:(NSString *)imageId {
-    NSString * urlstring = [restManager urlPictureMedicationByGtin:@"7680336700367" :@"PA" :@"Front" :@"M"];
-    dispatch_queue_t myqueue = dispatch_queue_create("myqueue", NULL);
+- (void)getImageForId:(NSString *)imageId withCompletionBlock:(void (^)(UIImage *image, NSError *error))completionBlock {
     
-    // execute a task on that queue asynchronously
-    dispatch_async(myqueue, ^{
-        NSURL *url = [NSURL URLWithString:[urlstring stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];;
-        NSData *data = [NSData dataWithContentsOfURL:url];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            _medicationPicture.image = [UIImage imageWithData:data]; //UI updates should be done on the main thread
-        });
-    });
+    NSString *urlString = [NSString stringWithFormat:@"%@/%@/gtin/PI/Front/M", [ConfigurationManager pictureUrl], imageId];//7680336700367
     
-    
-}*/
+    NSURLRequest *imageRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]
+                                                  cachePolicy:NSURLRequestReturnCacheDataElseLoad
+                                              timeoutInterval:60];
+    [[AFImageDownloader defaultInstance]downloadImageForURLRequest:imageRequest success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
+        if (completionBlock) {
+            completionBlock(responseObject, nil);
+        }
+    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+        if (completionBlock) {
+            completionBlock(nil, error);
+        }
+    }];
+
+}
 
 @end
