@@ -12,11 +12,12 @@
 #import "TimelineDetailTableViewController.h"
 #import "EditDrugsTableViewController.h"
 #import "RestManager.h"
+#import "MedicationData.h"
 
 @interface DrugsTableViewController ()
 
 @property (nonatomic, weak) RestManager *restManager;
-@property (nonatomic, weak) NSArray<NSObject*> *data;
+@property (nonatomic, weak) NSArray<MedicationData*> *data;
 @property (nonatomic, weak) NSString *userData;
 
 @end
@@ -37,7 +38,7 @@
 }
 
 - (void)loadData {
-    //todo stoecklim
+//    self.restManager getMedicationsForPatient:@".PAT" withCompletionBlock:<#^(NSArray *medications, NSError *error)completionBlock#>
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,13 +56,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //todo stoecklim: make dynamic
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //todo stoecklim: make dynamic
-    return 7;
+    return [self.data count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -70,9 +69,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DrugsTableViewCell *cell = (DrugsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"DrugsTableViewCell" forIndexPath:indexPath];
-    //todo stoecklim: set data from model
+    MedicationData *medicationData = [self.data objectAtIndex:indexPath.row];
     cell.medicamentImage.image = [UIImage imageNamed:@"sandro"];
-    cell.medicamentName.text = @"Medikament X";
+    cell.medicamentName.text = medicationData.title;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
@@ -82,8 +81,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TimelineDetailTableViewController *timelineTableDetailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TimelineDetailTableViewController"];
-    //todo stoecklim: pass data model
-    timelineTableDetailViewController.titleString = @"Medikament X";
+    MedicationData *medicationData = [self.data objectAtIndex:indexPath.row];
+    timelineTableDetailViewController.medicationData = medicationData;
     [self.navigationController pushViewController:timelineTableDetailViewController animated:YES];
 }
 

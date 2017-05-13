@@ -9,6 +9,7 @@
 #import "MedicationManager.h"
 #import <RestKit/CoreData.h>
 #import <RestKit/RestKit.h>
+#import "RestManager.h"
 
 @implementation MedicationManager
 
@@ -41,5 +42,34 @@
         NSLog(@"Json error: %@", error) ;
     }
     return json;
+}
+
+- (NSDictionary *)getDayListFromMedications:(NSArray *)medications {
+    
+    NSMutableDictionary *dayList = [NSMutableDictionary new];
+    [dayList setValue:medications forKey:@"MORN"];
+    [dayList setValue:medications forKey:@"AFT"];
+    [dayList setValue:medications forKey:@"EVE"];
+    [dayList setValue:medications forKey:@"NIGHT"];
+    
+    return dayList;
+}
+
+- (void)getDailyMedicationsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSDictionary *medications, NSError *error))completionBlock {
+    
+    RestManager *restManager = [RestManager sharedInstance];
+    [restManager getMedicationsForPatient:patientId withCompletionBlock:^(NSArray *medications, NSError *error) {
+        if (error == nil) {
+            if (completionBlock != nil) {
+                NSDictionary *dayDict = [self getDayListFromMedications:medications];
+                completionBlock(dayDict, nil);
+            }
+        }
+        else {
+            if (completionBlock != nil) {
+                completionBlock(nil, error);
+            }
+        }
+    }];
 }
 @end

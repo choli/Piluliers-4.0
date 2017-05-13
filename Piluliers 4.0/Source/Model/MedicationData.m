@@ -31,11 +31,28 @@
     return nil;
 }
 
-- (NSArray *)timings {
-    NSMutableArray *timingValues = [NSMutableArray new];
-    if (self.json != nil) {
-        
-    }
-    return timingValues;
+- (NSString *)quantity {
+    return @"12 Pills";
 }
+
+- (NSString *)frequency {
+    return @"3 times daily";
+}
+
+- (NSString *)duration {
+    return @"6 weeks";
+}
+
+- (NSString *)startDate {
+    return @"11.05.2017";
+}
+
+- (NSString *)time {
+    return @"08:00, 12:00, 18:00";
+}
+
+- (NSString *)notes {
+    return @"Before eating";
+}
+
 @end

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MedicationData.h"
 
 @interface TimelineDetailTableViewController : UITableViewController
 
-@property (nonatomic, weak) NSString *titleString; //todo stoecklim: replace by data object!
+@property (nonatomic, weak) MedicationData *medicationData;
 
 @end

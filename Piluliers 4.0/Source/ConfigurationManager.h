@@ -10,4 +10,5 @@
 
 @interface ConfigurationManager : NSObject
 + (NSString *)baseUrl;
++ (NSString *)pictureUrl;
 @end
