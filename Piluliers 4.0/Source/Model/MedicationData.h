@@ -22,4 +22,6 @@
 @property (nonatomic, nullable) NSString *notes;
 
 - (NSString *)formImageName;
+
+- (MedicationData *)deepCopy;
 @end
