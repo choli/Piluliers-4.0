@@ -13,6 +13,8 @@
 #import "MedicationManager.h"
 #import "ConfigurationManager.h"
 #import <AFNetworking/AFNetworking.h>
+#import "MedicationData.h"
+#import "MedicationRequestData.h"
 
 @interface RestManager ()
 @property (nonatomic, nullable) RKManagedObjectStore *managedObjectStore;
@@ -97,7 +99,7 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:@"Medication?patient_id=.PAT_10&_format=json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSLog(@"Success");
         MedicationManager *medicationManager = [[MedicationManager alloc] init];
-        [medicationManager fetchMedicationRequestFromContext];
+        // [medicationManager fetchMedicationRequestFromContext];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Failure");
     }];
@@ -112,7 +114,7 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:@"Medication?patient_id=.PAT_10&_format=json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSLog(@"Success");
         MedicationManager *medicationManager = [[MedicationManager alloc] init];
-        [medicationManager fetchMedicationRequestFromContext];
+        // [medicationManager fetchMedicationRequestFromContext];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Failure");
     }];
@@ -186,7 +188,7 @@
     [manager GET:[NSString stringWithFormat:url, [ConfigurationManager baseUrl], patientId] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
-        [userDefaults setObject:responseObject forKey:@"medication"];
+        [userDefaults setObject:responseObject forKey:@"medications"];
         [userDefaults synchronize];
         if (completionBlock != nil) {
             completionBlock(nil);
@@ -212,7 +214,7 @@
     [manager GET:[NSString stringWithFormat:url, [ConfigurationManager baseUrl], patientId] parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
-        [userDefaults setObject:responseObject forKey:@"medicationrequest"];
+        [userDefaults setObject:responseObject forKey:@"medicationrequests"];
         [userDefaults synchronize];
         if (completionBlock != nil) {
             completionBlock(nil);
@@ -242,6 +244,52 @@
         }
     }];
 }
+
+- (void)getMedicationsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSArray *medications, NSError *error))completionBlock {
+    [self fetchMedicationForPatient:patientId withCompletionBlock:^(NSError *error) {
+        if (error != nil ) {
+            if (completionBlock != nil) {
+                completionBlock(nil, error);
+            }
+        }
+        else {
+            NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
+            NSDictionary *json = [userDefaults objectForKey:@"medications"];
+            NSArray *entries = [json objectForKey:@"entry"];
+            NSMutableArray *medications = [NSMutableArray new];
+            for (NSDictionary *entry in entries) {
+                MedicationData *medicationData = [MedicationData new];
+                medicationData.json = [entry objectForKey:@"resource"];
+                [medications addObject:medicationData];
+            }
+            completionBlock(medications, nil);
+        }
+    }];
+}
+
+
+- (void)getMedicationRequestsForPatient:(NSString *)patientId withCompletionBlock:(void (^)(NSArray *medications, NSError *error))completionBlock {
+    [self fetchMedicationRequestForPatient:patientId withCompletionBlock:^(NSError *error) {
+        if (error != nil ) {
+            if (completionBlock != nil) {
+                completionBlock(nil, error);
+            }
+        }
+        else {
+            NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.ch.post.it.Pilulier4"];
+            NSDictionary *json = [userDefaults objectForKey:@"medicationrequests"];
+            NSArray *entries = [json objectForKey:@"entry"];
+            NSMutableArray *medicationRequests = [NSMutableArray new];
+            for (NSDictionary *entry in entries) {
+                MedicationRequestData *medicationRequestData = [MedicationRequestData new];
+                medicationRequestData.json = [entry objectForKey:@"resource"];
+                [medicationRequests addObject:medicationRequestData];
+            }
+            completionBlock(medicationRequests, nil);
+        }
+    }];
+}
+
 /*
 RestManager *restManager = [RestManager sharedInstance];
 

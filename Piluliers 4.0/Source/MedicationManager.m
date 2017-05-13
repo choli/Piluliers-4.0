@@ -11,33 +11,35 @@
 #import <RestKit/RestKit.h>
 
 @implementation MedicationManager
+
+- (NSMutableDictionary *)medicationForDate:(NSDate *)date {
     
-- (void)fetchMedicationFromContext {
+    NSDate *then = [NSDate dateWithTimeIntervalSince1970:0];
     
-    NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Medication"];
-    
-    /*
-    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
-    fetchRequest.sortDescriptors = @[descriptor];
-    */
-    
-    NSError *error = nil;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    return nil;
 }
 
-- (void)fetchMedicationRequestFromContext {
+- (void)saveMedication:(NSMutableDictionary *)data toDate:(NSDate *)date {
     
-    NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"MedicationRequest"];
-    
-    /*
-    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
-    fetchRequest.sortDescriptors = @[descriptor];
-    */
-    
-    NSError *error = nil;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    NSLog(@"FetchedObjects: %@", fetchedObjects);
+}
+
+- (long)daysBetween:(NSDate *)dt1 and:(NSDate *)dt2 {
+    NSUInteger unitFlags = NSCalendarUnitDay;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:unitFlags fromDate:dt1 toDate:dt2 options:0];
+    return [components day]+1;
+}
+
+- (NSDictionary *)loadMockMedication:(int)index {
+
+    NSError *error ;
+    NSString *resourceName = [NSString stringWithFormat:@"Medication%d", index];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:resourceName ofType:@"json"] ;
+    NSData *content = [[NSData alloc] initWithContentsOfFile:filePath] ;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:content options:kNilOptions error:&error] ;
+    if (error) {
+        NSLog(@"Json error: %@", error) ;
+    }
+    return json;
 }
 @end

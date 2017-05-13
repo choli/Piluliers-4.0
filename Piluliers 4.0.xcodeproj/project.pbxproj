@@ -60,6 +60,9 @@
 		2316E0191EC6EA24006284D6 /* PatientBundleMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316E0171EC6EA24006284D6 /* PatientBundleMapping.m */; };
 		2316E01C1EC6EAA9006284D6 /* MedicationRequestBundleMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316E01B1EC6EAA9006284D6 /* MedicationRequestBundleMapping.m */; };
 		2327ECAC1EC6FC44003CC27D /* PatientData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2327ECAB1EC6FC44003CC27D /* PatientData.m */; };
+		2327ECAF1EC7076E003CC27D /* MedicationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2327ECAE1EC7076E003CC27D /* MedicationData.m */; };
+		2327ECB11EC71FBE003CC27D /* Medication0.json in Resources */ = {isa = PBXBuildFile; fileRef = 2327ECB01EC71FBE003CC27D /* Medication0.json */; };
+		2327ECB41EC726A6003CC27D /* MedicationRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2327ECB31EC726A6003CC27D /* MedicationRequestData.m */; };
 		422AC6AF63948C7CF9418B04 /* libPods-Piluliers 4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */; };
 		BD1D6372524053B896173C45 /* libPods-Piluliers 4.0 WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8687B4E2155720F4DF9B6FE2 /* libPods-Piluliers 4.0 WatchKit Extension.a */; };
 		C0C73D44CE7477E88A7E25FF /* libPods-Piluliers 4.0 WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */; };
@@ -260,6 +263,11 @@
 		2316E01B1EC6EAA9006284D6 /* MedicationRequestBundleMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MedicationRequestBundleMapping.m; path = Source/Model/Mappings/MedicationRequestBundleMapping.m; sourceTree = "<group>"; };
 		2327ECAA1EC6FC44003CC27D /* PatientData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientData.h; path = Source/Model/PatientData.h; sourceTree = "<group>"; };
 		2327ECAB1EC6FC44003CC27D /* PatientData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientData.m; path = Source/Model/PatientData.m; sourceTree = "<group>"; };
+		2327ECAD1EC7076E003CC27D /* MedicationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MedicationData.h; path = Source/Model/MedicationData.h; sourceTree = "<group>"; };
+		2327ECAE1EC7076E003CC27D /* MedicationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MedicationData.m; path = Source/Model/MedicationData.m; sourceTree = "<group>"; };
+		2327ECB01EC71FBE003CC27D /* Medication0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Medication0.json; path = Resources/Medication0.json; sourceTree = "<group>"; };
+		2327ECB21EC726A6003CC27D /* MedicationRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MedicationRequestData.h; path = Source/Model/MedicationRequestData.h; sourceTree = "<group>"; };
+		2327ECB31EC726A6003CC27D /* MedicationRequestData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MedicationRequestData.m; path = Source/Model/MedicationRequestData.m; sourceTree = "<group>"; };
 		35EA955690DD6E672D8EEC8A /* Pods-Piluliers 4.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Piluliers 4.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Piluliers 4.0/Pods-Piluliers 4.0.debug.xcconfig"; sourceTree = "<group>"; };
 		3FABDF5052C6DCABBD9255B3 /* libPods-Piluliers 4.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BE00A6DD26B698927DBC51 /* libPods-Piluliers 4.0 WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Piluliers 4.0 WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -420,6 +428,10 @@
 				2316DF741EC602BA006284D6 /* DataModel.xcdatamodeld */,
 				2327ECAA1EC6FC44003CC27D /* PatientData.h */,
 				2327ECAB1EC6FC44003CC27D /* PatientData.m */,
+				2327ECAD1EC7076E003CC27D /* MedicationData.h */,
+				2327ECAE1EC7076E003CC27D /* MedicationData.m */,
+				2327ECB21EC726A6003CC27D /* MedicationRequestData.h */,
+				2327ECB31EC726A6003CC27D /* MedicationRequestData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -737,6 +749,7 @@
 			isa = PBXGroup;
 			children = (
 				F01A825B1EC59C6F008CEC5A /* Localizable.strings */,
+				2327ECB01EC71FBE003CC27D /* Medication0.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -988,6 +1001,7 @@
 			files = (
 				CFAEE8B21EC6DB6700CC8974 /* Settings.bundle in Resources */,
 				F01A82811EC5D6FC008CEC5A /* TimelineHeaderView.xib in Resources */,
+				2327ECB11EC71FBE003CC27D /* Medication0.json in Resources */,
 				F01A82591EC59C6F008CEC5A /* Localizable.strings in Resources */,
 				C72E60331EC1F3770087D2FD /* LaunchScreen.storyboard in Resources */,
 				C72E60301EC1F3770087D2FD /* Assets.xcassets in Resources */,
@@ -1149,6 +1163,7 @@
 				2316DFDE1EC61DEA006284D6 /* DispenseRequest+CoreDataClass.m in Sources */,
 				F01A82971EC612AD008CEC5A /* HistoryTableViewController.m in Sources */,
 				2316DFE31EC61DEA006284D6 /* MedicationPlan+CoreDataProperties.m in Sources */,
+				2327ECB41EC726A6003CC27D /* MedicationRequestData.m in Sources */,
 				F01A827F1EC5D65F008CEC5A /* TimelineHeaderView.m in Sources */,
 				2327ECAC1EC6FC44003CC27D /* PatientData.m in Sources */,
 				2316E0021EC61DEA006284D6 /* Period+CoreDataClass.m in Sources */,
@@ -1165,6 +1180,7 @@
 				F01A827B1EC5D39A008CEC5A /* UIColor+CustomColors.m in Sources */,
 				2316DFF91EC61DEA006284D6 /* Timing+CoreDataProperties.m in Sources */,
 				2316DFDB1EC61DEA006284D6 /* Repeat+CoreDataProperties.m in Sources */,
+				2327ECAF1EC7076E003CC27D /* MedicationData.m in Sources */,
 				2316E0191EC6EA24006284D6 /* PatientBundleMapping.m in Sources */,
 				2316DFED1EC61DEA006284D6 /* Note+CoreDataProperties.m in Sources */,
 				2316DFF41EC61DEA006284D6 /* Attachment+CoreDataClass.m in Sources */,
