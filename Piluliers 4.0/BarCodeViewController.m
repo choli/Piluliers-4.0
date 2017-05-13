@@ -53,11 +53,11 @@ RestManager * restManager;
     [reader stopScanning];
     
     [self dismissViewControllerAnimated:YES completion:^{
-        [self goToMainMenu];
 
         [restManager fetchPatientDataForPatient:result withCompletionBlock:(^(NSError* err){
             if(err==nil){
                 NSLog(@"%@",result);
+                [self goToMainMenu];
             }
             else{
                 NSLog(@"%@",err);
@@ -102,6 +102,7 @@ RestManager * restManager;
     [super viewDidLoad];
     restManager = [RestManager sharedInstance];
     self.view.backgroundColor = [UIColor hackathonAccentColor];
+    self.title = @"Login";
     // Do any additional setup after loading the view.
 }
 
