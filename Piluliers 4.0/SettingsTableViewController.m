@@ -7,6 +7,8 @@
 //
 
 #import "SettingsTableViewController.h"
+#import "EditDrugsTableViewCell.h"
+#import "UIColor+CustomColors.h"
 
 @interface SettingsTableViewController ()
 
@@ -14,10 +16,9 @@
 
 @implementation SettingsTableViewController
 
-//todo stoecklim: finish up if there is time
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     self.title = NSLocalizedString(@"settings", nil);
 }
 
@@ -36,14 +37,35 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 8;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimelineDetailTableViewCell" forIndexPath:indexPath];
-    cell.textLabel.text = @"Mein Titel";
-    cell.detailTextLabel.text = @"Mein Detail";
-    cell.userInteractionEnabled = NO;
+    EditDrugsTableViewCell *cell = (EditDrugsTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"EditDrugsTableViewCell" forIndexPath:indexPath];
+    switch (indexPath.row) {
+        case 0:
+            cell.inputTitle.text = @"Morning Time";
+            cell.inputValue.text = @"08:15";
+            break;
+        case 1:
+            cell.inputTitle.text = @"Midday Time";
+            cell.inputValue.text = @"12:00";
+            break;
+        case 2:
+            cell.inputTitle.text = @"Lunch Time";
+            cell.inputValue.text = @"18:30";
+            break;
+        case 3:
+            cell.inputTitle.text = @"Evening Time";
+            cell.inputValue.text = @"22:45";
+            break;
+        default:
+            break;
+    }
+    
+    cell.inputTitle.textColor = [UIColor hackathonTabBarColor];
+    cell.inputValue.textColor = [UIColor hackathonAccentColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

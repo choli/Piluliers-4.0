@@ -30,6 +30,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"addpill"] style:UIBarButtonItemStylePlain target:self action:@selector(addMedication:)];
     [self addTableViewHeaderView];
     self.restManager = [RestManager sharedInstance];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
