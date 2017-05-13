@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface MedicationManager : NSObject
-- (void)fetchMedicationRequestFromContext;
+- (NSMutableDictionary *)medicationForDate:(NSDate *)date;
+- (void)saveMedication:(NSMutableDictionary *)data toDate:(NSDate *)date;
 @end

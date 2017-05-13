@@ -13,6 +13,7 @@
 #import "AppDelegate+Appearance.h"
 #import "BarCodeViewController.h"
 #import "RestManager.h"
+#import "MedicationData.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) ConnectivityHandler *connectivityHandler;
@@ -24,8 +25,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIStoryboard * uiStroyboard = [UIStoryboard storyboardWithName:@"Qrcode" bundle:nil];
     
-
-    
+    /*
+    RestManager *restManager = [RestManager sharedInstance];
+    [restManager getMedicationsForPatient:@".PAT_10" withCompletionBlock:^(NSArray *medications, NSError *error) {
+        for (MedicationData *medication in medications) {
+            NSLog(@"Medication Name: %@", medication.title);
+            NSLog(@"Medication Form: %@", medication.form);
+            NSLog(@"Medication Timing: %@", [medication timings]);
+        }
+    }];
+    */
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [uiStroyboard instantiateViewControllerWithIdentifier:@"BarCodeViewController"];
     [self setupAppearance];
